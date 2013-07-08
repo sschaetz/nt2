@@ -7,70 +7,81 @@
 //                 See accompanying file LICENSE.txt or copy at
 //                     http://www.boost.org/LICENSE_1_0.txt
 //==============================================================================
-#include <cmath>
-#include <vector>
 #include <nt2/sdk/bench/benchmark.hpp>
+#include <nt2/sdk/bench/measure/cycles_per_element.hpp>
+#include <nt2/sdk/bench/workbench/nary_range.hpp>
+#include <nt2/sdk/bench/workbench/stepper.hpp>
+#include <nt2/sdk/bench/max_iteration.hpp>
+#include <nt2/sdk/bench/max_duration.hpp>
+#include <nt2/sdk/bench/stat/average.hpp>
+#include <nt2/sdk/bench/stat/median.hpp>
+#include <nt2/sdk/bench/stat/min.hpp>
+#include <nt2/sdk/bench/stat/max.hpp>
+#include <cmath>
 
-template<typename T> NT2_EXPERIMENT(cosinus)
+// - Regular benchmarks
+NT2_BENCHMARK(empty, (nt2::max_duration)((0.25)) )
 {
-  public:
-  cosinus ( std::size_t n, double d )
-            : NT2_EXPRIMENT_CTOR(d,"cycles/elements")
-            , size(n)
-  {}
 
-  virtual void run() const
-  {
-    for(int i=0;i<size;++i) y[i] = std::cos(x[i]);
-  }
+}
 
-  virtual double compute(nt2::benchmark_result_t const& r) const
-  {
-    return r.first/double(size);
-  }
-
-  virtual void info(std::ostream& os) const { os << size; }
-
-  virtual void reset() const
-  {
-    x.resize(size);
-    y.resize(size);
-    nt2::roll(x,-3.14159/2.,3.14159/2);
-    nt2::roll(y,-3.14159/2.,3.14159/2);
-  }
-
-  private:
-  int       size;
-  mutable   std::vector<T> x,y;
-};
-
-NT2_EXPERIMENT(empty)
+NT2_BENCHMARK(sleepy, (nt2::max_iteration)((5)) )
 {
-  public:
-  empty (std::size_t n, double d = 1)
-            : NT2_EXPRIMENT_CTOR(d,"cycles/elements"), size(n)
-  {}
+  sleep(1);
+}
 
-  virtual void run() const {}
-  virtual double compute(nt2::benchmark_result_t const& r) const
-  {
-    return r.first / double(size);
-  }
+NT2_BENCHMARK_WITH_METRIC( empty_i
+                  , (nt2::max_iteration)((100000))
+                  , (nt2::cycles_per_element<nt2::stat::min_>)
+                    (nt2::cycles_per_element<nt2::stat::max_>)
+                  )
+{
 
-  private:
-  std::size_t size;
-};
+}
 
-/*
-  empty is an empty test, it shoudl return 0 cycles/elements
-*/
-NT2_RUN_EXPERIMENT(empty)(1);
-NT2_RUN_EXPERIMENT(empty)(1000);
+NT2_BENCHMARK_WITH_METRIC( empty_c
+                  , (nt2::max_duration)((0.25))
+                  , (nt2::cycles_per_element<nt2::stat::min_>)
+                    (nt2::cycles_per_element<nt2::stat::average_>)
+                    (nt2::cycles_per_element<nt2::stat::median_>)
+                    (nt2::cycles_per_element<nt2::stat::max_>)
+                  )
+{
 
-/*
- Simple scalar AXPY benchmark to see if we catch cache misses
-*/
-NT2_RUN_EXPERIMENT_TPL( cosinus
-                      , (float)(double)
-                      , (256,3)
-                      );
+}
+
+// - Template benchmarks
+NT2_BENCHMARK_TPL(init,(nt2::max_duration)((0.25)),(int)(float)(double))
+{
+  T input = T(0.);
+  input++;
+}
+
+NT2_BENCHMARK_WITH_METRIC_TPL ( init_i
+                              , (nt2::max_iteration)
+                                ((100000))
+                              , (nt2::cycles_per_element<nt2::stat::min_>)
+                                (nt2::cycles_per_element<nt2::stat::max_>)
+                              , (int)(float)(double)
+                              )
+{
+  T input = T(0.);
+  input++;
+}
+
+NT2_STATEFUL_BENCHMARK_WITH_METRIC_TPL ( cosinus
+                                , (nt2::max_duration)((1))
+                                , ((nt2::nary_range<std::vector<T>,2>))
+                                  (
+                                    ( 2,256
+                                    , -3.14159, 3.14159
+                                    , nt2::geometric(2.5)
+                                    )
+                                  )
+                                , (nt2::cycles_per_element<nt2::stat::median_>)
+                                , (float)(double)
+                                )
+{
+  for(std::size_t i=0;i<work::size();++i)
+    work::a0[i] = std::cos(work::a1[i]);
+}

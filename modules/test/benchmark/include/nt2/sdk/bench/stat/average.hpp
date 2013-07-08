@@ -8,30 +8,24 @@
 //                 See accompanying file LICENSE.txt or copy at
 //                     http://www.boost.org/LICENSE_1_0.txt
 //==============================================================================
-#ifndef NT2_SDK_BENCH_EXPERIMENT_HPP_INCLUDED
-#define NT2_SDK_BENCH_EXPERIMENT_HPP_INCLUDED
+#ifndef NT2_SDK_BENCH_STAT_AVERAGE_HPP_INCLUDED
+#define NT2_SDK_BENCH_STAT_AVERAGE_HPP_INCLUDED
 
-#include <nt2/sdk/bench/config.hpp>
+#include <nt2/sdk/bench/workbench.hpp>
+#include <boost/accumulators/statistics/mean.hpp>
 #include <string>
 
-namespace nt2
+namespace nt2 { namespace stat
 {
-  class measure;
-
-  // Experiment  : code to run
-  class BOOST_SYMBOL_VISIBLE experiment
+  struct average_
   {
-    public:
+    template<typename Data> static double evaluate(Data const d)
+    {
+      return boost::accumulators::mean(d);
+    }
 
-    NT2_TEST_BENCHMARK_DECL experiment(std::string const&);
-    NT2_TEST_BENCHMARK_DECL virtual ~experiment();
-
-    NT2_TEST_BENCHMARK_DECL experiment* add_measure(measure* m);
-
-    virtual void body() = 0;
-
-    std::string name;
+    static std::string unit() { return " (average)"; }
   };
-}
+} }
 
 #endif

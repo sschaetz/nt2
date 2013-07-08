@@ -8,29 +8,32 @@
 //                 See accompanying file LICENSE.txt or copy at
 //                     http://www.boost.org/LICENSE_1_0.txt
 //==============================================================================
-#ifndef NT2_SDK_BENCH_EXPERIMENT_HPP_INCLUDED
-#define NT2_SDK_BENCH_EXPERIMENT_HPP_INCLUDED
+#ifndef NT2_SDK_BENCH_MEASURE_ABSOLUTE_TIME_HPP_INCLUDED
+#define NT2_SDK_BENCH_MEASURE_ABSOLUTE_TIME_HPP_INCLUDED
 
-#include <nt2/sdk/bench/config.hpp>
+#include <nt2/sdk/bench/measure.hpp>
 #include <string>
 
 namespace nt2
 {
-  class measure;
+  class workbench;
 
-  // Experiment  : code to run
-  class BOOST_SYMBOL_VISIBLE experiment
+  template<typename Stat>
+  struct absolute_time : nt2::measure
   {
-    public:
+    NT2_TEST_BENCHMARK_DECL
+    virtual double run( workbench*
+                      , details::times_set const& t
+                      , details::cycles_set const&
+                      ) const
+    {
+      return Stat::evaluate(t) * 1e-6;
+    }
 
-    NT2_TEST_BENCHMARK_DECL experiment(std::string const&);
-    NT2_TEST_BENCHMARK_DECL virtual ~experiment();
-
-    NT2_TEST_BENCHMARK_DECL experiment* add_measure(measure* m);
-
-    virtual void body() = 0;
-
-    std::string name;
+    std::string unit() const
+    {
+      return "second" + Stat::unit();
+    }
   };
 }
 

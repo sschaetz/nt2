@@ -8,35 +8,73 @@
 //                 See accompanying file LICENSE.txt or copy at
 //                     http://www.boost.org/LICENSE_1_0.txt
 //==============================================================================
-#include <cstdio>
-#include <nt2/sdk/bench/config.hpp>
 #include <nt2/sdk/bench/details/overheads.hpp>
-#include <nt2/sdk/bench/perform_benchmark.hpp>
+#include <nt2/sdk/bench/config.hpp>
+#include <nt2/sdk/bench/workbench.hpp>
+#include <nt2/sdk/bench/experiment.hpp>
+#include <nt2/sdk/bench/max_duration.hpp>
+#include <nt2/sdk/bench/details/measure.hpp>
+#include <nt2/sdk/bench/stat/average.hpp>
+#include <nt2/sdk/bench/stat/median.hpp>
+#include <nt2/sdk/bench/stat/min.hpp>
+#include <nt2/sdk/bench/stat/max.hpp>
+#include <boost/array.hpp>
+#include <iostream>
 
 namespace nt2 { namespace details
 {
+  // Overhead experiment - just do nothing
+  struct overhead_xp : experiment, max_duration, workbench
+  {
+    overhead_xp() : experiment(""), max_duration(0.), workbench() {}
+    virtual void body() {}
+  };
+
   // Overhead offsets:
   // http://www.motherboardpoint.com/rdtsc-performance-different-x86-archs-t166722.html
-  static std::pair<unsigned int, unsigned int> calculate_overhead()
+  static std::pair<double, double> calculate_overhead()
   {
-    struct null_benchmark_t : base_experiment
+    overhead_xp xp;
+
+    time_quantum_t const total_duration( to_timequantums(250000) );
+    time_quantum_t       duration      (0);
+
+    details::quantum_set  times_;
+    details::cycles_set cycles_;
+
+    do
     {
-      null_benchmark_t() {}
-      BOOST_DISPATCH_NOTHROW void run() const BOOST_DISPATCH_OVERRIDE {}
-    } null_benchmark;
+      time_quantum_t const time_start  ( time_quantum() );
+      cycles_t       const cycles_start( read_cycles() );
 
-    volatile null_benchmark_t& owb( null_benchmark );
+      xp.body();
 
-    nt2::intermediate_result_t const
-    result( perform_benchmark_impl(const_cast<null_benchmark_t&>( owb ), 0.25) );
+      cycles_t       const cycles_end( read_cycles() );
+      time_quantum_t const time_end  ( time_quantum() );
 
-    return std::make_pair ( static_cast<unsigned int>( result.first  )
-                          , static_cast<unsigned int>( result.second )
+      cycles_t       const burned_cycles( cycles_end - cycles_start );
+      time_quantum_t const elapsed_time ( time_end   - time_start   );
+
+      times_( elapsed_time );
+      cycles_(burned_cycles);
+
+      duration += elapsed_time;
+    } while( duration < total_duration );
+
+    return std::make_pair ( boost::accumulators::median(cycles_)
+                          , boost::accumulators::median(times_)
                           );
   }
 
-  static std::pair<unsigned int,unsigned int> const ior(calculate_overhead());
+  static std::pair<double,double> const ior(calculate_overhead());
 
-  unsigned int const cycles_overhead(ior.first);
-  unsigned int const quantums_overhead(ior.second);
+  double  const cycles_overhead(ior.first);
+  double  const quantums_overhead(ior.second);
+
+  NT2_TEST_BENCHMARK_DECL void display_overheads()
+  {
+    std::cout << "Overheads:\t"
+              << cycles_overhead << " - " << quantums_overhead
+              << std::endl;
+  }
 } }

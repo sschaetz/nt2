@@ -26,16 +26,11 @@ typedef BOOST_SIMD_DEFAULT_EXTENSION ext_t;
 
 NT2_TIMING(abs_, (RS(float  , -100, 100)) );
 NT2_TIMING(abs_, (RS(double , -100, 100)) );
-
-NT2_TIMING(plus_, (RS(float, -100, 100))(RS(float, -100, 100)) );
-NT2_TIMING(plus_, (RS(double, -100, 100))(RS(double, -100, 100)) );
-
-NT2_TIMING(cos_, (RS(float  , -3.14/4, 3.14/4)) );
-NT2_TIMING(cos_, (RS(double , -3.14/4, 3.14/4)) );
-
 NT2_TIMING(abs_, (RS((native<float ,ext_t>) , -100, 100)) );
 NT2_TIMING(abs_, (RS((native<double,ext_t>) , -100, 100)) );
 
+NT2_TIMING(plus_, (RS(float, -100, 100))(RS(float, -100, 100)) );
+NT2_TIMING(plus_, (RS(double, -100, 100))(RS(double, -100, 100)) );
 NT2_TIMING(plus_, (RS((native<float ,ext_t>), -100, 100))
                   (RS((native<float ,ext_t>), -100, 100))
           );
@@ -44,5 +39,7 @@ NT2_TIMING(plus_, (RS((native<double,ext_t>), -100, 100))
                   (RS((native<double,ext_t>), -100, 100))
           );
 
+NT2_TIMING(cos_, (RS(float  , -3.14/4, 3.14/4)) );
+NT2_TIMING(cos_, (RS(double , -3.14/4, 3.14/4)) );
 NT2_TIMING(cos_, (RS((native<float ,ext_t>) , -3.14159/4, 3.14159/4)) );
 NT2_TIMING(cos_, (RS((native<double,ext_t>) , -3.14159/4, 3.14159/4)) );

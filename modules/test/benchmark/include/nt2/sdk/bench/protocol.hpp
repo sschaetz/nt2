@@ -8,29 +8,22 @@
 //                 See accompanying file LICENSE.txt or copy at
 //                     http://www.boost.org/LICENSE_1_0.txt
 //==============================================================================
-#ifndef NT2_SDK_BENCH_EXPERIMENT_HPP_INCLUDED
-#define NT2_SDK_BENCH_EXPERIMENT_HPP_INCLUDED
+#ifndef NT2_SDK_BENCH_PROTOCOL_HPP_INCLUDED
+#define NT2_SDK_BENCH_PROTOCOL_HPP_INCLUDED
 
 #include <nt2/sdk/bench/config.hpp>
-#include <string>
+#include <nt2/sdk/timing/now.hpp>
 
 namespace nt2
 {
-  class measure;
+  class experiment;
 
-  // Experiment  : code to run
-  class BOOST_SYMBOL_VISIBLE experiment
+  // Measure : strategy on how to measure
+  class BOOST_SYMBOL_VISIBLE protocol
   {
     public:
-
-    NT2_TEST_BENCHMARK_DECL experiment(std::string const&);
-    NT2_TEST_BENCHMARK_DECL virtual ~experiment();
-
-    NT2_TEST_BENCHMARK_DECL experiment* add_measure(measure* m);
-
-    virtual void body() = 0;
-
-    std::string name;
+    NT2_TEST_BENCHMARK_DECL virtual ~protocol();
+    virtual void run(experiment* e) = 0;
   };
 }
 

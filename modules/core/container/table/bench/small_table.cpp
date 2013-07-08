@@ -6,127 +6,41 @@
 //                 See accompanying file LICENSE.txt or copy at
 //                     http://www.boost.org/LICENSE_1_0.txt
 //==============================================================================
-#include <nt2/table.hpp>
+#include <nt2/sdk/bench/benchmark.hpp>
+#include <nt2/sdk/bench/measure/cycles_per_element.hpp>
+#include <nt2/sdk/bench/workbench/nary_range.hpp>
+#include <nt2/sdk/bench/max_duration.hpp>
+#include <nt2/sdk/bench/stat/median.hpp>
 #include <nt2/include/functions/cos.hpp>
 #include <nt2/include/functions/sin.hpp>
 #include <nt2/include/functions/sqrt.hpp>
+#include <nt2/table.hpp>
 
-#include <nt2/sdk/bench/benchmark.hpp>
-
-template< typename Container
-        , typename Tag = boost::dispatch::default_site<void>::type
-        >
-NT2_EXPERIMENT(small_table)
+NT2_STATEFUL_BENCHMARK_WITH_METRIC_TPL
+( small_table
+, (nt2::max_duration)((3.))
+, ((nt2::nary_range< nt2::table<T>, 3 >))
+  (( 2,4096, -3.1415/4., 3.1415/4., nt2::geometric(2)))
+, (nt2::cycles_per_element<nt2::stat::median_>)
+, (float)(double)
+)
 {
-  public:
-  small_table ( std::size_t s0, std::size_t s1, bool status = false )
-              : NT2_EXPRIMENT_CTOR(1.,status ? "cycles/elements" : "speed-up")
-              , d0(s0), d1(s1)
-              , is_ref(status)
-  {}
+  work::a2  = nt2::sqrt ( nt2::cos(work::a0)/nt2::sin(work::a0)
+                        + work::a1*work::a1/work::a0
+                        );
+}
 
-  virtual void run() const
-  {
-    a2 = nt2::sqrt(nt2::cos(a0)/nt2::sin(a0) + a1*a1/a0);
-  }
-
-  virtual double compute(nt2::benchmark_result_t const& r) const
-  {
-    if(is_ref)
-    {
-      nt2::reference_timing().second = double(r.first);
-      return r.first/double(d0*d1);
-    }
-    else
-    {
-      return nt2::reference_timing().first / nt2::reference_timing().second;
-    }
-  }
-
-  virtual void info(std::ostream& os) const { os << d0 << "x" << d1; }
-
-  virtual void reset() const
-  {
-    a0.resize(nt2::of_size((is_ref ? d0:1), (is_ref ? d1:1)));
-    a1.resize(nt2::of_size((is_ref ? d0:1), (is_ref ? d1:1)));
-    a2.resize(nt2::of_size((is_ref ? d0:1), (is_ref ? d1:1)));
-
-    nt2::roll ( a0, -.28319, .28319 );
-    nt2::roll ( a1, -.28319, .28319 );
-  }
-
-  private:
-          std::size_t               d0,d1;
-          bool                      is_ref;
-  mutable Container                 a0,a1,a2;
-};
-
-template<typename T> NT2_EXPERIMENT(small_table< std::vector<T> >)
+NT2_STATEFUL_BENCHMARK_WITH_METRIC_TPL
+( small_vector
+, (nt2::max_duration)((3.))
+, ((nt2::nary_range< std::vector<T>,3 >))
+  (( 2,4096, -3.1415/4., 3.1415/4., nt2::geometric(2)))
+, (nt2::cycles_per_element<nt2::stat::median_>)
+, (float)(double)
+)
 {
-  public:
-  small_table ( std::size_t s0, std::size_t s1)
-              : NT2_EXPRIMENT_CTOR(1.,"cycles/elements")
-              , d0(s0), d1(s1)
-  {}
-
-  virtual void run() const
-  {
-    for(std::size_t i=0; i<d0*d1; ++i)
-      a2[i] = std::sqrt(std::cos(a0[i])/std::sin(a0[i]) + a1[i]*a1[i]/a0[i]);
-  }
-
-  virtual double compute(nt2::benchmark_result_t const& r) const
-  {
-    nt2::reference_timing() = r;
-    return r.first/double(d0*d1);
-  }
-
-  virtual void info(std::ostream& os) const { os << d0 << "x" << d1; }
-
-  virtual void reset() const
-  {
-    a0.resize(d0*d1);
-    a1.resize(d0*d1);
-    a2.resize(d0*d1);
-
-    nt2::roll ( a0, -.28319, .28319 );
-    nt2::roll ( a1, -.28319, .28319 );
-  }
-
-  private:
-          std::size_t               d0,d1;
-          bool                      is_ref;
-  mutable std::vector<T>            a0,a1,a2;
-};
-
-#define NT2_TABLE_EXP(T,N)                                                    \
-NT2_RUN_EXPERIMENT_TPL( small_table, (std::vector<T>) , (1<<N , 1<<N));       \
-NT2_RUN_EXPERIMENT_TPL( small_table, (nt2::table<T>)  , (1<<N , 1<<N,true));  \
-NT2_RUN_EXPERIMENT_TPL( small_table, (nt2::table<T>)  , (1<<N , 1<<N));       \
-/**/
-
-NT2_TABLE_EXP(double ,  1 );
-NT2_TABLE_EXP(double ,  2 );
-NT2_TABLE_EXP(double ,  3 );
-NT2_TABLE_EXP(double ,  4 );
-NT2_TABLE_EXP(double ,  5 );
-NT2_TABLE_EXP(double ,  6 );
-NT2_TABLE_EXP(double ,  7 );
-NT2_TABLE_EXP(double ,  8 );
-NT2_TABLE_EXP(double ,  9 );
-NT2_TABLE_EXP(double , 10 );
-NT2_TABLE_EXP(double , 11 );
-NT2_TABLE_EXP(double , 12 );
-
-NT2_TABLE_EXP(float ,  1 );
-NT2_TABLE_EXP(float ,  2 );
-NT2_TABLE_EXP(float ,  3 );
-NT2_TABLE_EXP(float ,  4 );
-NT2_TABLE_EXP(float ,  5 );
-NT2_TABLE_EXP(float ,  6 );
-NT2_TABLE_EXP(float ,  7 );
-NT2_TABLE_EXP(float ,  8 );
-NT2_TABLE_EXP(float ,  9 );
-NT2_TABLE_EXP(float , 10 );
-NT2_TABLE_EXP(float , 11 );
-NT2_TABLE_EXP(float , 12 );
+  for(std::size_t i=0; i<work::size(); ++i)
+    work::a2[i] = std::sqrt ( std::cos(work::a0[i])/std::sin(work::a0[i])
+                            + work::a1[i]*work::a1[i]/work::a0[i]
+                            );
+}

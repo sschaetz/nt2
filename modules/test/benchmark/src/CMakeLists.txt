@@ -11,14 +11,17 @@
 include(NT2Module)
 nt2_module_source_setup(test.benchmark)
 
-set(SOURCES
-    base_experiment.cpp
-    suite.cpp
-    priority.cpp
-    median.cpp
-    overheads.cpp
-    perform_benchmark.cpp
-   )
+set ( SOURCES
+      experiment.cpp
+      workbench.cpp
+      measure.cpp
+      max_duration.cpp
+      max_iteration.cpp
+      suite.cpp
+      priority.cpp
+      protocol.cpp
+      overheads.cpp
+    )
 
 if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUCXX)
   add_definitions(-fvisibility=hidden)

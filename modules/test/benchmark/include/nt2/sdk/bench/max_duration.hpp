@@ -8,29 +8,24 @@
 //                 See accompanying file LICENSE.txt or copy at
 //                     http://www.boost.org/LICENSE_1_0.txt
 //==============================================================================
-#ifndef NT2_SDK_BENCH_EXPERIMENT_HPP_INCLUDED
-#define NT2_SDK_BENCH_EXPERIMENT_HPP_INCLUDED
+#ifndef NT2_SDK_BENCH_MAX_DURATION_HPP_INCLUDED
+#define NT2_SDK_BENCH_MAX_DURATION_HPP_INCLUDED
 
 #include <nt2/sdk/bench/config.hpp>
-#include <string>
+#include <nt2/sdk/bench/protocol.hpp>
 
 namespace nt2
 {
-  class measure;
+  class experiment;
 
-  // Experiment  : code to run
-  class BOOST_SYMBOL_VISIBLE experiment
+  struct BOOST_SYMBOL_VISIBLE max_duration : protocol
   {
-    public:
+    NT2_TEST_BENCHMARK_DECL max_duration(double);
+    NT2_TEST_BENCHMARK_DECL virtual ~max_duration();
+    NT2_TEST_BENCHMARK_DECL virtual void run(experiment* e);
 
-    NT2_TEST_BENCHMARK_DECL experiment(std::string const&);
-    NT2_TEST_BENCHMARK_DECL virtual ~experiment();
-
-    NT2_TEST_BENCHMARK_DECL experiment* add_measure(measure* m);
-
-    virtual void body() = 0;
-
-    std::string name;
+    private:
+    double duration_;
   };
 }
 

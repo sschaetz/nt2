@@ -12,11 +12,15 @@
 #define NT2_SDK_BENCH_DETAILS_OVERHEADS_HPP_INCLUDED
 
 #include <nt2/sdk/bench/config.hpp>
+#include <nt2/sdk/timing/now.hpp>
+#include <boost/array.hpp>
 
 namespace nt2 { namespace details
 {
-  NT2_TEST_BENCHMARK_DECL extern unsigned int const cycles_overhead;
-  NT2_TEST_BENCHMARK_DECL extern unsigned int const quantums_overhead;
+  NT2_TEST_BENCHMARK_DECL extern double const cycles_overhead;
+  NT2_TEST_BENCHMARK_DECL extern double const quantums_overhead;
+
+  NT2_TEST_BENCHMARK_DECL void display_overheads();
 } }
 
 #endif
