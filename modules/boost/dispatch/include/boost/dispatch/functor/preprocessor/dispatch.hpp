@@ -17,6 +17,7 @@
 #include <boost/dispatch/details/parameters.hpp>
 #include <boost/dispatch/preprocessor/strip.hpp>
 #include <boost/dispatch/functor/details/dispatch.hpp>
+#include <boost/dispatch/functor/details/namespace.hpp>
 #include <boost/dispatch/attributes.hpp>
 #include <boost/preprocessor/seq/size.hpp>
 #include <boost/preprocessor/seq/elem.hpp>
@@ -30,16 +31,6 @@
 #define BOOST_DISPATCH_TYPE(z,n,t) class BOOST_DISPATCH_PP_STRIP(BOOST_PP_SEQ_ELEM(n,t))
 #define BOOST_DISPATCH_ARG(z,n,t) , BOOST_DISPATCH_PP_STRIP(BOOST_PP_SEQ_ELEM(n,t)) const
 #define BOOST_DISPATCH_TAG(z,n,t) BOOST_DISPATCH_PP_STRIP(BOOST_PP_SEQ_ELEM(n,t))
-
-// Namespace-related helpers
-#define BOOST_DISPATCH_NS_(s,data,elem) elem ::
-#define BOOST_DISPATCH_NS(seq) :: BOOST_PP_SEQ_FOR_EACH(BOOST_DISPATCH_NS_, ~, seq)
-
-#define BOOST_DISPATCH_CLOSE_(s,data,elem) }
-#define BOOST_DISPATCH_CLOSE(seq) BOOST_PP_SEQ_FOR_EACH(BOOST_DISPATCH_CLOSE_, ~, seq)
-
-#define BOOST_DISPATCH_REOPEN_(s,data,elem) namespace elem {
-#define BOOST_DISPATCH_REOPEN(seq) BOOST_PP_SEQ_FOR_EACH(BOOST_DISPATCH_REOPEN_, ~, seq)
 
 //==============================================================================
 /*!

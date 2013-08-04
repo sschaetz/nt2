@@ -10,6 +10,7 @@
 #define NT2_SDK_FUNCTOR_HIERARCHY_HPP_INCLUDED
 
 #include <boost/dispatch/functor/forward.hpp>
+#include <boost/dispatch/functor/preprocessor/declare.hpp>
 #include <nt2/sdk/meta/hierarchy_of.hpp>
 #include <nt2/sdk/meta/fusion.hpp>
 #include <nt2/sdk/meta/mpl.hpp>
@@ -45,5 +46,7 @@ namespace ext
   using boost::dispatch::ignore_unused;
 
 } }
+
+#define NT2_FUNCTION_DECLARE(Name) BOOST_DISPATCH_FUNCTION_DECLARE((nt2)(tag), Name, nt2::tag::Name)
 
 #endif

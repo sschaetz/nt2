@@ -10,6 +10,7 @@
 #define BOOST_SIMD_SDK_FUNCTOR_HIERARCHY_HPP_INCLUDED
 
 #include <boost/dispatch/functor/forward.hpp>
+#include <boost/dispatch/functor/preprocessor/declare.hpp>
 #include <boost/dispatch/meta/hierarchy_of.hpp>
 #include <boost/dispatch/meta/fusion.hpp>
 #include <boost/dispatch/meta/mpl.hpp>
@@ -88,5 +89,7 @@ namespace ext
   using boost::dispatch::ignore_unused;
 
 } } }
+
+#define BOOST_SIMD_FUNCTION_DECLARE(Name) BOOST_DISPATCH_FUNCTION_DECLARE((boost)(simd)(tag), Name, boost::simd::tag::Name)
 
 #endif
