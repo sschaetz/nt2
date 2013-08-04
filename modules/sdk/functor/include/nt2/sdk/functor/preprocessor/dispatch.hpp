@@ -33,4 +33,7 @@ BOOST_DISPATCH_REGISTER_IF((nt2)(ext),Tag,Site,Types,Cond,Seq)
 #define NT2_REGISTER_DISPATCH_IF_TPL(Tag,Site,Types,Cond,Seq)                  \
 BOOST_DISPATCH_REGISTER_IF_TPL((nt2)(ext),Tag,Site,Types,Cond,Seq)
 
+#define NT2_REGISTER_DISPATCH_IF_GEN(Tag,Site,Types,Cond,Seq)                  \
+BOOST_DISPATCH_REGISTER_IF_GEN((nt2)(ext),Tag,Site,Types,Cond,Seq)
+
 #endif

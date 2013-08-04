@@ -30,4 +30,7 @@ BOOST_DISPATCH_REGISTER_IF((boost)(simd)(ext),Tag,Site,Types,Cond,Seq)
 #define BOOST_SIMD_REGISTER_DISPATCH_IF_TPL(Tag,Site,Types,Cond,Seq)           \
 BOOST_DISPATCH_REGISTER_IF_TPL((boost)(simd)(ext),Tag,Site,Types,Cond,Seq)
 
+#define BOOST_SIMD_REGISTER_DISPATCH_TO_GEN(Tag,Site,Types,Seq,Ret)            \
+BOOST_DISPATCH_REGISTER_TO_GEN((boost)(simd)(ext),Tag,Site,Types,Seq,Ret)
+
 #endif

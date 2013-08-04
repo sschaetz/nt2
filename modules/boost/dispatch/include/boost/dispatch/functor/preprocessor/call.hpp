@@ -120,4 +120,25 @@ BOOST_DISPATCH_REGISTER_TPL_IF(NS, Tag, Site, Types, Cond, Seq)                \
 BOOST_DISPATCH_IMPLEMENT_BODY(Tag, Site, Types, Seq, BOOST_DISPATCH_TYPE_TPL)  \
 /**/
 
+
+#define BOOST_DISPATCH_IMPLEMENT_GEN(NS, Tag, Site, Types, Seq)                \
+BOOST_DISPATCH_REGISTER_GEN(NS, Tag, Site, Types, Seq)                         \
+BOOST_DISPATCH_IMPLEMENT_BODY(Tag, Site, Types, Seq, BOOST_DISPATCH_TYPE)      \
+/**/
+
+#define BOOST_DISPATCH_IMPLEMENT_TPL_GEN(NS, Tag, Site, Types, Seq)            \
+BOOST_DISPATCH_REGISTER_TPL_GEN(NS, Tag, Site, Types, Seq)                     \
+BOOST_DISPATCH_IMPLEMENT_BODY(Tag, Site, Types, Seq, BOOST_DISPATCH_TYPE_TPL)  \
+/**/
+
+#define BOOST_DISPATCH_IMPLEMENT_IF_GEN(NS, Tag, Site, Types, Cond, Seq)       \
+BOOST_DISPATCH_REGISTER_IF_GEN(NS, Tag, Site, Types, Cond, Seq)                \
+BOOST_DISPATCH_IMPLEMENT_BODY(Tag, Site, Types, Seq, BOOST_DISPATCH_TYPE)      \
+/**/
+
+#define BOOST_DISPATCH_IMPLEMENT_TPL_IF_GEN(NS, Tag, Site, Types, Cond, Seq)   \
+BOOST_DISPATCH_REGISTER_TPL_IF_GEN(NS, Tag, Site, Types, Cond, Seq)            \
+BOOST_DISPATCH_IMPLEMENT_BODY(Tag, Site, Types, Seq, BOOST_DISPATCH_TYPE_TPL)  \
+/**/
+
 #endif

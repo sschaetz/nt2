@@ -54,7 +54,7 @@
  * \param Seq Sequence of hierarchy defining the overload
  */
 //==============================================================================
-#define BOOST_DISPATCH_REGISTER_TO(NS, Tag, Site, Types, Seq, Ret)             \
+#define BOOST_DISPATCH_REGISTER_TO_GEN(NS, Tag, Site, Types, Seq, Ret)         \
 BOOST_DISPATCH_CLOSE(NS)                                                       \
 namespace boost { namespace dispatch { namespace meta                          \
 {                                                                              \
@@ -93,7 +93,7 @@ BOOST_DISPATCH_REOPEN(NS)                                                      \
  * \param Seq Sequence of hierarchy defining the overload
  */
 //==============================================================================
-#define BOOST_DISPATCH_REGISTER_TPL_TO(NS, Tag, Site, Types, Seq, Ret)         \
+#define BOOST_DISPATCH_REGISTER_TPL_TO_GEN(NS, Tag, Site, Types, Seq, Ret)     \
 BOOST_DISPATCH_CLOSE(NS)                                                       \
 namespace boost { namespace dispatch { namespace meta                          \
 {                                                                              \
@@ -133,7 +133,7 @@ BOOST_DISPATCH_REOPEN(NS)                                                      \
  * \param Seq Sequence of hierarchy defining the overload
  */
 //==============================================================================
-#define BOOST_DISPATCH_REGISTER_TO_IF(NS, Tag, Site, Types, Cond, Seq, Ret)    \
+#define BOOST_DISPATCH_REGISTER_TO_IF_GEN(NS, Tag, Site, Types, Cond, Seq, Ret) \
 BOOST_DISPATCH_CLOSE(NS)                                                       \
 namespace boost { namespace dispatch { namespace meta                          \
 {                                                                              \
@@ -176,7 +176,7 @@ BOOST_DISPATCH_REOPEN(NS)                                                      \
  * \param Seq Sequence of hierarchy defining the overload
  */
 //==============================================================================
-#define BOOST_DISPATCH_REGISTER_TPL_TO_IF(NS, Tag, Site, Types, Cond, Seq, Ret) \
+#define BOOST_DISPATCH_REGISTER_TPL_TO_IF_GEN(NS, Tag, Site, Types, Cond, Seq, Ret) \
 BOOST_DISPATCH_CLOSE(NS)                                                       \
 namespace boost { namespace dispatch { namespace meta                          \
 {                                                                              \
@@ -218,36 +218,41 @@ implement< BOOST_DISPATCH_PP_STRIP(Tag)                                        \
          >                                                                     \
 /**/
 
-#define BOOST_DISPATCH_REGISTER(NS, Tag, Site, Types, Seq)                     \
-BOOST_DISPATCH_REGISTER_TO( NS, Tag, Site, Types, Seq                          \
+#define BOOST_DISPATCH_REGISTER_GEN(NS, Tag, Site, Types, Seq)                 \
+BOOST_DISPATCH_REGISTER_TO_GEN( NS, Tag, Site, Types, Seq                      \
                           , ( BOOST_DISPATCH_NS(NS)                            \
                               BOOST_DISPATCH_IMPLEMENT_(Tag, Site, Seq)        \
                             )                                                  \
                           )                                                    \
 /**/
 
-#define BOOST_DISPATCH_REGISTER_TPL(NS, Tag, Site, Types, Seq)                 \
-BOOST_DISPATCH_REGISTER_TPL_TO( NS, Tag, Site, Types, Seq                      \
+#define BOOST_DISPATCH_REGISTER_TPL_GEN(NS, Tag, Site, Types, Seq)             \
+BOOST_DISPATCH_REGISTER_TPL_TO_GEN( NS, Tag, Site, Types, Seq                  \
                               , ( BOOST_DISPATCH_NS(NS)                        \
                                   BOOST_DISPATCH_IMPLEMENT_(Tag, Site, Seq)    \
                                 )                                              \
                               )                                                \
 /**/
 
-#define BOOST_DISPATCH_REGISTER_IF(NS, Tag, Site, Types, Cond, Seq)            \
-BOOST_DISPATCH_REGISTER_TO_IF( NS, Tag, Site, Types, Cond, Seq                 \
+#define BOOST_DISPATCH_REGISTER_IF_GEN(NS, Tag, Site, Types, Cond, Seq)        \
+BOOST_DISPATCH_REGISTER_TO_IF_GEN( NS, Tag, Site, Types, Cond, Seq             \
                              , ( BOOST_DISPATCH_NS(NS)                         \
                                  BOOST_DISPATCH_IMPLEMENT_(Tag, Site, Seq)     \
                                )                                               \
                              )                                                 \
 /**/
 
-#define BOOST_DISPATCH_REGISTER_TPL_IF(NS, Tag, Site, Types, Cond, Seq)        \
-BOOST_DISPATCH_REGISTER_TPL_TO_IF( NS, Tag, Site, Types, Cond, Seq             \
+#define BOOST_DISPATCH_REGISTER_TPL_IF_GEN(NS, Tag, Site, Types, Cond, Seq)    \
+BOOST_DISPATCH_REGISTER_TPL_TO_IF_GEN( NS, Tag, Site, Types, Cond, Seq         \
                                  , ( BOOST_DISPATCH_NS(NS)                     \
                                      BOOST_DISPATCH_IMPLEMENT_(Tag, Site, Seq) \
                                    )                                           \
                                  )                                             \
 /**/
+
+#define BOOST_DISPATCH_REGISTER(NS, Tag, Site, Types, Seq) BOOST_DISPATCH_REGISTER_GEN(NS, BOOST_DISPATCH_NS(NS) Tag, Site, Types, Seq)
+#define BOOST_DISPATCH_REGISTER_TPL(NS, Tag, Site, Types, Seq) BOOST_DISPATCH_REGISTER_TPL_GEN(NS, BOOST_DISPATCH_NS(NS) Tag, Site, Types, Seq)
+#define BOOST_DISPATCH_REGISTER_IF(NS, Tag, Site, Types, Cond, Seq) BOOST_DISPATCH_REGISTER_IF_GEN(NS, BOOST_DISPATCH_NS(NS) Tag, Site, Types, Cond, Seq)
+#define BOOST_DISPATCH_REGISTER_TPL_IF(NS, Tag, Site, Types, Cond, Seq) BOOST_DISPATCH_REGISTER_TPL_IF_GEN(NS, BOOST_DISPATCH_NS(NS) Tag, Site, Types, Cond, Seq)
 
 #endif

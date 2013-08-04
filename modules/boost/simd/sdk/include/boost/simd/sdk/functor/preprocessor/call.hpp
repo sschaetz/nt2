@@ -24,4 +24,13 @@ BOOST_DISPATCH_IMPLEMENT_TPL((boost)(simd)(ext),Tag,Site,Types,Seq)
 #define BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF(Tag,Site,Types,Cond,Seq)         \
 BOOST_DISPATCH_IMPLEMENT_IF((boost)(simd)(ext),Tag,Site,Types,Cond,Seq)
 
+#define BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN(Tag,Site,Types,Seq)             \
+BOOST_DISPATCH_IMPLEMENT_GEN((boost)(simd)(ext),Tag,Site,Types,Seq)
+
+#define BOOST_SIMD_FUNCTOR_IMPLEMENTATION_TPL_GEN(Tag,Site,Types,Seq)         \
+BOOST_DISPATCH_IMPLEMENT_TPL_GEN((boost)(simd)(ext),Tag,Site,Types,Seq)
+
+#define BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN(Tag,Site,Types,Cond,Seq)     \
+BOOST_DISPATCH_IMPLEMENT_IF_GEN((boost)(simd)(ext),Tag,Site,Types,Cond,Seq)
+
 #endif
