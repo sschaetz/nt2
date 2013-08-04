@@ -20,7 +20,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::sqr_abs_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::sqr_abs_, tag::cpu_
                             , (A0)
                             , (scalar_< arithmetic_<A0> >)
                             )
@@ -34,7 +34,7 @@ namespace boost { namespace simd { namespace ext
                                            : static_cast<result_type>(tmp);
     }
   };
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::sqr_abs_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::sqr_abs_, tag::cpu_
                             , (A0)
                             , (scalar_< ints64_<A0> >)
                             )
@@ -49,7 +49,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::sqr_abs_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::sqr_abs_, tag::cpu_
                             , (A0)
                             , (scalar_< floating_<A0> >)
                             )

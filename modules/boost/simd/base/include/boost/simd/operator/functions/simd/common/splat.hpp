@@ -25,7 +25,7 @@ namespace boost { namespace simd { namespace ext
   //============================================================================
   // With no idea what we're doing, just fill the vector piecewise
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::splat_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::splat_, tag::cpu_
                             , (A0)(A1)(X)
                             , (scalar_< unspecified_<A0> >)
                               ((target_< simd_< unspecified_<A1>, X > >))
@@ -45,7 +45,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::splat_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::splat_, tag::cpu_
                                       , (A0)(A1)(X)(Y)
                                       , (mpl::equal_to
                                         < boost::simd::meta::cardinal_of<A0>
@@ -74,7 +74,7 @@ namespace boost { namespace simd { namespace ext
   //============================================================================
   // Splatting a SIMD value to another can use bitwise_cast, toint or tofloat (optimizations)
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::splat_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::splat_, tag::cpu_
                                       , (A0)(A1)(X)
                                       , (mpl::equal_to
                                           < boost::simd::meta::cardinal_of<A0>
@@ -94,7 +94,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::splat_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::splat_, tag::cpu_
                                       , (A0)(A1)(X)
                                       , (mpl::equal_to
                                           < boost::simd::meta::cardinal_of<A0>
@@ -114,7 +114,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::splat_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::splat_, tag::cpu_
                                       , (A0)(A1)(X)
                                       , (mpl::equal_to
                                           < boost::simd::meta::cardinal_of<A0>

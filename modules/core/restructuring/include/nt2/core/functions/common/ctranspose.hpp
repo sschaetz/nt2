@@ -21,7 +21,7 @@
 namespace nt2 { namespace ext
 {
   // ctranspose scalar
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::ctranspose_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::ctranspose_, tag::cpu_
                             , (A0)
                             , (scalar_< unspecified_<A0> >)
                             )
@@ -30,7 +30,7 @@ namespace nt2 { namespace ext
   };
 
   // ctranspose optimizations
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::ctranspose_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::ctranspose_, tag::cpu_
                             , (A0)
                             , ((node_<A0, nt2::tag::transpose_, boost::mpl::long_<1>, nt2::container::domain>))
                             )
@@ -38,7 +38,7 @@ namespace nt2 { namespace ext
     BOOST_DISPATCH_RETURNS(1, (A0 const& a0), conj(boost::proto::child_c<0>(a0)))
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::ctranspose_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::ctranspose_, tag::cpu_
                             , (A0)
                             , ((node_<A0, nt2::tag::ctranspose_, boost::mpl::long_<1>, nt2::container::domain>))
                             )
@@ -46,7 +46,7 @@ namespace nt2 { namespace ext
     BOOST_DISPATCH_RETURNS(1, (A0 const& a0), boost::proto::child_c<0>(a0))
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::ctranspose_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::ctranspose_, tag::cpu_
                             , (A0)
                             , ((node_<A0, nt2::tag::conj_, boost::mpl::long_<1>, nt2::container::domain>))
                             )
@@ -80,7 +80,7 @@ namespace nt2 { namespace ext
                              );
 
   // ctranspose implementation
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::run_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_, tag::cpu_
                             , (A0)(State)(Data)
                             , ((node_<A0, nt2::tag::ctranspose_, boost::mpl::long_<1>, nt2::container::domain>))
                               (generic_< integer_<State> >)

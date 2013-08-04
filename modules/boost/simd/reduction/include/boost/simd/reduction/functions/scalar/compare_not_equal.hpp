@@ -13,7 +13,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::compare_not_equal_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::compare_not_equal_, tag::cpu_
                             , (A0)(A1)
                             , (scalar_< fundamental_<A0> >)
                               (scalar_< fundamental_<A1> >)
@@ -23,7 +23,7 @@ namespace boost { namespace simd { namespace ext
     BOOST_SIMD_FUNCTOR_CALL(2) { return result_type(bool(a0) != bool(a1)); }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::compare_not_equal_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::compare_not_equal_, tag::cpu_
                             , (A0)
                             , (scalar_< floating_<A0> >)
                               (scalar_< floating_<A0> >)

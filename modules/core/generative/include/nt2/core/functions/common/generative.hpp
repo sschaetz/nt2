@@ -23,7 +23,7 @@ namespace nt2 { namespace ext
 {
   /// INTERNAL ONLY
   /// of_size + target
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::ext::pure_constant_<Tag>, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::ext::pure_constant_<Tag>, tag::cpu_
                             , (T)(A0)(Tag)
                             , (fusion_sequence_<A0>)
                               (target_< scalar_< unspecified_<T> > >)
@@ -51,7 +51,7 @@ namespace nt2 { namespace ext
 
   /// INTERNAL ONLY
   /// of_size
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::ext::pure_constant_<Tag>, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::ext::pure_constant_<Tag>, tag::cpu_
                             , (A0)(Tag)
                             , (fusion_sequence_<A0>)
                             )
@@ -80,7 +80,7 @@ namespace nt2 { namespace ext
   #define M1(z,n,t) (scalar_< arithmetic_<BOOST_PP_CAT(A,n)> >)
 
   #define M0(z,n,t)                                                             \
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::ext::pure_constant_<Tag>, tag::cpu_          \
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::ext::pure_constant_<Tag>, tag::cpu_          \
                             , (Tag)BOOST_PP_REPEAT(n,M2,~)                      \
                             , BOOST_PP_REPEAT(n,M1,~)                           \
                             )                                                   \
@@ -93,7 +93,7 @@ namespace nt2 { namespace ext
                           )                                                     \
   };                                                                            \
                                                                                 \
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::ext::pure_constant_<Tag>, tag::cpu_          \
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::ext::pure_constant_<Tag>, tag::cpu_          \
                             , (Tag)BOOST_PP_REPEAT(n,M2,~)(T)                   \
                             , BOOST_PP_REPEAT(n,M1,~)                           \
                               (target_< scalar_< unspecified_<T> > >)           \
@@ -120,7 +120,7 @@ namespace nt2 { namespace ext
 
   /// INTERNAL ONLY
   /// size(...)
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::ext::pure_constant_<Tag>, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::ext::pure_constant_<Tag>, tag::cpu_
                             , (A0)(Tag)
                             , ((ast_< A0, nt2::container::domain >))
                             )
@@ -133,7 +133,7 @@ namespace nt2 { namespace ext
 
   /// INTERNAL ONLY
   /// size(...) + target
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::ext::pure_constant_<Tag>, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::ext::pure_constant_<Tag>, tag::cpu_
                             , (Tag)(A0)(T)
                             , ((ast_< A0, nt2::container::domain >))
                               (target_< scalar_< unspecified_<T> > >)

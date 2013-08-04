@@ -29,7 +29,7 @@
 namespace nt2 { namespace ext
 {
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::unifpdf_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::unifpdf_, tag::cpu_
                               , (A0)
                               , (generic_< floating_<A0> >)
                               )
@@ -41,7 +41,7 @@ namespace nt2 { namespace ext
       }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::unifpdf_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::unifpdf_, tag::cpu_
                               , (A0)(A1)(A2)
                               , (generic_< floating_<A0> >)
                               (generic_< floating_<A1> >)

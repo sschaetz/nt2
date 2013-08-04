@@ -19,7 +19,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::split_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::split_
                                       , boost::simd::tag::sse2_
                                       , (A0)(A1)
                                       , (boost::mpl::and_

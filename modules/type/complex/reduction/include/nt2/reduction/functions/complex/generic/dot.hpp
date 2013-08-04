@@ -22,7 +22,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::dot_, tag::cpu_, (A0),
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::dot_, tag::cpu_, (A0),
                               ((generic_ < complex_< arithmetic_ <A0> > > ))
                               ((generic_ < complex_< arithmetic_ <A0> > > ))
     )
@@ -34,7 +34,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::dot_, tag::cpu_, (A0),
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::dot_, tag::cpu_, (A0),
                               ((generic_ < dry_< arithmetic_ <A0> > > ))
                               ((generic_ < dry_< arithmetic_ <A0> > > ))
     )
@@ -48,7 +48,7 @@ namespace nt2 { namespace ext
 
 
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::dot_, tag::cpu_, (A0)(A1),
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::dot_, tag::cpu_, (A0)(A1),
                               ((generic_ < complex_< arithmetic_ <A0> > > ))
                               ((generic_ < complex_< arithmetic_ <A0> > > ))
                               ((scalar_<integer_<A1> > ))
@@ -62,7 +62,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::dot_, tag::cpu_, (A0)(A1),
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::dot_, tag::cpu_, (A0)(A1),
                               ((generic_ < dry_< arithmetic_ <A0> > > ))
                               ((generic_ < dry_< arithmetic_ <A0> > > ))
                               ((scalar_<integer_<A1> > ))

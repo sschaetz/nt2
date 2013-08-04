@@ -16,7 +16,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::tri1l_, tag::cpu_, (A0), ((ast_<A0, nt2::container::domain>)) )
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::tri1l_, tag::cpu_, (A0), ((ast_<A0, nt2::container::domain>)) )
   {
     typedef typename  boost::proto::
                       result_of::make_expr< nt2::tag::tri1l_
@@ -37,7 +37,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::offset_tri1l_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::offset_tri1l_, tag::cpu_
                             , (A0)(A1)
                             , ((ast_<A0, nt2::container::domain>))
                               (scalar_< integer_<A1> >)

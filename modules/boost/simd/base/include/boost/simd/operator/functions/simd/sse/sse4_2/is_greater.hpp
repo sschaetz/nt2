@@ -14,7 +14,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::is_greater_, boost::simd::tag::sse4_2_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::is_greater_, boost::simd::tag::sse4_2_
                             , (A0)
                             , ((simd_<int64_<A0>,boost::simd::tag::sse_>))
                               ((simd_<int64_<A0>,boost::simd::tag::sse_>))

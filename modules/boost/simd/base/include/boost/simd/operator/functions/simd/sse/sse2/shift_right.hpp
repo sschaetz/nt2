@@ -27,7 +27,7 @@
 namespace boost { namespace simd { namespace ext
 {
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::shift_right_, boost::simd::tag::sse2_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::shift_right_, boost::simd::tag::sse2_
                             , (A0)(A1)
                             , ((simd_<int8_<A0>,boost::simd::tag::sse_>))
                               (scalar_< integer_<A1> >)
@@ -44,7 +44,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::shift_right_, boost::simd::tag::sse2_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::shift_right_, boost::simd::tag::sse2_
                             , (A0)(A1)
                             , ((simd_<int16_<A0>,boost::simd::tag::sse_>))
                               (scalar_< integer_<A1> >)
@@ -57,7 +57,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::shift_right_, boost::simd::tag::sse2_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::shift_right_, boost::simd::tag::sse2_
                             , (A0)(A1)
                             , ((simd_<int32_<A0>,boost::simd::tag::sse_>))
                               (scalar_< integer_<A1> >)
@@ -70,7 +70,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::shift_right_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::shift_right_
                                     , boost::simd::tag::sse2_
                                     , (A0)(A1)
                                     , ((simd_<int64_<A0>,boost::simd::tag::sse_>))
@@ -86,7 +86,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::shift_right_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::shift_right_
                                     , boost::simd::tag::sse2_
                                     , (A0)(A1)
                                     , ((simd_<uint8_<A0>,boost::simd::tag::sse_>))
@@ -110,7 +110,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::shift_right_, boost::simd::tag::sse2_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::shift_right_, boost::simd::tag::sse2_
                                     , (A0)(A1)
                                     , ((simd_<uint16_<A0>,boost::simd::tag::sse_>))
                                       (scalar_< integer_<A1> >)
@@ -123,7 +123,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::shift_right_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::shift_right_
                                     , boost::simd::tag::sse2_
                                     , (A0)(A1)
                                     , ((simd_<uint32_<A0>,boost::simd::tag::sse_>))
@@ -137,7 +137,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::shift_right_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::shift_right_
                                     , boost::simd::tag::sse2_
                                     , (A0)(A1)
                                     , ((simd_<uint64_<A0>,boost::simd::tag::sse_>))

@@ -32,7 +32,7 @@ namespace boost { namespace simd
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN
   ( boost::simd::tag::map_avx_sse_, boost::simd::tag::avx_
   , (A0)
   , ((simd_< logical_<A0>, boost::simd::tag::sse_ >))
@@ -84,7 +84,7 @@ a##1##n = _mm256_extractf128_##t(a##n,1); \
 #define M5(z,n,t)                                                              \
 namespace boost { namespace simd { namespace ext                               \
 {                                                                              \
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION                                            \
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN                                            \
   ( boost::simd::tag::map_, boost::simd::tag::avx_                             \
   , (Func)BOOST_PP_REPEAT(n, M2, ~)                                            \
   , (unspecified_<Func>)                                                       \
@@ -117,7 +117,7 @@ namespace boost { namespace simd { namespace ext                               \
 #define BOOST_SIMD_MAP_CALL(T,C,CC)                                            \
 namespace boost { namespace simd { namespace ext                               \
 {                                                                              \
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION                                            \
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN                                            \
   ( boost::simd::tag::map_avx_sse_, boost::simd::tag::avx_                       \
   , (A0)                                                                       \
   , ((simd_< T<A0>, boost::simd::tag::sse_ >))                                 \

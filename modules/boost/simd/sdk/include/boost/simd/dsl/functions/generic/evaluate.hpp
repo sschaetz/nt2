@@ -18,7 +18,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::evaluate_, tag::formal_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::evaluate_, tag::formal_
                             , (A0)(D)
                             , ((ast_<A0, D>))
                             )

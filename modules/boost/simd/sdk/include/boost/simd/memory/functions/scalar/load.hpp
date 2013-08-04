@@ -19,7 +19,7 @@
 namespace boost { namespace simd { namespace ext
 {
   /// INTERNAL ONLY
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::load_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)
                                     , (iterator_< unspecified_<A0> >)
@@ -34,7 +34,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::load_
                                     , tag::cpu_
                                     , (A0)(A2)
                                     , (iterator_< unspecified_<A0> >)
@@ -48,7 +48,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::load_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)
                                     , (fusion_sequence_<A0>)
@@ -72,7 +72,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::load_
                                     , tag::cpu_
                                     , (A0)(A2)
                                     , (fusion_sequence_<A0>)
@@ -95,7 +95,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Load through pointer of fusion sequence
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::load_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)
                                     , (iterator_< fusion_sequence_<A0> >)
@@ -115,7 +115,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::load_
                                     , tag::cpu_
                                     , (A0)(A2)
                                     , (iterator_< fusion_sequence_<A0> >)

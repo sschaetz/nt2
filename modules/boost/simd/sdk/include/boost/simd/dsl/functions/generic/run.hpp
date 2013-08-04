@@ -83,7 +83,7 @@ namespace boost { namespace simd { namespace ext
   /**/
 
   #define M2(z,n,t)                                                                                \
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::run_, tag::formal_                         \
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::run_, tag::formal_                         \
                                     , (Expr)(T)(D)                                                 \
                                     , ((node_<Expr, unspecified_<T>, boost::mpl::long_<n>, D>))    \
                                     )                                                              \
@@ -157,7 +157,7 @@ namespace boost { namespace simd { namespace ext
   /**/
 
   #define M2(z,n,t)                                                                                \
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::run_, tag::cpu_                            \
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::run_, tag::cpu_                            \
                                     , (Expr)(T)(D)(State)(Data)                                    \
                                     , ((node_<Expr, unspecified_<T>, boost::mpl::long_<n>, D>))    \
                                       (unspecified_<State>)                                        \
@@ -196,7 +196,7 @@ namespace boost { namespace simd { namespace ext
   // Run an expression with a state and data - Terminal cases
   // When run on a terminal, we directly jump into the terminal functor
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::run_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::run_, tag::cpu_
                                     , (A0)(T)(D)
                                     , ((node_<A0, unspecified_<T>, mpl::long_<0>, D>))
                                     )
@@ -210,7 +210,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::run_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::run_, tag::cpu_
                                     , (A0)(T)(D)(State)(Data)
                                     , ((node_<A0, unspecified_<T>, mpl::long_<0>, D>))
                                       (unspecified_<State>)

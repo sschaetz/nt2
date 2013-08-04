@@ -34,7 +34,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Element-wise operations go to transform
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::run_assign_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_assign_, tag::cpu_
                             , (A0)(T0)(N0)(A1)(T1)(N1)
                             , ((node_<A0, elementwise_<T0>, N0, nt2::container::domain>))
                               ((node_<A1, elementwise_<T1>, N1, nt2::container::domain>))
@@ -55,7 +55,7 @@ namespace nt2 { namespace ext
   // Copies go to transform as well, but we check for self-assignment.
   // This is not a pessimization, some code patterns rely on this!
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::run_assign_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_assign_, tag::cpu_
                             , (A0)(T0)
                             , ((node_<A0, elementwise_<T0>, boost::mpl::long_<0> , nt2::container::domain>))
                               ((node_<A0, elementwise_<T0>, boost::mpl::long_<0> , nt2::container::domain>))
@@ -78,7 +78,7 @@ namespace nt2 { namespace ext
   // Note that MATLAB reduction functions have a f(x) and a f(x,i) form
   // that we handle with reduction_dim
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::run_assign_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_assign_, tag::cpu_
                             , (A0)(T0)(N0)(A1)(T1)(O1)(Neutral1)(N1)
                             , ((node_<A0, elementwise_<T0>, N0, nt2::container::domain>))
                               ((node_<A1, reduction_<T1,O1,Neutral1>, N1 , nt2::container::domain>))
@@ -151,7 +151,7 @@ namespace nt2 { namespace ext
   // Note that MATLAB reduction functions have a f(x) and a f(x,i) form
   // that we handle with reduction_dim
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::run_assign_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_assign_, tag::cpu_
                             , (A0)(T0)(N0)(A1)(T1)(O1)(Neutral1)(N1)
                             , ((node_<A0, elementwise_<T0>, N0, nt2::container::domain>))
                               ((node_<A1, cumulative_<T1,O1,Neutral1>, N1 , nt2::container::domain>))
@@ -222,7 +222,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Non-assign table expressions are reduced to assign expressions
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_IF( nt2::tag::run_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_IF_GEN( nt2::tag::run_, tag::cpu_
                             , (A0)(S0)(T)(N)
                             , (mpl::not_< is_same<T, boost::simd::tag::assign_> >)
                             , ((expr_< table_< unspecified_<A0>, S0 >
@@ -249,7 +249,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Running a table terminal does nothing and returns it
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::run_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_, tag::cpu_
                             , (A0)(S0)(T)
                             , ((expr_< table_< unspecified_<A0>, S0 >
                                      , T
@@ -278,7 +278,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Non-assign scalar expressions are evaluated directly
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_IF( nt2::tag::run_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_IF_GEN( nt2::tag::run_, tag::cpu_
                             , (A0)(T)(N)
                             , (mpl::not_< is_same<T, boost::simd::tag::assign_> >)
                             , ((expr_< scalar_< unspecified_<A0> >
@@ -313,7 +313,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Assign expressions call run_assign
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::run_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_, tag::cpu_
                             , (A0)
                             , ((node_< A0
                                      , boost::simd::tag::assign_

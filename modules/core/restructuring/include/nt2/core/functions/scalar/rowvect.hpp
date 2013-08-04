@@ -14,7 +14,7 @@
 namespace nt2 { namespace ext
 {
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::rowvect_, tag::cpu_, (A0)
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::rowvect_, tag::cpu_, (A0)
                             , (scalar_< unspecified_<A0> >)
                             )
   {

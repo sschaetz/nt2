@@ -19,7 +19,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_IF( nt2::tag::groups_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_IF_GEN( nt2::tag::groups_, tag::cpu_,
                           (A0)(X),
                           (boost::mpl::not_< boost::is_same<A0, typename dispatch::meta::downgrade<A0>::type> >),
                           ((simd_<complex_<arithmetic_<A0> >,X>))
@@ -34,7 +34,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_IF( nt2::tag::groups_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_IF_GEN( nt2::tag::groups_, tag::cpu_,
                           (A0)(X),
                           (boost::mpl::not_< boost::is_same<A0, typename dispatch::meta::downgrade<A0>::type> >),
                           ((simd_<dry_<arithmetic_<A0> >,X>))

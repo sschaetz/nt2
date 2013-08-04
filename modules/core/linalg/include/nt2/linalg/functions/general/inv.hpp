@@ -15,7 +15,7 @@
 #include <nt2/include/functions/assign.hpp>
 namespace nt2{ namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::run_assign_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_assign_, tag::cpu_
                               , (A0)(A1)(N)
                               , ((ast_<A0, nt2::container::domain>))
                                 ((node_<A1, nt2::tag::inv_, N,nt2::container::domain> ))

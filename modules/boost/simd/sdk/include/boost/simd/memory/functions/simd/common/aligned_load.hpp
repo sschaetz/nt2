@@ -26,7 +26,7 @@
 namespace boost { namespace simd { namespace ext
 {
   /// INTERNAL ONLY - Regular SIMD load with offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_load_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_load_, tag::cpu_
                                       , (A0)(A1)(A2)(X)
                                       , ( simd::meta::is_pointing_to
                                           < A0
@@ -47,7 +47,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Regular SIMD load without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_load_
                                       , tag::cpu_
                                       , (A0)(A2)(X)
                                       , ( simd::meta::is_pointing_to
@@ -68,7 +68,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_load_
                                       , tag::cpu_
                                       , (A0)(A2)(X)
                                       , ( simd::meta::is_pointing_to
@@ -89,7 +89,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - SIMD load with misalignment without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_load_
                                       , tag::cpu_
                                       , (A0)(A2)(A3)(X)
                                       , ( simd::meta::is_pointing_to
@@ -112,7 +112,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - SIMD load with misalignment without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_load_
                                       , tag::cpu_
                                       , (A0)(A2)(A3)(X)
                                       , ( simd::meta::is_pointing_to
@@ -136,7 +136,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - SIMD load with gather - gather means SIMD offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_load_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_load_, tag::cpu_
                                       , (A0)(A1)(A2)(X)(Y)
                                       , ( mpl::equal_to
                                         < boost::simd::meta
@@ -161,7 +161,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - SIMD fusion sequence load with offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::aligned_load_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::aligned_load_, tag::cpu_
                                    , (A0)(A1)(A2)(X)
                                    , (fusion_sequence_<A0>)
                                      (generic_< integer_<A1> >)
@@ -184,7 +184,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - SIMD fusion sequence load without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::aligned_load_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::aligned_load_, tag::cpu_
                                    , (A0)(A2)(X)
                                    , (fusion_sequence_<A0>)
                                      ((target_<simd_<fusion_sequence_<A2>,X> >))
@@ -206,7 +206,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Misaligned load with offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_load_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_load_, tag::cpu_
                                       , (A0)(A1)(A2)(A3)(X)
                                       , ( simd::meta::is_pointing_to
                                           < A0

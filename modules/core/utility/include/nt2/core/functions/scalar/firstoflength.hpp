@@ -14,7 +14,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::firstoflength_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::firstoflength_, tag::cpu_
                               , (A0)(A1), (scalar_< unspecified_<A0> >)(scalar_< integer_<A1> >)
                             )
   {
@@ -24,7 +24,7 @@ namespace nt2 { namespace ext
     result_type operator()(A0 const&, A1 const&) const { return result_type(); }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::firstoflength_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::firstoflength_, tag::cpu_
                             , (A0)(A1)
                             , (fusion_sequence_<A0>)(scalar_< integer_<A1> >)
                             )

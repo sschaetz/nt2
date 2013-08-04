@@ -17,7 +17,7 @@
 namespace boost { namespace simd { namespace ext
 {
   /// INTERNAL ONLY
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::insert_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::insert_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)
                                     , (scalar_< fundamental_<A0> >)

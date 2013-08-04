@@ -30,7 +30,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION(nt2::tag::rem_pio2_medium_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::rem_pio2_medium_, tag::cpu_,
                              (A0)(A1),
                              (generic_ < floating_<A0> > )
                              (generic_ < integer_<A1>  > )
@@ -44,7 +44,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION(nt2::tag::rem_pio2_medium_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::rem_pio2_medium_, tag::cpu_,
                              (A0),
                              (generic_ < floating_<A0> > )
                              )
@@ -59,7 +59,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION(nt2::tag::rem_pio2_medium_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::rem_pio2_medium_, tag::cpu_,
                              (A0),
                              (generic_ < floating_<A0> > )
                              (generic_ < floating_<A0> > )

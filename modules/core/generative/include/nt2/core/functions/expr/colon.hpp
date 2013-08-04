@@ -19,7 +19,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates colon from a pair of [low,begin_/end_+offset]
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::colon_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::colon_, tag::cpu_
                             , (A0)(A1)
                             , (scalar_< arithmetic_<A0> >)
                               (extremum_<A1>)
@@ -46,7 +46,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates colon from a pair of [begin_/end_+offset, upper]
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::colon_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::colon_, tag::cpu_
                             , (A0)(A1)
                             , (extremum_<A0>)
                               (scalar_< arithmetic_<A1> >)
@@ -73,7 +73,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates colon from a pair of [begin_/end_+offset, begin_/end_+offset]
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::colon_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::colon_, tag::cpu_
                             , (A0)(A1)
                             , (extremum_<A0>)
                               (extremum_<A1>)
@@ -100,7 +100,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates colon from a pair of [low,step,begin_/end_+offset]
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::colon_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::colon_, tag::cpu_
                             , (A0)(A1)(A2)
                             , (scalar_< arithmetic_<A0> >)
                               (scalar_< arithmetic_<A1> >)
@@ -134,7 +134,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates colon from a pair of [begin_/end_+offset,step,upper]
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::colon_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::colon_, tag::cpu_
                             , (A0)(A1)(A2)
                             , (extremum_<A0>)
                               (scalar_< arithmetic_<A1> >)
@@ -168,7 +168,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates colon from a pair of [begin_/end_+offset,step,upper]
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::colon_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::colon_, tag::cpu_
                             , (A0)(A1)(A2)
                             , (extremum_<A0>)
                               (scalar_< arithmetic_<A1> >)

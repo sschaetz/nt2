@@ -26,7 +26,7 @@
 namespace nt2 { namespace ext
 {
   // scalar impl general
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::cast_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cast_, tag::cpu_
                             , (A0)(To)
                             , (scalar_< unspecified_<A0> >)
                               (target_< scalar_< unspecified_<To> > >)
@@ -150,7 +150,7 @@ namespace nt2 { namespace ext
   };
 
   // cast
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::cast_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cast_, tag::cpu_
                             , (A0)(To)
                             , ((ast_<A0, nt2::container::domain>))
                               (target_< scalar_< unspecified_<To> > >)

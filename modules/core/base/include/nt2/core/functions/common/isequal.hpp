@@ -21,7 +21,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::isequal_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::isequal_, tag::cpu_
                             , (A0)(A1)
                             , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))
@@ -36,7 +36,7 @@ namespace nt2 { namespace ext
       return nt2::all( (a0 == a1)(_) )(1);
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::isequal_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::isequal_, tag::cpu_
                             , (A0)(A1)
                             , (scalar_<unspecified_<A0> >)
                               ((ast_<A1, nt2::container::domain>))
@@ -51,7 +51,7 @@ namespace nt2 { namespace ext
       return a0 == a1(nt2::first_index<1>(a1));
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::isequal_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::isequal_, tag::cpu_
                             , (A0)(A1)
                             , ((ast_<A0, nt2::container::domain>))
                               (scalar_<unspecified_<A1> >)
@@ -67,7 +67,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::isequal_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::isequal_, tag::cpu_
                             , (A0)(A1)
                             , (scalar_<unspecified_<A0> >)
                               (scalar_<unspecified_<A1> >)

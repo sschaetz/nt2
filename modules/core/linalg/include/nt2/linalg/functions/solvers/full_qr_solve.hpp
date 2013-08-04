@@ -18,7 +18,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::solvers::full_qr_solve_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::solvers::full_qr_solve_, tag::cpu_
                             , (A0)(A1)(A2)
                             , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))
@@ -40,7 +40,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::solvers::full_qr_solve_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::solvers::full_qr_solve_, tag::cpu_
                               , (A0)(A1)(A2)(IP)
                               , ((ast_<A0, nt2::container::domain>))
                                 ((ast_<A1, nt2::container::domain>))

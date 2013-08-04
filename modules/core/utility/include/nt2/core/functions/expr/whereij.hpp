@@ -18,7 +18,7 @@ namespace nt2 { namespace ext
 {
   /// INTERNAL ONLY
   /// Generates from a 2ary functor and 2 expressions
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::whereij_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::whereij_, tag::cpu_,
                               (A0)(A1)(A2),
                               (unspecified_<A0>)
                               ((ast_<A1, nt2::container::domain>))
@@ -48,7 +48,7 @@ namespace nt2 { namespace ext
 
   /// INTERNAL ONLY
   /// Generates from a 2ary functor, an expression and a scalar
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::whereij_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::whereij_, tag::cpu_,
                               (A0)(A1)(A2),
                               (unspecified_<A0>)
                               ((ast_<A1, nt2::container::domain>))
@@ -78,7 +78,7 @@ namespace nt2 { namespace ext
 
   /// INTERNAL ONLY
   /// Generates from a 2ary functor, a scalar and an expression
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::whereij_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::whereij_, tag::cpu_,
                               (A0)(A1)(A2),
                               (unspecified_<A0>)
                               (scalar_< unspecified_<A1> >)

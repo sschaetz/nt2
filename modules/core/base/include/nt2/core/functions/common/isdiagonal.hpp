@@ -24,7 +24,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::isdiagonal_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::isdiagonal_, tag::cpu_
                             , (A0)
                             , ((ast_<A0, nt2::container::domain>))
                             )
@@ -35,7 +35,7 @@ namespace nt2 { namespace ext
       return nt2::ismatrix(a0) && nt2::isequal(a0, nt2::expand(nt2::from_diag(nt2::diag_of(a0)), size(a0)));
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::isdiagonal_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::isdiagonal_, tag::cpu_
                             , (A0)
                             , (scalar_<unspecified_<A0> >)
                             )
@@ -47,7 +47,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::isdiagonal_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::isdiagonal_, tag::cpu_
                             , (A0)(A1)
                             , ((ast_<A0, nt2::container::domain>))
                               (scalar_<floating_<A1> >)
@@ -63,7 +63,7 @@ namespace nt2 { namespace ext
       return r <= thresh;
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::isdiagonal_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::isdiagonal_, tag::cpu_
                               , (A0)(A1)
                               , (scalar_<unspecified_<A0> >)
                                 (scalar_<floating_<A1> >)

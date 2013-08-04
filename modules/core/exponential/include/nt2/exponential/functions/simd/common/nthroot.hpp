@@ -43,7 +43,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::nthroot_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::nthroot_, tag::cpu_
                             , (A0)(A1)(X)
                             , ((simd_<integer_<A0>,X>))
                               ((simd_<integer_<A1>,X>))
@@ -56,7 +56,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::nthroot_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::nthroot_, tag::cpu_
                             , (A0)(A1)(X)
                             , ((simd_<floating_<A0>,X>))
                               ((simd_<integer_<A1>,X>))

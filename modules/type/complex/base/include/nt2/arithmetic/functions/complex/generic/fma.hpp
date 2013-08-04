@@ -35,7 +35,7 @@ namespace nt2 { namespace ext
 
 
   //0 ccc
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
                               , (generic_<complex_<arithmetic_<A0> > > )
                               (generic_<complex_<arithmetic_<A1> > > )
                               (generic_<complex_<arithmetic_<A2> > > )
@@ -69,7 +69,7 @@ namespace nt2 { namespace ext
 
 
   //8 acc
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
                               , (generic_<arithmetic_<A0> > )
                               (generic_<complex_<arithmetic_<A1> > > )
                               (generic_<complex_<arithmetic_<A2> > > )
@@ -103,7 +103,7 @@ namespace nt2 { namespace ext
   };
 
   //9 cac
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
                               , (generic_<complex_<arithmetic_<A0> > > )
                               (generic_<arithmetic_<A1> > )
                               (generic_<complex_<arithmetic_<A2> > > )
@@ -117,7 +117,7 @@ namespace nt2 { namespace ext
   };
 
   //10 cca
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
                               , (generic_<complex_<arithmetic_<A0> > > )
                               (generic_<complex_<arithmetic_<A1> > > )
                               (generic_<arithmetic_<A2> > )
@@ -149,7 +149,7 @@ namespace nt2 { namespace ext
   };
 
   //11 caa
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
                               , (generic_<complex_<arithmetic_<A0> > > )
                               (generic_< arithmetic_<A1>  > )
                               (generic_< arithmetic_<A2>  > )
@@ -175,7 +175,7 @@ namespace nt2 { namespace ext
   };
 
   //12 aca
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
                               , (generic_< arithmetic_<A0>  > )
                               (generic_<complex_<arithmetic_<A1> > > )
                               (generic_< arithmetic_<A2>  > )
@@ -189,7 +189,7 @@ namespace nt2 { namespace ext
   };
 
   //13 aac
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::fma_, tag::cpu_, (A0)(A1)(A2)
                               , (generic_<arithmetic_<A0>  > )
                               (generic_<arithmetic_<A1>  > )
                               (generic_<complex_<arithmetic_<A2> > > )

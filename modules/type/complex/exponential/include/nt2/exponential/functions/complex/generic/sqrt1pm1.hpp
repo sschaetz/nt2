@@ -18,7 +18,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::sqrt1pm1_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::sqrt1pm1_, tag::cpu_
                             , (A0)
                             , ((generic_<complex_< floating_<A0 > > >))
                             )

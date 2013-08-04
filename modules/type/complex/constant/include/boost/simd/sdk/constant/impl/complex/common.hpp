@@ -16,7 +16,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( constant_<Tag>, tag::cpu_, (Tag)(A0)
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( constant_<Tag>, tag::cpu_, (Tag)(A0)
                             , ((target_< generic_< complex_< arithmetic_<A0> > > >))
                             )
   {
@@ -28,7 +28,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( constant_<Tag>, tag::cpu_, (Tag)(A0)
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( constant_<Tag>, tag::cpu_, (Tag)(A0)
                             , ((target_< generic_< dry_< arithmetic_<A0> > > >))
                             )
   {

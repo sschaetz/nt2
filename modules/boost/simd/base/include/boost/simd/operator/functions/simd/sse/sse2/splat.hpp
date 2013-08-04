@@ -18,7 +18,7 @@
 //==============================================================================
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
                             , (scalar_< fundamental_<A0> >)
                               ((target_< simd_< double_<A1>, boost::simd::tag::sse_ > >))
                       )
@@ -36,7 +36,7 @@ namespace boost { namespace simd { namespace ext
 //==============================================================================
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
                             , (scalar_< fundamental_<A0> >)
                               ((target_< simd_< single_<A1>, boost::simd::tag::sse_ > >))
                       )
@@ -54,7 +54,7 @@ namespace boost { namespace simd { namespace ext
 //==============================================================================
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
                             , (scalar_< fundamental_<A0> >)
                               ((target_< simd_< ints8_<A1>, boost::simd::tag::sse_ > >))
                       )
@@ -72,7 +72,7 @@ namespace boost { namespace simd { namespace ext
 //==============================================================================
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
                             , (scalar_< fundamental_<A0> >)
                               ((target_< simd_< ints16_<A1>, boost::simd::tag::sse_ > >))
                       )
@@ -90,7 +90,7 @@ namespace boost { namespace simd { namespace ext
 //==============================================================================
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
                             , (scalar_< fundamental_<A0> >)
                               ((target_< simd_< ints32_<A1>, boost::simd::tag::sse_ > >))
                       )
@@ -108,7 +108,7 @@ namespace boost { namespace simd { namespace ext
 //==============================================================================
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::splat_, boost::simd::tag::sse2_, (A0)(A1)
                             , (scalar_< fundamental_<A0> >)
                               ((target_< simd_< ints64_<A1>, boost::simd::tag::sse_ > >))
                       )

@@ -68,7 +68,7 @@ BOOST_FUSION_DEFINE_STRUCT(, dispatch_t,
 
 std::ostream& operator<<(std::ostream& os, dispatch_t const& dispatch)
 {
-    os << "  NT2_FUNCTOR_IMPLEMENTATION( ";
+    os << "  NT2_FUNCTOR_IMPLEMENTATION_GEN( ";
     os << dispatch.tag << ", " << dispatch.site << "\n";
     os << "                            , ";
     BOOST_FOREACH(const std::string& arg, dispatch.template_args)
@@ -157,7 +157,7 @@ struct call_file : qi::grammar<file_iterator, space_type, file_t()>
         ;
 
         register_dispatch
-            =   qi::lit("NT2_REGISTER_DISPATCH")
+            =   qi::lit("NT2_REGISTER_DISPATCH_GEN")
                 >>  qi::lit('(')
                     >> full_name >> qi::lit(',') // tag
                     >> full_name >> qi::lit(',') // site

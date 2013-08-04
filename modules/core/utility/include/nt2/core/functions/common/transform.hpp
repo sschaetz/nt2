@@ -18,7 +18,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Global version
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::transform_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::transform_, tag::cpu_
                             , (A0)(A1)
                             , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))
@@ -36,7 +36,7 @@ namespace nt2 { namespace ext
   // Partial version - Process sz elements starting at element p
   // Note that p should be properly set beforehand
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::transform_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::transform_, tag::cpu_
                             , (A0)(A1)(A2)(A3)
                             , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))

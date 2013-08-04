@@ -15,7 +15,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::round2even_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::round2even_, tag::cpu_
                             , (A0)
                             , (scalar_< floating_<A0> >)
                             )
@@ -32,7 +32,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::round2even_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::round2even_, tag::cpu_
                             , (A0)
                             , (scalar_< integer_<A0> >)
                             )

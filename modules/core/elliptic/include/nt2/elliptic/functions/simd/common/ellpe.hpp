@@ -21,7 +21,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION(nt2::tag::ellpe_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::ellpe_, tag::cpu_,
                         (A0)(X),
                         ((simd_<integer_<A0>,X>))
                        )
@@ -34,7 +34,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION(nt2::tag::ellpe_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::ellpe_, tag::cpu_,
                         (A0)(X),
                         ((simd_<single_<A0>,X>))
                        )

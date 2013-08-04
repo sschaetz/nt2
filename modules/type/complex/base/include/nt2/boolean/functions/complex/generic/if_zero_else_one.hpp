@@ -16,7 +16,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::if_zero_else_one_, tag::cpu_, (A0)
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::if_zero_else_one_, tag::cpu_, (A0)
                             ,  (generic_< complex_<floating_<A0> > >)
                             )
   {

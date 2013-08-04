@@ -19,7 +19,7 @@ namespace boost { namespace simd
 {
   namespace ext
   {
-    BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::shuffle_
+    BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::shuffle_
                                       , boost::simd::tag::sse2_
                                       , (A0)(P)
                                       , ((simd_ < type64_<A0>
@@ -114,7 +114,7 @@ namespace boost { namespace simd
       }
     };
 
-   BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::shuffle_
+   BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::shuffle_
                                       , boost::simd::tag::sse2_
                                       , (A0)(P)
                                       , ((simd_ < type32_<A0>
@@ -198,7 +198,7 @@ namespace boost { namespace simd
       }
     };
 
-    BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::shuffle_
+    BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::shuffle_
                                       , boost::simd::tag::sse2_
                                       , (A0)(P)
                                       , ((simd_ < type64_<A0>
@@ -311,7 +311,7 @@ namespace boost { namespace simd
       }
     };
 
-    BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::shuffle_
+    BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::shuffle_
                                       , boost::simd::tag::sse2_
                                       , (A0)(P)
                                       , ((simd_ < type32_<A0>

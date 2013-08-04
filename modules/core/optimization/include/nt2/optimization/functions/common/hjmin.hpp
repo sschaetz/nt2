@@ -149,7 +149,7 @@ namespace nt2 { namespace details
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::hjmin_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::hjmin_, tag::cpu_
                               , (F)(A)(H)(O)
                             , (unspecified_< F >)
                               ((ast_< A, nt2::container::domain>))
@@ -206,7 +206,7 @@ namespace nt2 { namespace ext
     value_type            valmin;
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::hjmin_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::hjmin_, tag::cpu_
                               , (F)(A)(H)(O)
                             , (unspecified_< F >)
                               ((ast_< A, nt2::container::domain>))

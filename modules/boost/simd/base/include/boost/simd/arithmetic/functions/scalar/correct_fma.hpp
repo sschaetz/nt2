@@ -13,7 +13,7 @@
 namespace boost { namespace simd { namespace ext
 {
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::correct_fma_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::correct_fma_, tag::cpu_
                                    , (A0)
                                    , (scalar_< single_<A0> >)
                                      (scalar_< single_<A0> >)

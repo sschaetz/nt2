@@ -23,7 +23,7 @@
 namespace boost { namespace simd { namespace ext
 {
   /// INTERNAL ONLY - Regular SIMD load for double without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::aligned_load_
                                     , boost::simd::tag::avx_
                                     , (A0)(A2)
                                     , (iterator_< scalar_< double_<A0> > >)
@@ -44,7 +44,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Regular SIMD load for single without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::aligned_load_
                                     , boost::simd::tag::avx_
                                     , (A0)(A2)
                                     , (iterator_< scalar_< single_<A0> > >)
@@ -65,7 +65,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Regular SIMD load for integers without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_load_
                                       , boost::simd::tag::avx_
                                       , (A0)(A2)
                                       , ( simd::meta::is_pointing_to
@@ -92,7 +92,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Misaligned load without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_load_
                                       , boost::simd::tag::avx_
                                       , (A0)(A2)(A3)
                                       , ( simd::meta::is_pointing_to

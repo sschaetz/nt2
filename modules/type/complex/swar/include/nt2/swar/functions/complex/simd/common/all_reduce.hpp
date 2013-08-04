@@ -17,7 +17,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::all_reduce_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::all_reduce_
                             , boost::simd::tag::simd_
                             , (Tag)(A0)(X)
                             , ((simd_<dry_<arithmetic_<A0> >,X>))

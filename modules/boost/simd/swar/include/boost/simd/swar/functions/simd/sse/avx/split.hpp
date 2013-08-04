@@ -19,7 +19,7 @@ namespace boost { namespace simd { namespace ext
   //============================================================================
   // Implementation when type is single_
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::split_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::split_
                                     , boost::simd::tag::avx_
                                     , (A0)(A1)
                                     , ((simd_<single_<A0>,boost::simd::tag::avx_>))
@@ -40,7 +40,7 @@ namespace boost { namespace simd { namespace ext
   //============================================================================
   // Implementation when type is arithmetic_
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::split_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::split_
                                       , boost::simd::tag::avx_
                                       , (A0)(A1)
                                       , (simd::meta::is_upgradable_to<A0,A1>)

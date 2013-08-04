@@ -26,7 +26,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::house_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::house_, tag::cpu_,
                               (A0),
                               ((ast_<A0, nt2::container::domain>))
                             )
@@ -54,7 +54,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::house_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::house_, tag::cpu_,
                               (A0)(A1),
                               ((ast_<A0, nt2::container::domain>))
                               (scalar_<integer_<A1> >)
@@ -87,7 +87,7 @@ namespace nt2 { namespace ext
 
 
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::house_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::house_, tag::cpu_
                             , (A0)(A1)(N1)
                             , ((node_<A0, nt2::tag::house_, boost::mpl::long_<3>, nt2::container::domain>))
                               ((node_<A1, nt2::tag::tie_ , N1, nt2::container::domain>))

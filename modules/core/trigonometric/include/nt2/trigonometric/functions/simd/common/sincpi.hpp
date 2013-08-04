@@ -23,7 +23,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::sincpi_, boost::simd::tag::simd_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::sincpi_, boost::simd::tag::simd_
                             , (A0)(X)
                             , ((simd_<arithmetic_<A0>,X>))
                             )
@@ -35,7 +35,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::sincpi_, boost::simd::tag::simd_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::sincpi_, boost::simd::tag::simd_
                             , (A0)(X)
                             , ((simd_<floating_<A0>,X>))
                             )

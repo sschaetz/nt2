@@ -17,7 +17,7 @@
 // Is there nothing to do for float vectors ? TO DO
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::arith_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::arith_
                                     , boost::simd::tag::altivec_
                                     , (T)
                                     , ((target_

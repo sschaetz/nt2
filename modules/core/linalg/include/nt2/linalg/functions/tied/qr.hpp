@@ -21,7 +21,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Capture a tie(l, u, p) = qr(...) at assign time and resolve to optimized call
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::qr_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::qr_, tag::cpu_
                             , (A0)(N0)(A1)(N1)
                             , ((node_<A0, nt2::tag::qr_, N0, nt2::container::domain>))
                               ((node_<A1, nt2::tag::tie_ , N1, nt2::container::domain>))

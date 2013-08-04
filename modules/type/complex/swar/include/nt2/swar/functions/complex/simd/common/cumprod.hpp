@@ -28,7 +28,7 @@
 /////////////////////////////////////////////////////////////////////////////
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( boost::simd::tag::cumprod_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::cumprod_, tag::cpu_
                             , (A0)(X)
                             , ((simd_<complex_<arithmetic_<A0> > ,X>))
                             )
@@ -45,7 +45,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::cumprod_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cumprod_, tag::cpu_
                                      , (A0)(X)
                                      , ((simd_<dry_<arithmetic_<A0> >,X>))
                                      )

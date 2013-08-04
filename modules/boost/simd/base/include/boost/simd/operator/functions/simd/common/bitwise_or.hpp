@@ -17,7 +17,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF(boost::simd::tag::bitwise_or_, tag::cpu_,
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN(boost::simd::tag::bitwise_or_, tag::cpu_,
                                 (A0)(A1)(X),
                                 (boost::mpl::not_< boost::is_same<A0, A1> >),
                                 ((simd_<arithmetic_<A0>,X>))
@@ -32,7 +32,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   // mixed scalar/simd
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::bitwise_or_, tag::cpu_,
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::bitwise_or_, tag::cpu_,
                                     (A0)(A1)(X),
                                     ((simd_<arithmetic_ <A0>,X>))((scalar_<arithmetic_<A1> >))
                                    )
@@ -45,7 +45,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::bitwise_or_, tag::cpu_,
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::bitwise_or_, tag::cpu_,
                                      (A0)(A1)(X),
                                      ((scalar_<arithmetic_<A0> >))((simd_<arithmetic_<A1>,X>))
                                    )

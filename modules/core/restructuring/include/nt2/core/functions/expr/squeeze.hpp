@@ -21,7 +21,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates squeeze
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::squeeze_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::squeeze_, tag::cpu_
                             , (A0)
                             , ((ast_<A0, nt2::container::domain>))
                             )

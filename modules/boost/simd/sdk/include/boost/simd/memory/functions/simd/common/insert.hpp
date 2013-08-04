@@ -26,7 +26,7 @@
 namespace boost { namespace simd { namespace ext
 {
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::insert_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::insert_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)(X)
                                     , (scalar_< arithmetic_<A0> >)
@@ -44,7 +44,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::insert_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::insert_
                                       , tag::cpu_
                                       , (A0)(A1)(A2)(X)
                                       , (mpl::equal_to
@@ -68,7 +68,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::insert_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::insert_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)(X)
                                     , (fusion_sequence_<A0>)

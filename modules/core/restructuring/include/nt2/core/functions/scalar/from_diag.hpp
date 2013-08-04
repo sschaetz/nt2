@@ -17,7 +17,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // from_diag build a diagonal matrix from a scalar
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::from_diag_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::from_diag_, tag::cpu_
                             , (A0)
                             , (scalar_< unspecified_<A0> >)
                             )

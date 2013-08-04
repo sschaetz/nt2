@@ -21,7 +21,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::gammaln_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gammaln_, tag::cpu_
                             , (A0)
                             , (scalar_< floating_<A0> >)
                             )
@@ -40,7 +40,7 @@ namespace nt2 { namespace ext
   };
 
 #ifdef BOOST_SIMD_HAS_LGAMMAF
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::gammaln_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gammaln_, tag::cpu_
                             , (A0)
                             , (scalar_< single_<A0> >)
                             )
@@ -55,7 +55,7 @@ namespace nt2 { namespace ext
   };
 #endif
 
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::gammaln_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gammaln_, tag::cpu_
                             , (A0)
                             , (scalar_< arithmetic_<A0> >)
                             )

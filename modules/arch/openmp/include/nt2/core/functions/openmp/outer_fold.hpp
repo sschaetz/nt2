@@ -29,7 +29,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates outer_fold
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_IF( nt2::tag::outer_fold_, nt2::tag::openmp_<Site>
+  NT2_FUNCTOR_IMPLEMENTATION_IF_GEN( nt2::tag::outer_fold_, nt2::tag::openmp_<Site>
                                , (A0)(S0)(T0)(N0)(A1)(A2)(A3)(A4)(Site)
                                , (boost::simd::meta::is_vectorizable<typename A0::value_type, BOOST_SIMD_DEFAULT_EXTENSION>)
                                , ((expr_< table_< unspecified_<A0>, S0 >
@@ -140,7 +140,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates outer_fold
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::outer_fold_, nt2::tag::openmp_<Site>
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::outer_fold_, nt2::tag::openmp_<Site>
                             , (A0)(A1)(A2)(A3)(A4)(Site)
                             , ((ast_< A0, nt2::container::domain>))
                               ((ast_< A1, nt2::container::domain>))

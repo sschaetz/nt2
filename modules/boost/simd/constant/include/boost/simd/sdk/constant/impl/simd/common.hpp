@@ -29,7 +29,7 @@ namespace boost { namespace simd { namespace ext
   // By default we splat the constant contained into the extarcted value from
   // the Tag over a given Target.
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( pure_constant_<Tag>, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( pure_constant_<Tag>, tag::cpu_
                                     , (Tag)(A0)
                                     , ((target_< scalar_< arithmetic_<A0> > >))
                                     )
@@ -50,7 +50,7 @@ namespace boost { namespace simd { namespace ext
   // splat from the Tag/Target bit pattern immediate, if not we add a bitwise
   // cast
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( pure_constant_<Tag>, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( pure_constant_<Tag>, tag::cpu_
                                     , (Tag)(A0)(X)
                                     , ((target_< simd_< arithmetic_<A0>,X> >))
                                     )

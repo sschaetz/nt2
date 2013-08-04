@@ -25,7 +25,7 @@
 namespace boost { namespace simd { namespace ext
 {
   /// INTERNAL ONLY - Regular SIMD store
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_store_
                                       , tag::cpu_
                                       , (A0)(A1)(A2)(X)
                                       , ( simd::meta::is_pointing_to
@@ -49,7 +49,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Regular SIMD store
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_store_
                                       , tag::cpu_
                                       , (A0)(A1)(X)
                                       , ( simd::meta::is_pointing_to
@@ -73,7 +73,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Other type regular SIMD store
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_store_
                                       , tag::cpu_
                                       , (A0)(A1)(X)
                                       , ( simd::meta::is_pointing_to
@@ -96,7 +96,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Scatter SIMD store
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( boost::simd::tag::aligned_store_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::aligned_store_, tag::cpu_
                                       , (A0)(A1)(A2)(X)(Y)
                                       , (mpl::and_
                                           < mpl::equal_to
@@ -126,7 +126,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - SIMD Fusion sequence store
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::aligned_store_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::aligned_store_, tag::cpu_
                                    , (A0)(A1)(A2)(X)
                                    , ((simd_< fusion_sequence_<A0>, X >))
                                      (fusion_sequence_<A1>)
@@ -146,7 +146,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
   /// INTERNAL ONLY - SIMD Fusion sequence store
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( boost::simd::tag::aligned_store_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::aligned_store_, tag::cpu_
                                    , (A0)(A1)(X)
                                    , ((simd_< fusion_sequence_<A0>, X >))
                                      (fusion_sequence_<A1>)

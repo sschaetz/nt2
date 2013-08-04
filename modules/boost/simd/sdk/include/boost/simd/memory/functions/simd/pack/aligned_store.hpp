@@ -19,7 +19,7 @@
 namespace boost { namespace simd { namespace ext
 {
   /// INTERNAL ONLY pack store with offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::aligned_store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::aligned_store_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)
                                     , ((ast_<A0, boost::simd::domain>))
@@ -36,7 +36,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
   /// INTERNAL ONLY pack store with offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::aligned_store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::aligned_store_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)(X)
                                     , ((ast_<A0, boost::simd::domain>))
@@ -54,7 +54,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY pack store without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( boost::simd::tag::aligned_store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::aligned_store_
                                     , tag::cpu_
                                     , (A0)(A1)
                                     , ((ast_<A0, boost::simd::domain>))

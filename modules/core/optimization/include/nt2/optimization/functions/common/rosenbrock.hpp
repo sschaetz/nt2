@@ -27,7 +27,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( nt2::tag::rosenbrock_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::rosenbrock_, tag::cpu_
                               , (F)(A)(O)
                             , (unspecified_< F >)
                               ((ast_< A, nt2::container::domain>))
