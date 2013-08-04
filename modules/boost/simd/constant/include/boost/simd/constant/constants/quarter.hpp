@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Quarter, double, 0
                                 , 0x3E800000, 0x3FD0000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Quarter)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Quarter, Quarter)

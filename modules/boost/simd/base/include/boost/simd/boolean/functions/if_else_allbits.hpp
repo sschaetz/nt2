@@ -69,6 +69,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.boolean
     **/
     struct if_else_allbits_ : ext::elementwise_<if_else_allbits_> { typedef ext::elementwise_<if_else_allbits_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(if_else_allbits_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::if_else_allbits_, if_else_nan, 2)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::if_else_allbits_, ifelsenan,   2)

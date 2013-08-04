@@ -58,6 +58,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox trigonometric
     **/
     struct rem_2pi_ : ext::elementwise_<rem_2pi_> { typedef ext::elementwise_<rem_2pi_> parent; };
+    NT2_FUNCTION_DECLARE(rem_2pi_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::rem_2pi_, rem_2pi,1)
   NT2_FUNCTION_IMPLEMENTATION(tag::rem_2pi_, rem_2pi,2)

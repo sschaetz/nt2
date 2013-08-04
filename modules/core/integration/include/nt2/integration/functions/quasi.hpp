@@ -52,6 +52,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
      **/
     struct quasi_ : ext::unspecified_<quasi_> { typedef ext::unspecified_<quasi_> parent; };
+    NT2_FUNCTION_DECLARE(quasi_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::quasi_, quasi, 3)

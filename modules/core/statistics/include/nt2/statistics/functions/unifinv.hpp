@@ -60,6 +60,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct unifinv_ : ext::elementwise_<unifinv_> { typedef ext::elementwise_<unifinv_> parent; };
+    NT2_FUNCTION_DECLARE(unifinv_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::unifinv_, unifinv, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::unifinv_, unifinv, 2)

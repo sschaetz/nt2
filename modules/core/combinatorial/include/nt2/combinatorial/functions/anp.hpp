@@ -60,6 +60,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox combinatorial
     **/
     struct anp_ : ext::elementwise_<anp_> { typedef ext::elementwise_<anp_> parent; };
+    NT2_FUNCTION_DECLARE(anp_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::anp_, anp, 2)
 }

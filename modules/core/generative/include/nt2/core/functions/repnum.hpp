@@ -25,6 +25,7 @@ namespace nt2
     {
       typedef ext::state_constant_<repnum_> parent;
     };
+    NT2_FUNCTION_DECLARE(repnum_)
   }
 
   #define M0(z,n,t)                                                           \

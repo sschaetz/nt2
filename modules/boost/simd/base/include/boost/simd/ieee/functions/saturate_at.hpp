@@ -64,6 +64,7 @@ namespace boost { namespace simd
     {
       typedef ext::elementwise_< saturate_at_<T> > parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(saturate_at_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION_TPL( tag::saturate_at_<A0>

@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER(Eight,double
                                 , 8, 0x41000000UL , 0x4020000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Eight)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Eight, Eight)

@@ -26,6 +26,7 @@ namespace nt2
     {
       typedef ext::tieable_<qrinsert_>  parent;
     };
+    NT2_FUNCTION_DECLARE(qrinsert_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::qrinsert_, qrinsert, 4)

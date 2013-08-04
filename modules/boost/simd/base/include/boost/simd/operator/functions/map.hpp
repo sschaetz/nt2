@@ -60,6 +60,7 @@ namespace boost { namespace simd
   namespace tag
   {
     struct map_ : dispatch::tag::formal_ { typedef dispatch::tag::formal_ parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(map_)
   }
 } }
 

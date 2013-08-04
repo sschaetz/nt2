@@ -17,6 +17,7 @@
 namespace nt2 { namespace tag
   {
     struct plevl_ : ext::elementwise_<plevl_> { typedef ext::elementwise_<plevl_> parent; };
+    NT2_FUNCTION_DECLARE(plevl_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::plevl_, plevl, 2)
   NT2_FUNCTION_IMPLEMENTATION(tag::plevl_, p1evl, 2)

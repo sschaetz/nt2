@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Mten, double, -10
                                 , 0xc1200000UL, 0xc024000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Mten)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Mten, Mten)

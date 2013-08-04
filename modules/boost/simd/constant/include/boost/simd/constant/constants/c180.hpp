@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( C180, double, 0
                                  , 0x43340000, 0x4066800000000000ll
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(C180)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::C180, C180)

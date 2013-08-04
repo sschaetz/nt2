@@ -20,6 +20,7 @@ namespace nt2
                                 , 1, 0x3fb8aa3b
                                 , 0x3ff71547652b82feLL
                                 );
+    NT2_FUNCTION_DECLARE(Invlog_2)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Invlog_2, Invlog_2);

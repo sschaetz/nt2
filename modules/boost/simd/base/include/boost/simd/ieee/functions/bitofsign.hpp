@@ -59,6 +59,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct bitofsign_ : ext::elementwise_<bitofsign_> { typedef ext::elementwise_<bitofsign_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(bitofsign_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::bitofsign_, bitofsign, 1)
 } }

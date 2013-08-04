@@ -26,6 +26,7 @@ namespace boost { namespace simd
     {
       typedef ext::elementwise_<remquo_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(remquo_)
   }
 
   /*!

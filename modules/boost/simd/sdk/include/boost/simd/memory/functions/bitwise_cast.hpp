@@ -28,6 +28,7 @@ namespace boost { namespace simd
       /// @brief Parent hierarchy
       typedef ext::elementwise_<bitwise_cast_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(bitwise_cast_)
   }
 
   namespace details

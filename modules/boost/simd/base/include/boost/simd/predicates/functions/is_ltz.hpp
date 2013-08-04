@@ -63,6 +63,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.predicates
     **/
     struct is_ltz_ : ext::elementwise_<is_ltz_> { typedef ext::elementwise_<is_ltz_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(is_ltz_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::is_ltz_, is_ltz, 1)
 } }

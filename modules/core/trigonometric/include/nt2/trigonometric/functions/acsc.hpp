@@ -55,6 +55,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox trigonometric
     **/
     struct acsc_ : ext::elementwise_<acsc_> { typedef ext::elementwise_<acsc_> parent; };
+    NT2_FUNCTION_DECLARE(acsc_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::acsc_, acsc, 1)
 }

@@ -32,6 +32,7 @@ namespace nt2
     {
       typedef ext::tieable_<freqspace_> parent;
     };
+    NT2_FUNCTION_DECLARE(freqspace_)
   }
 
   /*!

@@ -26,6 +26,7 @@
 namespace nt2 { namespace tag
   {
     struct roots_ : ext::unspecified_<roots_> { typedef ext::unspecified_<roots_> parent; };
+    NT2_FUNCTION_DECLARE(roots_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::roots_, roots, 1)
 

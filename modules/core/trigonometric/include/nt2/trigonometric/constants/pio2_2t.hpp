@@ -21,6 +21,7 @@ namespace nt2
                                 , 0, 0x2e85a308
                                 , 0x3BA3198A2E037073ll
                                 );
+    NT2_FUNCTION_DECLARE(Pio2_2t)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Pio2_2t, Pio2_2t);

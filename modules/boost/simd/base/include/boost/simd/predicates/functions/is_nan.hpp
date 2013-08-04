@@ -63,6 +63,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.predicates
     **/
     struct is_nan_ : ext::elementwise_<is_nan_> { typedef ext::elementwise_<is_nan_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(is_nan_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::is_nan_, is_nan, 1)
 } }

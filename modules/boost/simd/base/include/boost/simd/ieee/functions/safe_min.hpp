@@ -57,6 +57,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct safe_min_ : ext::elementwise_<safe_min_> { typedef ext::elementwise_<safe_min_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(safe_min_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::safe_min_, safe_min, 1)
 } }

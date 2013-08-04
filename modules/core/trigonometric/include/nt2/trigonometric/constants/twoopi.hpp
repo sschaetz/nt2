@@ -54,6 +54,7 @@ namespace nt2
                                 , 0, 0x3f22f983
                                 , 0x3fe45f306dc9c883ll
                                 );
+    NT2_FUNCTION_DECLARE(Twoopi)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Twoopi, Twoopi);

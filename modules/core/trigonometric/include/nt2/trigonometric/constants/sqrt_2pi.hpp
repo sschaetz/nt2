@@ -20,6 +20,7 @@ namespace nt2
                                 , 2, 0x40206c99
                                 , 0x40040d931ff62704ll
                                 );
+    NT2_FUNCTION_DECLARE(Sqrt_2pi)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Sqrt_2pi, Sqrt_2pi);

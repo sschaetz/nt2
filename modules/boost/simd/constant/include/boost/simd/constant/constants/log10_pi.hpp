@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Log10_pi, double, 3
                                   , 0x3efe8a6e, 0x3fdfd14db31ba3bbll
                                   );
+    BOOST_SIMD_FUNCTION_DECLARE(Log10_pi)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Log10_pi, Log10_pi)

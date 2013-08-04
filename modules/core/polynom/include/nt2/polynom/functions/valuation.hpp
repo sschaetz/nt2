@@ -21,6 +21,7 @@
 namespace nt2 { namespace tag
   {
     struct valuation_: ext::elementwise_<valuation_> { typedef ext::elementwise_<valuation_> parent; };
+    NT2_FUNCTION_DECLARE(valuation_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::valuation_,valuation, 1)
 }

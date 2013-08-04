@@ -35,6 +35,7 @@ namespace boost { namespace simd
      *        in namespace boost::simd::tag for toolbox boost.simd.swar
     **/
     struct shuffle_ : ext::unspecified_<shuffle_> { typedef ext::unspecified_<shuffle_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(shuffle_)
   }
 
   template<class T,class A0>

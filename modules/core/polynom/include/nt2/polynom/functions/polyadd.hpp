@@ -22,6 +22,7 @@
 namespace nt2 { namespace tag
   {
     struct polyadd_ : ext::elementwise_<polyadd_> { typedef ext::elementwise_<polyadd_> parent; };
+    NT2_FUNCTION_DECLARE(polyadd_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::polyadd_, polyadd, 2)
 }

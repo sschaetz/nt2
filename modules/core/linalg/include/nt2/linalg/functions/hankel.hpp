@@ -48,6 +48,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct hankel_ : ext::unspecified_<hankel_> { typedef ext::unspecified_<hankel_> parent; };
+    NT2_FUNCTION_DECLARE(hankel_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::hankel_, hankel, 1)

@@ -67,6 +67,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Thirdrooteps, double, 1
                                 , 0x3BA14518, 0x3ED965FEA53D6E42ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Thirdrooteps)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Thirdrooteps, Thirdrooteps)

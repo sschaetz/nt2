@@ -23,12 +23,14 @@ namespace nt2
     {
       typedef ext::unspecified_<romberg_> parent;
     };
+    NT2_FUNCTION_DECLARE(romberg_)
 
     // definition  of abstol constant for romberg method
     BOOST_SIMD_CONSTANT_REGISTER( Rombergabstol, double
                                   , 0, 0x3a83126f             //1.0e-3
                                   , 0x3eb0c6f7a0b5ed8dll      //1.0e-6
       );
+    NT2_FUNCTION_DECLARE(Rombergabstol)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Rombergabstol, Rombergabstol);

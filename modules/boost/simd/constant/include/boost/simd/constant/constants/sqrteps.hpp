@@ -67,6 +67,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Sqrteps, double, 1
                                 , 0x39B504F3, 0x3E50000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Sqrteps)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Sqrteps, Sqrteps)

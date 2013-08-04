@@ -54,6 +54,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox euler
     **/
     struct gammaincinv_ : ext::elementwise_<gammaincinv_> { typedef ext::elementwise_<gammaincinv_> parent; };
+    NT2_FUNCTION_DECLARE(gammaincinv_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::gammaincinv_, gammaincinv, 2)
 }

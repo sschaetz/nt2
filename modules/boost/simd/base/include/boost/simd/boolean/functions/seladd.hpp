@@ -56,6 +56,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.boolean
     **/
     struct seladd_ : ext::elementwise_<seladd_> { typedef ext::elementwise_<seladd_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(seladd_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::seladd_, seladd, 3)
 } }

@@ -68,6 +68,7 @@ namespace boost { namespace simd
     {
       typedef dispatch::tag::formal_ parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(none_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::none_, none, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::none_, none, 2)

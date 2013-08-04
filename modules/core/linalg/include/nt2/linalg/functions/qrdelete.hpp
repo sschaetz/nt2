@@ -26,6 +26,7 @@ namespace nt2
     {
       typedef ext::tieable_<qrdelete_>  parent;
     };
+    NT2_FUNCTION_DECLARE(qrdelete_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::qrdelete_, qrdelete, 3)

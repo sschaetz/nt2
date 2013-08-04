@@ -36,6 +36,7 @@ namespace nt2
     {
       typedef ext::elementwise_<aggregate_> parent;
     };
+    NT2_FUNCTION_DECLARE(aggregate_)
   }
 
   #if defined(DOXYGEN_ONLY)
@@ -80,6 +81,7 @@ namespace nt2 { namespace ext
 {
   // INTERNAL ONLY
   struct aggregate_value_ {};
+  NT2_FUNCTION_DECLARE(aggregate_value_)
 
   /// INTERNAL ONLY
   /// Aggregate value type is irrelevant, we just use a placeholder type.

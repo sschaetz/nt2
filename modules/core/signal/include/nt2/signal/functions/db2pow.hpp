@@ -25,6 +25,7 @@ namespace nt2
     {
       typedef ext::elementwise_<db2pow_> parent;
     };
+    NT2_FUNCTION_DECLARE(db2pow_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::db2pow_, db2pow, 1)

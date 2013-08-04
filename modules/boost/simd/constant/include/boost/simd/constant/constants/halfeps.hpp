@@ -66,6 +66,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Halfeps, double, 1
                                 , 0x33800000, 0x3CA0000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Halfeps)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Halfeps, Halfeps)

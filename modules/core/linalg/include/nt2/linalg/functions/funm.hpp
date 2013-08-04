@@ -20,6 +20,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<funm_>  parent;
     };
+    NT2_FUNCTION_DECLARE(funm_)
   }
   /**
    * @brief funm(f, a) evaluates the functor fun at the square

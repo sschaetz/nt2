@@ -62,8 +62,11 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox combinatorial
     **/
     struct fibonacci_ : ext::unspecified_<fibonacci_> { typedef ext::unspecified_<fibonacci_> parent; };
+    NT2_FUNCTION_DECLARE(fibonacci_)
 //    struct fibonacci_ : ext::elementwise_<fibonacci_> { typedef ext::elementwise_<fibonacci_> parent; };
+    NT2_FUNCTION_DECLARE(fibonacci_)
 //    struct fibonacci_ : tag::formal_{ typedef tag::formal_ parent; };
+    NT2_FUNCTION_DECLARE(fibonacci_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::fibonacci_,fibonacci, 3)
 }

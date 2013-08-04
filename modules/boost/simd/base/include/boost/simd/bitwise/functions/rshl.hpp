@@ -58,6 +58,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.bitwise
     **/
     struct rshl_ : ext::elementwise_<rshl_> { typedef ext::elementwise_<rshl_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(rshl_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::rshl_, rshl, 2)
 } }

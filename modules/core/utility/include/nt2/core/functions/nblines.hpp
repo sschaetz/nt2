@@ -20,6 +20,7 @@ namespace nt2
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(nblines_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::nblines_, nblines, 2)

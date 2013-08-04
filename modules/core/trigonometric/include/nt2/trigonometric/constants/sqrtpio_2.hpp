@@ -54,6 +54,7 @@ namespace nt2
                                 , 0, 0x3f62dfc5
                                 , 0x3fec5bf891b4ef6bll
                                 );
+    NT2_FUNCTION_DECLARE(Sqrtpio_2)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Sqrtpio_2, Sqrtpio_2);//0.88622692545275801364908374167057

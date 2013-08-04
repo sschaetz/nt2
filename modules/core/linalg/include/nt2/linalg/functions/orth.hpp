@@ -33,6 +33,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct orth_ :  tag::formal_ { typedef tag::formal_ parent; };
+    NT2_FUNCTION_DECLARE(orth_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::orth_, orth, 1)

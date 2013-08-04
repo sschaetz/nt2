@@ -62,6 +62,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(tridiag_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::tridiag_, tridiag, 4)

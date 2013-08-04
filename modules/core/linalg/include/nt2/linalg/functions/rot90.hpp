@@ -39,7 +39,9 @@ namespace nt2
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct rot90_   :  ext::unspecified_<rot90_> { typedef ext::unspecified_<rot90_> parent; };
+    NT2_FUNCTION_DECLARE(rot90_)
     struct rot90_0_ :  tag::formal_              { typedef tag::formal_ parent;              };
+    NT2_FUNCTION_DECLARE(rot90_0_)
 
   }
 

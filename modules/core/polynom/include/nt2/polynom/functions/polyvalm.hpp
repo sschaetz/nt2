@@ -22,6 +22,7 @@
 namespace nt2 { namespace tag
   {
     struct polyvalm_ : ext::unspecified_<polyvalm_> { typedef ext::unspecified_<polyvalm_> parent; };
+    NT2_FUNCTION_DECLARE(polyvalm_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::polyvalm_, polyvalm, 2)
 

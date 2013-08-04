@@ -44,12 +44,14 @@ namespace nt2 { namespace tag
       {
         typedef ext::unspecified_<factorization::rref_> parent;
       };
+      NT2_FUNCTION_DECLARE(rref_)
     }
 
     struct rref_ :  ext::tieable_<rref_>
     {
       typedef ext::tieable_<rref_>  parent;
     };
+    NT2_FUNCTION_DECLARE(rref_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::rref_, rref, 1)

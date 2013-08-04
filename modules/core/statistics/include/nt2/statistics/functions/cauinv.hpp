@@ -54,6 +54,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct cauinv_ : ext::elementwise_<cauinv_> { typedef ext::elementwise_<cauinv_> parent; };
+    NT2_FUNCTION_DECLARE(cauinv_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::cauinv_, cauinv, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::cauinv_, cauinv, 2)

@@ -32,6 +32,7 @@ namespace nt2
     {
       typedef ext::reshaping_<ifvectvert_> parent;
     };
+    NT2_FUNCTION_DECLARE(ifvectvert_)
   }
 
   /*!

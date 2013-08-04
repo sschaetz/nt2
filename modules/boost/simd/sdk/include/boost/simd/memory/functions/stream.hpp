@@ -29,6 +29,7 @@ namespace boost { namespace simd
       /// @brief Parent hierarchy
       typedef tag::formal_ parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(stream_)
   }
 
   /*!

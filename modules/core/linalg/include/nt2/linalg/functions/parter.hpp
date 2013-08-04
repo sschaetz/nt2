@@ -49,6 +49,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(parter_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::parter_, parter, 2)

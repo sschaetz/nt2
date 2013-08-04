@@ -30,6 +30,7 @@
 namespace nt2 { namespace tag
   {
     struct ratfracder_ : ext::tieable_<ratfracder_> { typedef ext::tieable_<ratfracder_> parent; };
+    NT2_FUNCTION_DECLARE(ratfracder_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::ratfracder_, ratfracder, 1)

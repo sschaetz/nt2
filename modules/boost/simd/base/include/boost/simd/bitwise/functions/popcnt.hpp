@@ -56,6 +56,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.bitwise
     **/
     struct popcnt_ : ext::elementwise_<popcnt_> { typedef ext::elementwise_<popcnt_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(popcnt_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::popcnt_, popcnt, 1)
 } }

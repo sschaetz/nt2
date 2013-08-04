@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Two, double, 2
                                 , 0x40000000UL, 0x4000000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Two)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Two, Two)

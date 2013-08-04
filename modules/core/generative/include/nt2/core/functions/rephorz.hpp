@@ -22,6 +22,7 @@ namespace nt2
     {
       typedef ext::elementwise_<rephorz_> parent;
     };
+    NT2_FUNCTION_DECLARE(rephorz_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::rephorz_, rephorz, 2)

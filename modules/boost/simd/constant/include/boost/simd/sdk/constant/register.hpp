@@ -17,6 +17,7 @@
 #include <boost/simd/sdk/meta/int_c.hpp>
 #include <boost/simd/sdk/meta/float.hpp>
 #include <boost/simd/sdk/meta/double.hpp>
+#include <boost/simd/sdk/functor/hierarchy.hpp>
 
 //==============================================================================
 /*!

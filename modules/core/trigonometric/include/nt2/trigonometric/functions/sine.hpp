@@ -242,6 +242,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox trigonometric
     **/
     template <class T> struct sine_ : ext::elementwise_< sine_<T> > { typedef ext::elementwise_< sine_<T> > parent; };
+ NT2_FUNCTION_DECLARE(sine_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION_TPL(tag::sine_<A0> , sine, (A1 const&), 2)

@@ -22,6 +22,7 @@ namespace nt2
     {
       typedef ext::unspecified_<mpower_>  parent;
     };
+    NT2_FUNCTION_DECLARE(mpower_)
   }
   /**
    * @brief compute matricial power a0^a1

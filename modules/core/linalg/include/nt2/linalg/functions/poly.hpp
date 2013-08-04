@@ -28,12 +28,14 @@ namespace nt2
       {
         typedef ext::unspecified_<factorization::poly_> parent;
       };
+      NT2_FUNCTION_DECLARE(poly_)
     }
 
     struct poly_ :  ext::unspecified_<poly_>
     {
       typedef ext::unspecified_<poly_>  parent;
     };
+    NT2_FUNCTION_DECLARE(poly_)
   }
 
   /**

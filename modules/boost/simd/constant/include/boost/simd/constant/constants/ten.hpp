@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Ten, double, 10
                                 , 0x41200000UL, 0x4024000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Ten)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Ten, Ten)

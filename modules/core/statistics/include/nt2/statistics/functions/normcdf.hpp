@@ -73,7 +73,9 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct normcdf_ : ext::tieable_<normcdf_> { typedef ext::tieable_<normcdf_> parent; };
+    NT2_FUNCTION_DECLARE(normcdf_)
     struct normcdf0_ : ext::elementwise_<normcdf0_> { typedef ext::elementwise_<normcdf0_> parent; };
+    NT2_FUNCTION_DECLARE(normcdf0_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::normcdf0_, normcdf, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::normcdf0_, normcdf, 2)

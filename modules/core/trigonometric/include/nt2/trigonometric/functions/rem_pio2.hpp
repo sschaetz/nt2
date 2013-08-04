@@ -22,6 +22,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::elementwise_<rem_pio2_> parent;
     };
+    NT2_FUNCTION_DECLARE(rem_pio2_)
   }
   /*!
     @brief rem_pio2

@@ -52,6 +52,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct chebvand_ : ext::unspecified_<chebvand_> { typedef ext::unspecified_<chebvand_> parent; };
+    NT2_FUNCTION_DECLARE(chebvand_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::chebvand_, chebvand, 1)

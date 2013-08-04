@@ -22,6 +22,7 @@
 namespace nt2 { namespace tag
   {
     struct compan_: ext::elementwise_<compan_> { typedef ext::elementwise_<compan_> parent; };
+    NT2_FUNCTION_DECLARE(compan_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::compan_,compan, 1)
 }

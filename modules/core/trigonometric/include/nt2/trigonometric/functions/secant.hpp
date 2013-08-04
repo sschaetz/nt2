@@ -55,6 +55,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox trigonometric
     **/
     template <class T> struct secant_ : ext::elementwise_< secant_<T> > { typedef ext::elementwise_< secant_<T> > parent; };
+ NT2_FUNCTION_DECLARE(secant_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION_TPL(tag::secant_<A0> , secant, (A1 const&), 2)

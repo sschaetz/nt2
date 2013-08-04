@@ -58,6 +58,7 @@ namespace nt2
                                 , 0, 0x3f317218
                                 , 0x3fe62e42fefa39efLL
                                 );
+    NT2_FUNCTION_DECLARE(Log_2)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Log_2, Log_2);

@@ -46,6 +46,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct trace_ : ext::unspecified_<trace_> { typedef ext::unspecified_<trace_> parent; };
+    NT2_FUNCTION_DECLARE(trace_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::trace_, trace, 1)

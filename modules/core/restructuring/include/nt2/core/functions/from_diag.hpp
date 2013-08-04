@@ -31,6 +31,7 @@ namespace nt2
     {
       typedef ext::elementwise_<from_diag_> parent;
     };
+    NT2_FUNCTION_DECLARE(from_diag_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::from_diag_ , from_diag, 2)

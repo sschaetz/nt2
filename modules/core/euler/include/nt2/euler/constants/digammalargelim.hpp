@@ -20,6 +20,7 @@ namespace nt2
                                 , 0, 0x41200000
                                 , 0x4034000000000000ll
                                 );
+    NT2_FUNCTION_DECLARE(Digammalargelim)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Digammalargelim, Digammalargelim);

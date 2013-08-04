@@ -75,6 +75,7 @@ namespace boost { namespace simd {
     {
       typedef ext::unspecified_<repeat_upper_half_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(repeat_upper_half_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::repeat_upper_half_, repeat_upper_half, 1)
 

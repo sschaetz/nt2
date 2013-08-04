@@ -58,6 +58,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.bitwise
     **/
     struct rrol_ : ext::elementwise_<rrol_> { typedef ext::elementwise_<rrol_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(rrol_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::rrol_, rrol, 2)
 } }

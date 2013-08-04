@@ -70,6 +70,7 @@ namespace boost { namespace simd { namespace tag
     {
       typedef ext::cumulative_<cumprod_, tag::multiplies_, tag::One> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(cumprod_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::cumprod_, cumprod, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::cumprod_, cumprod, 2)

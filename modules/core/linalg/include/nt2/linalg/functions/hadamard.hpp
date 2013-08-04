@@ -52,6 +52,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct hadamard_ : ext::unspecified_<hadamard_> { typedef ext::unspecified_<hadamard_> parent; };
+    NT2_FUNCTION_DECLARE(hadamard_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::hadamard_, hadamard, 1)

@@ -64,6 +64,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.reduction
     **/
     struct dot_ : ext::unspecified_<dot_> { typedef ext::unspecified_<dot_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(dot_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::dot_, dot, 2)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::dot_, dot, 3)

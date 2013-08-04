@@ -53,6 +53,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct linear_ : ext::unspecified_<linear_> { typedef ext::unspecified_<linear_> parent; };
+    NT2_FUNCTION_DECLARE(linear_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::linear_, linear, 3)
   NT2_FUNCTION_IMPLEMENTATION(tag::linear_, linear, 4)

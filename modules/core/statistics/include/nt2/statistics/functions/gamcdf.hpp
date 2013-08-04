@@ -75,7 +75,9 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct gamcdf_ : ext::tieable_<gamcdf_> { typedef ext::tieable_<gamcdf_> parent; };
+    NT2_FUNCTION_DECLARE(gamcdf_)
     struct gamcdf0_: ext::elementwise_<gamcdf0_> { typedef ext::elementwise_<gamcdf0_> parent; };
+    NT2_FUNCTION_DECLARE(gamcdf0_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::gamcdf0_, gamcdf, 2)

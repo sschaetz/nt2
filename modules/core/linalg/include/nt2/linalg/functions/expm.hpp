@@ -20,6 +20,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<expm_>  parent;
     };
+    NT2_FUNCTION_DECLARE(expm_)
   }
   /**
    * @brief compute exponential of a matricial expression

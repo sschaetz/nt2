@@ -56,6 +56,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(vecnorm_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(nt2::tag::vecnorm_, vecnorm, 1)

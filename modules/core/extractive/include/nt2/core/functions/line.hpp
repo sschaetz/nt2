@@ -28,6 +28,7 @@ namespace nt2
     {
       typedef ext::elementwise_<line_> parent;
     };
+    NT2_FUNCTION_DECLARE(line_)
   }
 
   /*!

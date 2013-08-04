@@ -52,6 +52,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<bandred_> parent;
     };
+    NT2_FUNCTION_DECLARE(bandred_)
 }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::bandred_, bandred, 3)

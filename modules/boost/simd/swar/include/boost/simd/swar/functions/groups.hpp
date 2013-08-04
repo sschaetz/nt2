@@ -67,6 +67,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.swar
     **/
     struct groups_ : ext::elementwise_<groups_> { typedef ext::elementwise_<groups_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(groups_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::groups_, groups, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::groups_, demotes, 1)

@@ -52,6 +52,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox interpol
     **/
     struct bsearch_ : ext::unspecified_<bsearch_> { typedef ext::unspecified_<bsearch_> parent; };
+    NT2_FUNCTION_DECLARE(bsearch_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::bsearch_, bsearch, 2)
 

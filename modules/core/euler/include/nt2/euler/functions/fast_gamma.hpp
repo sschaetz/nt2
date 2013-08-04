@@ -58,6 +58,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox euler
     **/
     struct fast_gamma_ : ext::elementwise_<fast_gamma_> { typedef ext::elementwise_<fast_gamma_> parent; };
+    NT2_FUNCTION_DECLARE(fast_gamma_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::fast_gamma_, fast_gamma, 1)
 }

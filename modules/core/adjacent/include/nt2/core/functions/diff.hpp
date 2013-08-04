@@ -31,6 +31,7 @@ namespace nt2
     {
       typedef  ext::elementwise_<diff_> parent;
     };
+    NT2_FUNCTION_DECLARE(diff_)
   }
 
   /*!

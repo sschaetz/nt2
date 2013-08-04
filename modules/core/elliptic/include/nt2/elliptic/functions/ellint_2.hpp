@@ -57,6 +57,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox elliptic
     **/
     struct ellint_2_ : ext::elementwise_<ellint_2_> { typedef ext::elementwise_<ellint_2_> parent; };
+    NT2_FUNCTION_DECLARE(ellint_2_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::ellint_2_, ellint_2, 1)
 }

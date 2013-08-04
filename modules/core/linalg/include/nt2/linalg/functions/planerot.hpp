@@ -25,6 +25,7 @@ namespace nt2
     {
       typedef ext::tieable_<planerot_>  parent;
     };
+    NT2_FUNCTION_DECLARE(planerot_)
   }
 
   /**

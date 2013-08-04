@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Hundred,double
                                 , 100, 0x42c80000, 0x4059000000000000ll
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Hundred)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Hundred, Hundred)

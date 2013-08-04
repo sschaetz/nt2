@@ -75,6 +75,7 @@ namespace boost { namespace simd {
     {
       typedef ext::unspecified_<interleave_even_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(interleave_even_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::interleave_even_, interleave_even, 2)
 

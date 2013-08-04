@@ -20,6 +20,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::elementwise_<rem_pio2_straight_> parent;
     };
+    NT2_FUNCTION_DECLARE(rem_pio2_straight_)
   }
   /*!
     @brief rem_pio2_straight

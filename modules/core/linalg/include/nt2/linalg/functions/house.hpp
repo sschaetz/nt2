@@ -72,6 +72,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::tieable_<house_>  parent;
     };
+    NT2_FUNCTION_DECLARE(house_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::house_, house, 1)

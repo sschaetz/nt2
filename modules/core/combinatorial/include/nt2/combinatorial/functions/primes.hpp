@@ -57,6 +57,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox combinatorial
     **/
     struct primes_ : ext::elementwise_<primes_> { typedef ext::elementwise_<primes_> parent; };
+    NT2_FUNCTION_DECLARE(primes_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::primes_,primes, 1)
 }

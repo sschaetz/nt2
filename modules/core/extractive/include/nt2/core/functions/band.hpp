@@ -29,6 +29,7 @@ namespace nt2
       /// @brief Parent hierarchy
       typedef ext::elementwise_<band_> parent;
     };
+    NT2_FUNCTION_DECLARE(band_)
   }
 
   /*!

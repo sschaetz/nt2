@@ -17,7 +17,9 @@ namespace boost { namespace simd
   namespace tag
   {
     struct run_ : dispatch::tag::formal_ { typedef dispatch::tag::formal_ parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(run_)
     struct run_assign_ : dispatch::tag::formal_ { typedef dispatch::tag::formal_ parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(run_assign_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION_TPL(tag::run_, run, (A0 const&), 1)

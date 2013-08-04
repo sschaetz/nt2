@@ -63,6 +63,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct unifcdf_ : ext::elementwise_<unifcdf_> { typedef ext::elementwise_<unifcdf_> parent; };
+    NT2_FUNCTION_DECLARE(unifcdf_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::unifcdf_, unifcdf, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::unifcdf_, unifcdf, 2)

@@ -28,6 +28,7 @@ namespace nt2
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(issquare_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::issquare_, issquare, 1)

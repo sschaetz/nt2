@@ -71,6 +71,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<condex_>  parent;
     };
+    NT2_FUNCTION_DECLARE(condex_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::condex_, condex, 1)

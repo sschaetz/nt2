@@ -25,6 +25,7 @@ namespace boost { namespace simd
     {
       typedef ext::elementwise_<two_split_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(two_split_)
   }
 
   /*!

@@ -17,6 +17,7 @@ namespace nt2 {  namespace tag
     {
       typedef ext::unspecified_<conv_>  parent;
     };
+    NT2_FUNCTION_DECLARE(conv_)
   }
 
   /**

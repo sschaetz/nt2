@@ -54,6 +54,7 @@ namespace nt2
                                 , 12, 0x41490fdb
                                 , 0x402921fb54442d18ll
                                 );
+    NT2_FUNCTION_DECLARE(Pix_4)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Pix_4, Pix_4);

@@ -49,6 +49,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(moler_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::moler_, moler, 2)

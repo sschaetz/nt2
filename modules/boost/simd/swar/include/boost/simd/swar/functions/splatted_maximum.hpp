@@ -27,6 +27,7 @@ namespace boost { namespace simd
       /// @brief Parent hierarchy
       typedef ext::unspecified_<splatted_maximum_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(splatted_maximum_)
   }
 
   /*!

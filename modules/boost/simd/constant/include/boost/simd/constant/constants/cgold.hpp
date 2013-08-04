@@ -58,6 +58,7 @@ namespace boost { namespace simd
      *        in namespace boost::simd::tag for toolbox boost.simd.constant
     **/
     BOOST_SIMD_CONSTANT_REGISTER(Cgold,double,0,0x3EC3910D,0x3FD8722191A02D61ULL);
+    BOOST_SIMD_FUNCTION_DECLARE(Cgold)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Cgold, Cgold)

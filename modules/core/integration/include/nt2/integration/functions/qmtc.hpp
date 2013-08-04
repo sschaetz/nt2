@@ -23,6 +23,7 @@ namespace nt2
     {
       typedef ext::unspecified_<qmtc_> parent;
     };
+    NT2_FUNCTION_DECLARE(qmtc_)
   }
 
   // specialization of abstol for qmtc method

@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Gold,double,1
                                 , 0x3FCF1BBD,0x3FF9E3779B97F4A8ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Gold)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Gold, Gold)

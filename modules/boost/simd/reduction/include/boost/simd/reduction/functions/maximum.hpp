@@ -72,6 +72,7 @@ namespace boost { namespace simd
     {
       typedef ext::reduction_<maximum_, tag::max_, tag::Maxinit> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(max_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::maximum_, maximum, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::maximum_, maximum, 2)

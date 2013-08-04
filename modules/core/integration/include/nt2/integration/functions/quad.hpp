@@ -23,12 +23,14 @@ namespace nt2
     {
       typedef ext::unspecified_<quad_> parent;
     };
+    NT2_FUNCTION_DECLARE(quad_)
 
     // definition  of abstol constant for quad method
     BOOST_SIMD_CONSTANT_REGISTER( Quadabstol, double
                                   , 0, 0x3a83126f             //1.0e-3
                                   , 0x3eb0c6f7a0b5ed8dll      //1.0e-6
       );
+    NT2_FUNCTION_DECLARE(Quadabstol)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Quadabstol, Quadabstol);

@@ -53,6 +53,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox euler
     **/
     struct dgammainc_ : ext::elementwise_<dgammainc_> { typedef ext::elementwise_<dgammainc_> parent; };
+    NT2_FUNCTION_DECLARE(dgammainc_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::dgammainc_, dgammainc, 2)
 }

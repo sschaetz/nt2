@@ -61,6 +61,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct bitfloating_ : ext::elementwise_<bitfloating_> { typedef ext::elementwise_<bitfloating_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(bitfloating_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::bitfloating_, bitfloating, 1)
 } }

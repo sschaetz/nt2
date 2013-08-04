@@ -22,6 +22,7 @@ namespace nt2
     {
       typedef ext::elementwise_<db_> parent;
     };
+    NT2_FUNCTION_DECLARE(db_)
   }
 
   namespace details
@@ -34,6 +35,7 @@ namespace nt2
   }
 
   details::voltage_t  const voltage_  = {};
+    NT2_FUNCTION_DECLARE(voltage_)
   details::power_t    const power_    = {};
 
   NT2_FUNCTION_IMPLEMENTATION(tag::db_, db, 1)

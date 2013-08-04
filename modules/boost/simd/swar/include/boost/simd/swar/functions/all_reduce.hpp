@@ -27,6 +27,7 @@ namespace boost { namespace simd
       /// @brief Parent hierarchy
       typedef ext::unspecified_<all_reduce_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(all_reduce_)
   }
 
   /*!

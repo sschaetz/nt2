@@ -65,6 +65,7 @@ namespace nt2
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(medianad_)
   }
 
   //============================================================================

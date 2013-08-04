@@ -25,6 +25,7 @@ namespace nt2
     {
       typedef ext::state_constant_<homot_> parent;
     };
+    NT2_FUNCTION_DECLARE(homot_)
   }
 
   #define M0(z,n,t)                                                           \

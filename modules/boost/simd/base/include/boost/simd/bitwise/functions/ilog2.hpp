@@ -56,6 +56,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.bitwise
     **/
     struct ilog2_ : ext::elementwise_<ilog2_> { typedef ext::elementwise_<ilog2_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(ilog2_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::ilog2_, ilog2, 1)
 } }

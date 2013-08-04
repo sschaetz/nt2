@@ -77,6 +77,7 @@ namespace boost { namespace simd { namespace tag
     {
       typedef tag::formal_ parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(cumtrapz_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::cumtrapz_, cumtrapz, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::cumtrapz_, cumtrapz, 2)

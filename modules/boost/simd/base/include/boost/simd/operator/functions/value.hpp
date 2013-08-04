@@ -26,6 +26,7 @@ namespace boost { namespace simd
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(value_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::value_     , value       , 1 )

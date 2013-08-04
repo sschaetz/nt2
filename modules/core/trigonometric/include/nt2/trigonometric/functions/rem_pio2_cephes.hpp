@@ -25,6 +25,7 @@ namespace nt2
     {
       typedef ext::elementwise_<rem_pio2_cephes_> parent;
     };
+    NT2_FUNCTION_DECLARE(rem_pio2_cephes_)
   }
   /*!
     @brief rem_pio2_cephes

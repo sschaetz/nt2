@@ -61,6 +61,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_  parent;
     };
+    NT2_FUNCTION_DECLARE(fiedler_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::fiedler_, fiedler, 1)

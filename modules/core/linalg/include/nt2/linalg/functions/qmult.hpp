@@ -48,10 +48,12 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(qmult0_)
      struct qmult_ : ext::unspecified_<qmult_>
     {
       typedef ext::unspecified_<qmult_> parent;
     };
+     NT2_FUNCTION_DECLARE(qmult_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::qmult0_, qmult, 2)

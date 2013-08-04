@@ -23,6 +23,7 @@ namespace nt2
     {
       typedef ext::unspecified_<mtc_> parent;
     };
+    NT2_FUNCTION_DECLARE(mtc_)
   }
 
   // specialization of abstol for mtc method

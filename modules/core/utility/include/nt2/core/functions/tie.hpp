@@ -40,6 +40,7 @@ namespace nt2
     {
       typedef ext::elementwise_<tie_> parent;
     };
+    NT2_FUNCTION_DECLARE(tie_)
   }
 
   //============================================================================

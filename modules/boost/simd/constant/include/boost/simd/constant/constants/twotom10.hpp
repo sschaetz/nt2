@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Twotom10, double, 0
                                 , 0x3A800000, 0x3F50000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Twotom10)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Twotom10, Twotom10)

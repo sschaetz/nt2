@@ -20,6 +20,7 @@ namespace boost { namespace simd
     {
       typedef ext::elementwise_<fast_rec_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(fast_rec_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::fast_rec_, fast_rec, 1)

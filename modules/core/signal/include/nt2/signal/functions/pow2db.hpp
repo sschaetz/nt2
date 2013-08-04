@@ -26,6 +26,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox signal
     **/
     struct pow2db_ : ext::elementwise_<pow2db_> { typedef ext::elementwise_<pow2db_> parent; };
+    NT2_FUNCTION_DECLARE(pow2db_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::pow2db_, pow2db, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::pow2db_, pow2db, 2)

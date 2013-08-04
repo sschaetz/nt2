@@ -24,6 +24,7 @@
 namespace nt2 { namespace tag
   {
     struct polyder_: ext::elementwise_<polyder_> { typedef ext::elementwise_<polyder_> parent; };
+    NT2_FUNCTION_DECLARE(polyder_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::polyder_,polyder, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::polyder_,polyder, 2)

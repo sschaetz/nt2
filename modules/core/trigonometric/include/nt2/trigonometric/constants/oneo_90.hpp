@@ -20,6 +20,7 @@ namespace nt2
                                 , 0, 0x3c360b61         //1/90
                                 , 0x3f86c16c16c16c17ll  //1/90
                                 );
+    NT2_FUNCTION_DECLARE(Oneo_90)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Oneo_90, Oneo_90);

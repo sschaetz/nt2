@@ -39,6 +39,7 @@ namespace nt2
     {
       typedef ext::tieable_<find_> parent;
     };
+    NT2_FUNCTION_DECLARE(find_)
   }
 
   /*!

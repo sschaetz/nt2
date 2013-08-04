@@ -67,6 +67,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.swar
     **/
     struct put_first_ : ext::unspecified_<put_first_> { typedef ext::unspecified_<put_first_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(put_first_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::put_first_, put_first, 2)
 } }

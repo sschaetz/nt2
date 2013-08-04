@@ -59,6 +59,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct exponent_ : ext::elementwise_<exponent_> { typedef ext::elementwise_<exponent_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(exponent_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::exponent_, exponent, 1)
 } }

@@ -62,6 +62,7 @@ namespace nt2
   namespace tag
   {
     struct globalmax_ : tag::formal_ { typedef tag::formal_ parent; };
+    NT2_FUNCTION_DECLARE(globalmax_)
   }
 
   //============================================================================

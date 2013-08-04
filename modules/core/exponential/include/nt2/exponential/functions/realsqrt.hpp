@@ -55,6 +55,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox exponential
     **/
     struct realsqrt_ : ext::elementwise_<realsqrt_> { typedef ext::elementwise_<realsqrt_> parent; };
+    NT2_FUNCTION_DECLARE(realsqrt_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::realsqrt_, realsqrt, 1)
 }

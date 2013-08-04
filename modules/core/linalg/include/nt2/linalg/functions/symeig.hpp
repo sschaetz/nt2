@@ -56,6 +56,7 @@ namespace nt2
     {
       typedef ext::tieable_<symeig_>  parent;
     };
+    NT2_FUNCTION_DECLARE(symeig_)
   }
 
   /**

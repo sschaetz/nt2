@@ -25,6 +25,7 @@ namespace nt2
     {
       typedef ext::elementwise_<ctranspose_> parent;
     };
+    NT2_FUNCTION_DECLARE(ctranspose_)
   }
 
   //============================================================================

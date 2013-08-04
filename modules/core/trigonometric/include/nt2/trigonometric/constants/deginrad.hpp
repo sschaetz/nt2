@@ -54,6 +54,7 @@ namespace nt2
                                 , 0, 0x3c8efa35
                                 , 0x3f91df46a2529d39ll
                                 );
+    NT2_FUNCTION_DECLARE(Deginrad)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Deginrad, Deginrad);

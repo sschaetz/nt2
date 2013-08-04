@@ -20,6 +20,7 @@ namespace nt2
                                 , 0, 0x42b17218
                                 , 0x40862e42fefa39efll
                                 );
+    NT2_FUNCTION_DECLARE(Maxlog)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Maxlog, Maxlog);

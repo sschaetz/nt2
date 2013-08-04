@@ -60,6 +60,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::tieable_<ipjfact_>  parent;
     };
+    NT2_FUNCTION_DECLARE(ipjfact_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::ipjfact_, ipjfact, 1)

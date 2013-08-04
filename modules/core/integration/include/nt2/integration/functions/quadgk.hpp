@@ -23,16 +23,19 @@ namespace nt2
     {
       typedef ext::unspecified_<quadgk_> parent;
     };
+    NT2_FUNCTION_DECLARE(quadgk_)
     // definition  of abstol constant for quadgk method
     BOOST_SIMD_CONSTANT_REGISTER( Quadgkabstol, double
                                   , 0, 0x3727c5ac             //1.0e-5
                                   , 0x3ddb7cdfd9d7bdbbll      //1.0e-10
       );
+    NT2_FUNCTION_DECLARE(Quadgkabstol)
     // definition  of reltol constant for quadgk method
     BOOST_SIMD_CONSTANT_REGISTER( Quadgkreltol, double
                                   , 0, 0x38d1b717             //1.0e-4
                                   , 0x3eb0c6f7a0b5ed8dll      //1.0e-6
       );
+    NT2_FUNCTION_DECLARE(Quadgkreltol)
   }
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Quadgkabstol, Quadgkabstol);
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Quadgkreltol, Quadgkreltol);

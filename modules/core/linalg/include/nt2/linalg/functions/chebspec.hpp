@@ -58,6 +58,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<chebspec_> parent;
     };
+    NT2_FUNCTION_DECLARE(chebspec_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::chebspec_, chebspec, 2)

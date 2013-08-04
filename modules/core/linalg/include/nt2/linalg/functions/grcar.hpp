@@ -48,6 +48,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(grcar_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::grcar_, grcar, 2)

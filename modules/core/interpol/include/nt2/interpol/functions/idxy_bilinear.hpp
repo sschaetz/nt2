@@ -54,6 +54,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct idxy_bilinear_ : ext::unspecified_<idxy_bilinear_> { typedef ext::unspecified_<idxy_bilinear_> parent; };
+    NT2_FUNCTION_DECLARE(idxy_bilinear_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::idxy_bilinear_, idxy_bilinear, 3)
   NT2_FUNCTION_IMPLEMENTATION(tag::idxy_bilinear_, idxy_bilinear, 4)

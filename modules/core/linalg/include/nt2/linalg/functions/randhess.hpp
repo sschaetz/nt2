@@ -56,10 +56,12 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(randhess0_)
      struct randhess_ : ext::unspecified_<randhess_>
     {
       typedef ext::unspecified_<randhess_> parent;
     };
+     NT2_FUNCTION_DECLARE(randhess_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::randhess0_, randhess, 2)

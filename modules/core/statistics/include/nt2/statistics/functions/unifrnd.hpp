@@ -48,6 +48,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct unifrnd_ : boost::dispatch::tag::formal_ { typedef boost::dispatch::tag::formal_ parent; };
+    NT2_FUNCTION_DECLARE(unifrnd_)
   }
 
  NT2_FUNCTION_IMPLEMENTATION(nt2::tag::unifrnd_, unifrnd, 2)

@@ -30,6 +30,7 @@ namespace nt2
       typedef ext::unspecified_<rand_>  parent;
       typedef double                    default_type;
     };
+    NT2_FUNCTION_DECLARE(rand_)
   }
 
   #define M0(z,n,t)                                     \

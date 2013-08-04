@@ -19,6 +19,7 @@ namespace nt2
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(putalong_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::putalong_, putalong, 2)

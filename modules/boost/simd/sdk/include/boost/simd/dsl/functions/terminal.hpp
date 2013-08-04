@@ -20,8 +20,11 @@ namespace boost { namespace simd
   namespace tag
   {
     struct terminal_ : ext::elementwise_<terminal_> { typedef ext::elementwise_<terminal_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(terminal_)
     struct box_ : terminal_{ typedef terminal_ parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(box_)
     struct dereference_ : box_ { typedef box_ parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(dereference_)
   }
 
   template<class Expr>

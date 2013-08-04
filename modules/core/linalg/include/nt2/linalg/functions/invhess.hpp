@@ -67,6 +67,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct invhess_ :   ext::unspecified_<invhess_> { typedef  ext::unspecified_<invhess_> parent; };
+    NT2_FUNCTION_DECLARE(invhess_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::invhess_, invhess, 1)

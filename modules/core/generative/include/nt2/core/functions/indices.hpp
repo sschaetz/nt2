@@ -35,6 +35,7 @@ namespace nt2
       typedef ext::state_constant_<indices_>  parent;
       typedef double                          default_type;
     };
+    NT2_FUNCTION_DECLARE(indices_)
   }
 
   #define M0(z,n,t)                                           \

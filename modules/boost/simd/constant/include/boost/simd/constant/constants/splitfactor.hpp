@@ -64,6 +64,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Splitfactor, double, 0
                                 , 0x46000000, 0x41A0000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Splitfactor)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Splitfactor, Splitfactor)

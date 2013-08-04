@@ -25,6 +25,7 @@ namespace nt2
     {
       typedef ext::elementwise_<db2mag_> parent;
     };
+    NT2_FUNCTION_DECLARE(db2mag_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::db2mag_, db2mag, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::db2mag_, db2mag, 2)

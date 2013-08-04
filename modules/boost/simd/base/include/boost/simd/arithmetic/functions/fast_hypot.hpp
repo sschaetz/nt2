@@ -58,6 +58,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.arithmetic
     **/
     struct fast_hypot_ : ext::elementwise_<fast_hypot_> { typedef ext::elementwise_<fast_hypot_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(fast_hypot_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::fast_hypot_, fast_hypot, 2)
 } }

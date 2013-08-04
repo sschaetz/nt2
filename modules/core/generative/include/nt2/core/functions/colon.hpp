@@ -28,18 +28,21 @@ namespace nt2
       typedef ext::state_constant_<colon_> parent;
       typedef double                      default_type;
     };
+    NT2_FUNCTION_DECLARE(colon_)
 
     /// INTERNAL ONLY
     struct empty_colon_ : colon_
     {
       typedef colon_ parent;
     };
+    NT2_FUNCTION_DECLARE(empty_colon_)
 
     /// INTERNAL ONLY
     struct relative_colon_ : ext::elementwise_<relative_colon_>
     {
       typedef ext::elementwise_<relative_colon_> parent;
     };
+    NT2_FUNCTION_DECLARE(relative_colon_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::colon_, colon, 2)

@@ -68,6 +68,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox trigonometric
     **/
     struct nbd_atan2_ : ext::elementwise_<nbd_atan2_> { typedef ext::elementwise_<nbd_atan2_> parent; };
+    NT2_FUNCTION_DECLARE(nbd_atan2_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::nbd_atan2_, nbd_atan2, 2)
 }

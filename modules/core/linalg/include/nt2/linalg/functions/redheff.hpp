@@ -61,6 +61,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(redheff_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::redheff_, redheff, 2)

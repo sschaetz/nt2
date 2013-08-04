@@ -68,6 +68,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<kahan_> parent;
     };
+    NT2_FUNCTION_DECLARE(kahan_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::kahan_, kahan, 1)

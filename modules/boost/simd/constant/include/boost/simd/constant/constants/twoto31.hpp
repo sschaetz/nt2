@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Twoto31, double, (1 << 31)
                                 , 0x4f000000, 0x41e0000000000000LL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Twoto31)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Twoto31, Twoto31)

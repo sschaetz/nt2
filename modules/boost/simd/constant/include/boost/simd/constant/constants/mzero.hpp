@@ -67,6 +67,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Mzero, double, 0
                                 , 0x80000000, 0x8000000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Mzero)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Mzero, Mzero)

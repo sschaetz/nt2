@@ -24,12 +24,14 @@ namespace nt2
       {
         typedef ext::unspecified_<factorization::schur_> parent;
       };
+      NT2_FUNCTION_DECLARE(schur_)
     }
 
     struct schur_ : ext::tieable_<schur_>
     {
       typedef ext::tieable_<schur_>  parent;
     };
+    NT2_FUNCTION_DECLARE(schur_)
   }
 
   /**

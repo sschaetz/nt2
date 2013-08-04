@@ -45,6 +45,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct chow_ : ext::unspecified_<chow_> { typedef ext::unspecified_<chow_> parent; };
+    NT2_FUNCTION_DECLARE(chow_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::chow_, chow, 1)

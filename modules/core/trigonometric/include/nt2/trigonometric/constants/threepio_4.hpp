@@ -55,6 +55,7 @@ namespace nt2
                                 , 2, 0x4016cbe4
                                 , 0x4002d97c7f3321d2ll
                                 );
+    NT2_FUNCTION_DECLARE(Threepio_4)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Threepio_4, Threepio_4);

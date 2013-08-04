@@ -56,6 +56,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox euler
     **/
     struct digamma_ : ext::elementwise_<digamma_> { typedef ext::elementwise_<digamma_> parent; };
+    NT2_FUNCTION_DECLARE(digamma_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::digamma_, digamma, 1)
 }

@@ -76,6 +76,7 @@ namespace boost { namespace simd
      *        in namespace boost::simd::tag for toolbox boost.simd.reduction
     **/
     struct compare_not_equal_ : ext::unspecified_<compare_not_equal_> { typedef ext::unspecified_<compare_not_equal_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(compare_not_equal_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::compare_not_equal_, compare_not_equal , 2 )

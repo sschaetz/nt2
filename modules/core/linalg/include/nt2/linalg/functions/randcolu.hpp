@@ -62,10 +62,12 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(randcolu0_)
      struct randcolu_ : ext::unspecified_<randcolu_>
     {
       typedef ext::unspecified_<randcolu_> parent;
     };
+     NT2_FUNCTION_DECLARE(randcolu_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::randcolu_, randcolu, 3)

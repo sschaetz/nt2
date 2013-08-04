@@ -23,6 +23,7 @@ namespace nt2
     {
       typedef ext::state_constant_<pispace_> parent;
     };
+    NT2_FUNCTION_DECLARE(pispace_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::pispace_, pispace, 1)

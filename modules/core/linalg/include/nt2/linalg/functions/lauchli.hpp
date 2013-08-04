@@ -47,6 +47,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(lauchli_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::lauchli_, lauchli, 2)

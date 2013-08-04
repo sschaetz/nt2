@@ -20,6 +20,7 @@ namespace nt2
                                 , 201, 0x43490fdb       //2^6*pi
                                 , 0x412921fb54442d18ll  //2^18*pi
                                 );
+    NT2_FUNCTION_DECLARE(Medium_pi)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Medium_pi, Medium_pi);

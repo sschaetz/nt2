@@ -41,6 +41,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct magic_ : ext::unspecified_<magic_> { typedef ext::unspecified_<magic_> parent; };
+    NT2_FUNCTION_DECLARE(magic_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::magic_, magic, 1)

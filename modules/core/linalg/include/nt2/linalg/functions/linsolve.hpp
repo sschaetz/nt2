@@ -76,12 +76,14 @@ namespace nt2
       {
         typedef ext::unspecified_<factorization::linsolve_> parent;
       };
+      NT2_FUNCTION_DECLARE(linsolve_)
     }
 
     struct linsolve_ :  ext::tieable_<linsolve_>
     {
       typedef ext::tieable_<linsolve_>  parent;
     };
+    NT2_FUNCTION_DECLARE(linsolve_)
   }
 
   /**

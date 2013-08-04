@@ -55,6 +55,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox trigonometric
     **/
     struct cotpi_ : ext::elementwise_<cotpi_> { typedef ext::elementwise_<cotpi_> parent; };
+    NT2_FUNCTION_DECLARE(cotpi_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::cotpi_, cotpi, 1)
 }

@@ -58,6 +58,7 @@ namespace boost { namespace simd
      *        in namespace boost::simd::tag for toolbox boost.simd.constant
     **/
     BOOST_SIMD_CONSTANT_REGISTER( Zero, double , 0, 0, 0 );
+    BOOST_SIMD_FUNCTION_DECLARE(Zero)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Zero, Zero)

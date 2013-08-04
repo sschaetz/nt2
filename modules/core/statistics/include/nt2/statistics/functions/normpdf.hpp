@@ -53,6 +53,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct normpdf_ : ext::elementwise_<normpdf_> { typedef ext::elementwise_<normpdf_> parent; };
+    NT2_FUNCTION_DECLARE(normpdf_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::normpdf_, normpdf, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::normpdf_, normpdf, 2)

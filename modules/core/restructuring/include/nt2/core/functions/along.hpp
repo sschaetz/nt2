@@ -54,6 +54,7 @@ namespace nt2
     {
       typedef ext::elementwise_<along_> parent;
     };
+    NT2_FUNCTION_DECLARE(along_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::along_       , along, 2)

@@ -65,6 +65,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<dramadah_> parent;
     };
+    NT2_FUNCTION_DECLARE(dramadah_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::dramadah_, dramadah, 1)

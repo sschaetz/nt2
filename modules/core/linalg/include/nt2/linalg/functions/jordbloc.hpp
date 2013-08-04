@@ -42,6 +42,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(jordbloc_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::jordbloc_, jordbloc, 2)

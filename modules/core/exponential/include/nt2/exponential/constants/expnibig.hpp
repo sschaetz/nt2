@@ -20,6 +20,7 @@ namespace nt2
                                 , 0, 0x4b800000         // 2^24
                                 , 0x4380000000000000ll  // 1.0/128
                                 );
+    NT2_FUNCTION_DECLARE(Expnibig)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Expnibig, Expnibig);

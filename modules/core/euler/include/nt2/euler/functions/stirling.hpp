@@ -59,6 +59,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox euler
     **/
     struct stirling_ : ext::elementwise_<stirling_> { typedef ext::elementwise_<stirling_> parent; };
+    NT2_FUNCTION_DECLARE(stirling_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::stirling_, stirling, 1)
 }

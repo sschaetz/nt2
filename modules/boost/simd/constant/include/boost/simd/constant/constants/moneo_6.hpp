@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Moneo_6, double, 0, 0xBE2AAAAB
                                 , 0xBFC5555555555555LL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Moneo_6)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Moneo_6, Moneo_6)

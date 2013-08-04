@@ -77,7 +77,9 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct expcdf_ : ext::tieable_<expcdf_> { typedef ext::tieable_<expcdf_> parent; };
+    NT2_FUNCTION_DECLARE(expcdf_)
     struct expcdf0_: ext::elementwise_<expcdf0_> { typedef ext::elementwise_<expcdf0_> parent; };
+    NT2_FUNCTION_DECLARE(expcdf0_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::expcdf0_, expcdf, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::expcdf0_, expcdf, 2)

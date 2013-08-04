@@ -23,6 +23,7 @@ namespace nt2
     {
       typedef ext::state_constant_<linspace_> parent;
     };
+    NT2_FUNCTION_DECLARE(linspace_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::linspace_, linspace, 2)

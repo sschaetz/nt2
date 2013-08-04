@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Twotonmb, double, 0
                                 , 0x4B000000, 0x4330000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Twotonmb)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Twotonmb, Twotonmb)

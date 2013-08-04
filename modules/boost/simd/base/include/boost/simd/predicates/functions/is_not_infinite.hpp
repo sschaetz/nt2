@@ -63,6 +63,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.predicates
     **/
     struct is_not_infinite_ : ext::elementwise_<is_not_infinite_> { typedef ext::elementwise_<is_not_infinite_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(is_not_infinite_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::is_not_infinite_, is_not_infinite, 1)
 } }

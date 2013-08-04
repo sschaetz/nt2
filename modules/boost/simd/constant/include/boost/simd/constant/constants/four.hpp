@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Four,double
                                 , 4,0x40800000UL,0x4010000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Four)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Four, Four)

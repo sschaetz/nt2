@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Mlogeps2, double, 0
                                 , 0x40FF1402, 0x403205966F2B4F13ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Mlogeps2)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Mlogeps2, Mlogeps2)

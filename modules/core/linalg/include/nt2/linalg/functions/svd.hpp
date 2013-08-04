@@ -24,12 +24,14 @@ namespace nt2
       {
         typedef ext::unspecified_<factorization::svd_> parent;
       };
+      NT2_FUNCTION_DECLARE(svd_)
     }
 
     struct svd_ : ext::unspecified_<svd_>
     {
        typedef ext::tieable_<svd_>  parent;
     };
+    NT2_FUNCTION_DECLARE(svd_)
   }
 
   /**

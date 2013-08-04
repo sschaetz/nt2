@@ -63,6 +63,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.reduction
     **/
     struct posmin_ : ext::unspecified_<posmin_> { typedef ext::unspecified_<posmin_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(posmin_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::posmin_, posmin, 1)
 } }

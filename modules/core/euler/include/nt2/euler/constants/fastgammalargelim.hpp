@@ -20,6 +20,7 @@ namespace nt2
                                 , 0, 0x41200000         // 10.f
                                 , 0x4040800000000000ll  // 30.
                                 );
+    NT2_FUNCTION_DECLARE(Fastgammalargelim)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Fastgammalargelim, Fastgammalargelim);

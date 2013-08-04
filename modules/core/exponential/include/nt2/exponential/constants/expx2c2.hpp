@@ -20,6 +20,7 @@ namespace nt2
                                 , 0, 0x3d000000         // 1.f/32
                                 , 0x3f80000000000000ll  // 1.0/128
                                 );
+    NT2_FUNCTION_DECLARE(Expx2c2)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Expx2c2, Expx2c2);

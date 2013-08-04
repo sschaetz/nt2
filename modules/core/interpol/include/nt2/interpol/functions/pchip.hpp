@@ -53,6 +53,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox interpol
     **/
     struct pchip_ : ext::unspecified_<pchip_> { typedef ext::unspecified_<pchip_> parent; };
+    NT2_FUNCTION_DECLARE(pchip_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::pchip_, pchip, 3)
   NT2_FUNCTION_IMPLEMENTATION(tag::pchip_, pchip, 4)

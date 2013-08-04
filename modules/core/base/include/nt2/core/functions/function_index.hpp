@@ -21,6 +21,7 @@ namespace nt2
     {
       typedef ext::elementwise_<function_index_> parent;
     };
+    NT2_FUNCTION_DECLARE(function_index_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::function_index_, function_index, 3)

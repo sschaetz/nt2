@@ -60,6 +60,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(minij_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::minij_, minij, 2)

@@ -53,6 +53,7 @@ namespace boost { namespace simd {
      *        in namespace boost::simd::tag for toolbox boost.simd.arithmetic
     **/
     struct inc_ : ext::elementwise_<inc_> { typedef ext::elementwise_<inc_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(inc_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::inc_, inc, 1)
 } }

@@ -55,6 +55,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct exppdf_ : ext::elementwise_<exppdf_> { typedef ext::elementwise_<exppdf_> parent; };
+    NT2_FUNCTION_DECLARE(exppdf_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::exppdf_, exppdf, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::exppdf_, exppdf, 2)

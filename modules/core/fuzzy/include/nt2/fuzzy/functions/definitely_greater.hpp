@@ -64,6 +64,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox fuzzy
     **/
     struct definitely_greater_ : ext::elementwise_<definitely_greater_> { typedef ext::elementwise_<definitely_greater_> parent; };
+    NT2_FUNCTION_DECLARE(definitely_greater_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::definitely_greater_, definitely_greater, 3)
 }

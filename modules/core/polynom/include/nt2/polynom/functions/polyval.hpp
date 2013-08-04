@@ -22,6 +22,7 @@
 namespace nt2 { namespace tag
   {
     struct polyval_ : ext::tieable_<polyval_> { typedef ext::tieable_<polyval_> parent; };
+    NT2_FUNCTION_DECLARE(polyval_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::polyval_, polyval, 2)
     NT2_FUNCTION_IMPLEMENTATION(tag::polyval_, polyval, 3)

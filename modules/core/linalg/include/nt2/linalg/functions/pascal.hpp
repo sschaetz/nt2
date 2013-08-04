@@ -64,6 +64,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<pascal_> parent;
     };
+    NT2_FUNCTION_DECLARE(pascal_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::pascal_, pascal, 1)

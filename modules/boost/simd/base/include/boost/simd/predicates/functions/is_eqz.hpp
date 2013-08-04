@@ -65,6 +65,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.predicates
     **/
     struct is_eqz_ : ext::elementwise_<is_eqz_> { typedef ext::elementwise_<is_eqz_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(is_eqz_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::is_eqz_, is_eqz,   1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::is_eqz_, is_false, 1)

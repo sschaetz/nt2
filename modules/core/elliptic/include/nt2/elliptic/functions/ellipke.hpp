@@ -22,6 +22,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::elementwise_<ellipke_> parent;
     };
+    NT2_FUNCTION_DECLARE(ellipke_)
   }
   /*!
     @brief ellipke

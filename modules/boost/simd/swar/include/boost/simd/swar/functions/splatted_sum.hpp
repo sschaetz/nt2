@@ -27,6 +27,7 @@ namespace boost { namespace simd
       /// @brief Parent hierarchy
       typedef ext::unspecified_<splatted_sum_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(splatted_sum_)
   }
 
   /*!

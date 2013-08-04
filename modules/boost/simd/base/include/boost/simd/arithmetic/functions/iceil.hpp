@@ -57,6 +57,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.arithmetic
     **/
     struct iceil_ : ext::elementwise_<iceil_> { typedef ext::elementwise_<iceil_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(iceil_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::iceil_, iceil, 1)
 } }

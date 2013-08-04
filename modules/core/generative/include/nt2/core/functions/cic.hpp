@@ -36,6 +36,7 @@ namespace nt2
       contexts.
     **/
     BOOST_SIMD_CONSTANT_REGISTER( cic_, double , 0, 0, 0 );
+    NT2_FUNCTION_DECLARE(cic_)
   }
 
   #define M0(z,n,t)                                   \

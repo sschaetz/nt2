@@ -57,6 +57,7 @@ namespace nt2
      *        in namespace nt2::tag for toolbox complex
     **/
     struct proj_ : ext::elementwise_<proj_> { typedef ext::elementwise_<proj_> parent; };
+    NT2_FUNCTION_DECLARE(proj_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::proj_, proj, 1)

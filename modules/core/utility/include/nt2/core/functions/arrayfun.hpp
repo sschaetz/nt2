@@ -28,6 +28,7 @@ namespace nt2
     {
       typedef ext::elementwise_<arrayfun_> parent;
     };
+    NT2_FUNCTION_DECLARE(arrayfun_)
   }
 
   /*!

@@ -67,6 +67,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<clement_> parent;
     };
+    NT2_FUNCTION_DECLARE(clement_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::clement_, clement, 1)

@@ -63,6 +63,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.reduction
     **/
     struct posmax_ : ext::unspecified_<posmax_> { typedef ext::unspecified_<posmax_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(posmax_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::posmax_, posmax, 1)
 } }

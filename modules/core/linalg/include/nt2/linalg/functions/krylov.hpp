@@ -56,6 +56,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<krylov_>  parent;
     };
+    NT2_FUNCTION_DECLARE(krylov_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::krylov_, krylov, 1)

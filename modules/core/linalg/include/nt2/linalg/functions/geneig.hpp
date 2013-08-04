@@ -46,6 +46,7 @@ namespace nt2
     {
       typedef ext::tieable_<geneig_>  parent;
     };
+    NT2_FUNCTION_DECLARE(geneig_)
   }
 
   /**

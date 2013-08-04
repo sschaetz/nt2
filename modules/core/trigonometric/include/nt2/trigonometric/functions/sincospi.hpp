@@ -19,6 +19,7 @@ namespace nt2 { namespace tag
   {
     /// @brief Hierarchy tag for sincospi function
     struct sincospi_ : ext::elementwise_<sincospi_> { typedef ext::elementwise_<sincospi_> parent; };
+    NT2_FUNCTION_DECLARE(sincospi_)
   }
   /*!
     @brief sincospi

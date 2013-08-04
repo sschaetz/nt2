@@ -58,6 +58,7 @@ namespace nt2
                                 , 180, 0x43340000
                                 , 0x4066800000000000ll
                                 );
+    NT2_FUNCTION_DECLARE(_180)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::_180, _180);

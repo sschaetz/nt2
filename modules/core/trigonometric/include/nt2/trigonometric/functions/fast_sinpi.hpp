@@ -55,6 +55,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox trigonometric
     **/
     struct fast_sinpi_ : ext::elementwise_<fast_sinpi_> { typedef ext::elementwise_<fast_sinpi_> parent; };
+    NT2_FUNCTION_DECLARE(fast_sinpi_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::fast_sinpi_, fast_sinpi, 1)
 }

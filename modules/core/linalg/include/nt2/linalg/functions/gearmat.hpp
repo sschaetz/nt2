@@ -51,6 +51,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(gearmat_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::gearmat_, gearmat, 2)

@@ -58,6 +58,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox exponential
     **/
     struct realpow_ : ext::elementwise_<realpow_> { typedef ext::elementwise_<realpow_> parent; };
+    NT2_FUNCTION_DECLARE(realpow_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::realpow_, realpow, 2)
 }

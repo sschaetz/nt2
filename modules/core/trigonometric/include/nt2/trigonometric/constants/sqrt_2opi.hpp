@@ -54,6 +54,7 @@ namespace nt2
                                 , 0, 0x3f4c422a
                                 , 0x3fe9884533d43651ll
                                 );
+    NT2_FUNCTION_DECLARE(Sqrt_2opi)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Sqrt_2opi, Sqrt_2opi);

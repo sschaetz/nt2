@@ -34,6 +34,7 @@ namespace nt2
     {
       typedef ext::elementwise_<expand_to_> parent;
     };
+    NT2_FUNCTION_DECLARE(expand_to_)
   }
 
   /*!

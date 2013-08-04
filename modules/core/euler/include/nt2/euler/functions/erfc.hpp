@@ -57,6 +57,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox euler
     **/
     struct erfc_ : ext::elementwise_<erfc_> { typedef ext::elementwise_<erfc_> parent; };
+    NT2_FUNCTION_DECLARE(erfc_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::erfc_, erfc, 1)
 }

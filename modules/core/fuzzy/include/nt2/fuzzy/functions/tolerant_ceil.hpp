@@ -84,6 +84,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox fuzzy
     **/
     struct tolerant_ceil_ : ext::elementwise_<tolerant_ceil_> { typedef ext::elementwise_<tolerant_ceil_> parent; };
+    NT2_FUNCTION_DECLARE(tolerant_ceil_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::tolerant_ceil_, tolerant_ceil, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::tolerant_ceil_, tceil, 1)

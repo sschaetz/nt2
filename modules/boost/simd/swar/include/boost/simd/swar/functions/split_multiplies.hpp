@@ -26,6 +26,7 @@ namespace boost { namespace simd
     {
       typedef ext::elementwise_<split_multiplies_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(split_multiplies_)
   }
 
   /*!

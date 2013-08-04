@@ -51,6 +51,7 @@ namespace nt2
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(ofsameheight_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::ofsameheight_, ofsameheight, 2)

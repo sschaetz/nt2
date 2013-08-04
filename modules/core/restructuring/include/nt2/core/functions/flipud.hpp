@@ -30,6 +30,7 @@ namespace nt2
     {
       typedef ext::elementwise_<flipud_> parent;
     };
+    NT2_FUNCTION_DECLARE(flipud_)
   }
 
   /*!

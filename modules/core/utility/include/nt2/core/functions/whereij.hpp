@@ -32,6 +32,7 @@ namespace nt2
     {
       typedef ext::elementwise_<whereij_> parent;
     };
+    NT2_FUNCTION_DECLARE(whereij_)
   }
 
   /*!

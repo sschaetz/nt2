@@ -22,6 +22,7 @@ namespace nt2
     {
       typedef ext::elementwise_<repmat_> parent;
     };
+    NT2_FUNCTION_DECLARE(repmat_)
   }
   #define M0(z,n,t)                                                           \
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::repmat_, repmat, n)                   \

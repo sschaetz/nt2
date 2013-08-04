@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Fifteen,double
                                 , 15,0x41700000,0x402e000000000000ll
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Fifteen)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Fifteen, Fifteen)

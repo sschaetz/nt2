@@ -62,6 +62,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::tieable_<dorr_>  parent;
     };
+    NT2_FUNCTION_DECLARE(dorr_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::dorr_, dorr, 1)

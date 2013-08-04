@@ -66,6 +66,7 @@ namespace boost { namespace simd { namespace tag
     {
       typedef ext::unspecified_<is_simd_logical_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(is_simd_logical_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::is_simd_logical_, is_simd_logical, 1)
 } }

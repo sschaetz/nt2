@@ -56,6 +56,7 @@ namespace nt2
                                 , 0, 0x3f22f984
                                 , 0x3FE45F306DC9C883ll
                                 );
+    NT2_FUNCTION_DECLARE(Invpio_2)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Invpio_2, Invpio_2);

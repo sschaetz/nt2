@@ -53,6 +53,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct interp1_ : ext::unspecified_<interp1_> { typedef ext::unspecified_<interp1_> parent; };
+    NT2_FUNCTION_DECLARE(interp1_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::interp1_, interp1, 2)
   NT2_FUNCTION_IMPLEMENTATION(tag::interp1_, interp1, 3)

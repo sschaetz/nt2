@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Mfour, double, -4
                                 , 0xc0800000UL, 0xc010000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Mfour)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Mfour, Mfour)

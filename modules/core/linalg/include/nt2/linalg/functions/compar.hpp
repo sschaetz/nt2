@@ -57,6 +57,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct compar_ : ext::unspecified_<compar_> { typedef ext::unspecified_<compar_> parent; };
+    NT2_FUNCTION_DECLARE(compar_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::compar_, compar, 1)

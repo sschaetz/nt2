@@ -47,6 +47,7 @@ namespace nt2
      {
        typedef tag::formal_ parent;
      };
+     NT2_FUNCTION_DECLARE(sx_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::sx_       , sx, 3)

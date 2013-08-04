@@ -32,12 +32,14 @@ namespace nt2
       {
         typedef ext::unspecified_<solvers::svd_solve_> parent;
       };
+      NT2_FUNCTION_DECLARE(svd_solve_)
     }
 
     struct svd_solve_ :  ext::tieable_<svd_solve_>
     {
       typedef ext::tieable_<svd_solve_>  parent;
     };
+    NT2_FUNCTION_DECLARE(svd_solve_)
   }
 
   /**

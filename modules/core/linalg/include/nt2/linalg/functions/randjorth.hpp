@@ -56,6 +56,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<randjorth_> parent;
     };
+    NT2_FUNCTION_DECLARE(randjorth_)
 }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::randjorth_, randjorth, 4)

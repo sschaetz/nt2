@@ -36,6 +36,7 @@ namespace nt2
     {
       typedef ext::elementwise_<expand_> parent;
     };
+    NT2_FUNCTION_DECLARE(expand_)
   }
 
   #define M0(z,n,t)                                         \

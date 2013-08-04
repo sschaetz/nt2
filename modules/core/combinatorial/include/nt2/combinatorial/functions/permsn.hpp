@@ -31,6 +31,7 @@ namespace nt2
       /// @brief Parent hierarchy
       typedef ext::unspecified_<permsn_> parent;
     };
+    NT2_FUNCTION_DECLARE(permsn_)
   }
 
   /*!

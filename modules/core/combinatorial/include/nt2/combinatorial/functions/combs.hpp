@@ -65,6 +65,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox combinatorial
     **/
     struct combs_ : ext::elementwise_<combs_> { typedef ext::elementwise_<combs_> parent; };
+    NT2_FUNCTION_DECLARE(combs_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::combs_, combs, 2)
 }

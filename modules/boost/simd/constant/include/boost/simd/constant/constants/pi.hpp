@@ -61,6 +61,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Pi, double, 3
                                 , 0x40490FDB, 0x400921FB54442D18ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Pi)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Pi, Pi)

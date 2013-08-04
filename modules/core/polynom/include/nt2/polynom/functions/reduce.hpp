@@ -24,6 +24,7 @@
 namespace nt2 { namespace tag
   {
     struct reduce_: ext::elementwise_<reduce_> { typedef ext::elementwise_<reduce_> parent; };
+    NT2_FUNCTION_DECLARE(reduce_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::reduce_,reduce, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::reduce_,reduce, 2)

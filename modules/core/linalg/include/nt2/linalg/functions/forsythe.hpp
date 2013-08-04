@@ -49,6 +49,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(forsythe_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::forsythe_, forsythe, 2)

@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Oneo_10, double, 0
                                 , 0x3dcccccd, 0x3fb999999999999all
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Oneo_10)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Oneo_10, Oneo_10)

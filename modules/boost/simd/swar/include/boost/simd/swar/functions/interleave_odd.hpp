@@ -75,6 +75,7 @@ namespace boost { namespace simd {
     {
       typedef ext::unspecified_<interleave_odd_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(interleave_odd_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::interleave_odd_, interleave_odd, 2)
 

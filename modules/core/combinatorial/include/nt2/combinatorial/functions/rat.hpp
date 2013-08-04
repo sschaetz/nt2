@@ -59,6 +59,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox combinatorial
     **/
     struct rat_ : ext::elementwise_<rat_> { typedef ext::elementwise_<rat_> parent; };
+    NT2_FUNCTION_DECLARE(rat_)
   }
     NT2_FUNCTION_IMPLEMENTATION(tag::rat_, rat, 1)
     NT2_FUNCTION_IMPLEMENTATION(tag::rat_, rat, 2)

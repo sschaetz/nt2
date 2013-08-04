@@ -32,6 +32,7 @@ namespace nt2
     {
       typedef ext::elementwise_<diag_of_> parent;
     };
+    NT2_FUNCTION_DECLARE(diag_of_)
 
     /*!
       @brief Tag for the offset_diag_of functor
@@ -40,6 +41,7 @@ namespace nt2
     {
       typedef ext::elementwise_<offset_diag_of_>  parent;
     };
+    NT2_FUNCTION_DECLARE(offset_diag_of_)
    }
 
   /*!

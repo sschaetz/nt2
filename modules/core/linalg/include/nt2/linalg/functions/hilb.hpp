@@ -53,6 +53,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct hilb_ : boost::dispatch::tag::formal_ { typedef boost::dispatch::tag::formal_ parent; };
+    NT2_FUNCTION_DECLARE(hilb_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::hilb_, hilb, 1)

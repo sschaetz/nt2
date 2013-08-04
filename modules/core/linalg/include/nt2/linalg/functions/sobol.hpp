@@ -49,6 +49,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<sobol_> parent;
     };
+    NT2_FUNCTION_DECLARE(sobol_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::sobol_, sobol, 2)
 

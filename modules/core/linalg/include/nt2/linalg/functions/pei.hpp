@@ -43,6 +43,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(pei_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::pei_, pei, 2)

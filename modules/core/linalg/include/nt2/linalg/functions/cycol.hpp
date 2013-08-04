@@ -46,6 +46,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct cycol_ : ext::unspecified_<cycol_> { typedef ext::unspecified_<cycol_> parent; };
+    NT2_FUNCTION_DECLARE(cycol_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::cycol_, cycol, 2)

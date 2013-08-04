@@ -75,6 +75,7 @@ namespace boost { namespace simd {
     {
       typedef ext::unspecified_<interleave_first_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(interleave_first_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::interleave_first_, interleave_first, 2)
 

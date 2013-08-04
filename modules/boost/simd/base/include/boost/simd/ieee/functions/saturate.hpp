@@ -64,6 +64,7 @@ namespace boost { namespace simd
     {
       typedef ext::elementwise_<saturate_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(saturate_)
   }
 
   // Explicit version : saturate(x, class_)

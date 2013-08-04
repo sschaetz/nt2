@@ -56,6 +56,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct prev_ : ext::elementwise_<prev_> { typedef ext::elementwise_<prev_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(prev_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::prev_, prev, 1)
 } }

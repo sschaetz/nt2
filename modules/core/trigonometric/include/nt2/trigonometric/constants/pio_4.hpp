@@ -54,6 +54,7 @@ namespace nt2
                                 , 0, 0x3f490fdb
                                 , 0x3fe921fb54442d18ll
                                 );
+    NT2_FUNCTION_DECLARE(Pio_4)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Pio_4, Pio_4);

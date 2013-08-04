@@ -65,6 +65,7 @@ namespace boost { namespace simd { namespace tag
     **/
 
     struct hmsb_ : ext::unspecified_<hmsb_> { typedef ext::unspecified_<hmsb_> parent;  };
+    BOOST_SIMD_FUNCTION_DECLARE(hmsb_)
   }
     BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::hmsb_, hmsb, 1)
 } }

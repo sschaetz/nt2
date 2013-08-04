@@ -51,6 +51,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct kstest_ : tag::formal_ { typedef tag::formal_ parent; };
+    NT2_FUNCTION_DECLARE(kstest_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::kstest_, kstest, 2)

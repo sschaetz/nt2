@@ -22,6 +22,7 @@ namespace nt2
     {
       typedef ext::elementwise_<repvert_> parent;
     };
+    NT2_FUNCTION_DECLARE(repvert_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::repvert_, repvert, 2)

@@ -46,6 +46,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<rando_> parent;
     };
+    NT2_FUNCTION_DECLARE(rando_)
 }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::rando_, rando, 4)

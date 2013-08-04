@@ -64,6 +64,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct eps_ : ext::elementwise_<eps_> { typedef ext::elementwise_<eps_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(eps_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::eps_, eps, 1)
 } }

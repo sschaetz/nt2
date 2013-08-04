@@ -56,6 +56,7 @@ namespace nt2
                                 , 2, 0x3ebc5ab2
                                 , 0x3fd78b56362cef38ll
                                 );
+    NT2_FUNCTION_DECLARE(Invexp_1)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Invexp_1, Invexp_1);

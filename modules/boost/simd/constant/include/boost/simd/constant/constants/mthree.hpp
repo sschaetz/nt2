@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Mthree, double, -3
                                 , 0xc0400000UL, 0xc008000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Mthree)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Mthree, Mthree)

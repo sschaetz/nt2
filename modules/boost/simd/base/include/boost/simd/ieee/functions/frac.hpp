@@ -59,6 +59,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct frac_ : ext::elementwise_<frac_> { typedef ext::elementwise_<frac_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(frac_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::frac_, frac, 1)
 } }

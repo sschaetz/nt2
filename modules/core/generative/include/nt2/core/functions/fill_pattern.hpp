@@ -32,6 +32,7 @@ namespace nt2
     {
       typedef ext::elementwise_<fill_pattern_> parent;
     };
+    NT2_FUNCTION_DECLARE(fill_pattern_)
   }
 
   #define M0(z,n,t)                                                     \

@@ -75,6 +75,7 @@ namespace boost { namespace simd {
     {
       typedef ext::unspecified_<deinterleave_first_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(deinterleave_first_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::deinterleave_first_, deinterleave_first, 2)
 

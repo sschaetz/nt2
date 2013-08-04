@@ -28,12 +28,14 @@ namespace nt2
       {
         typedef ext::unspecified_<factorization::chol_> parent;
       };
+      NT2_FUNCTION_DECLARE(chol_)
     }
 
     struct chol_ : ext::tieable_<chol_>
     {
       typedef ext::tieable_<chol_>  parent;
     };
+    NT2_FUNCTION_DECLARE(chol_)
   }
 
   /**

@@ -67,6 +67,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Fourthrooteps,double,1
                                 , 0x3C9837F0,0x3F20000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Fourthrooteps)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Fourthrooteps, Fourthrooteps)

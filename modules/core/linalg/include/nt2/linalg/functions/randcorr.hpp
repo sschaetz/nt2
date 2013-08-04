@@ -63,10 +63,12 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(randcorr0_)
      struct randcorr_ : ext::unspecified_<randcorr_>
     {
       typedef ext::unspecified_<randcorr_> parent;
     };
+     NT2_FUNCTION_DECLARE(randcorr_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::randcorr_, randcorr, 3)

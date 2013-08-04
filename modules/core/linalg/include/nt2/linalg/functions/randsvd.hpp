@@ -72,6 +72,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<randsvd_> parent;
     };
+     NT2_FUNCTION_DECLARE(randsvd_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::randsvd_, randsvd, 6)

@@ -55,6 +55,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(lesp_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::lesp_, lesp, 2)

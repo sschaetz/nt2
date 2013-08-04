@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Mnine , double, -9
                                 , 0xc1100000UL, 0xc022000000000000ULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Mnine)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Mnine, Mnine)

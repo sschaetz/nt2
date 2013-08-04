@@ -22,6 +22,7 @@
 namespace nt2 { namespace tag
   {
     struct degree_: ext::elementwise_<degree_> { typedef ext::elementwise_<degree_> parent; };
+    NT2_FUNCTION_DECLARE(degree_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::degree_,degree, 1)
 }

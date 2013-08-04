@@ -24,6 +24,7 @@
 namespace nt2 { namespace tag
   {
     struct deconv_ : ext::tieable_<deconv_> { typedef ext::tieable_<deconv_> parent; };
+    NT2_FUNCTION_DECLARE(deconv_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::deconv_, deconv, 2)
 }

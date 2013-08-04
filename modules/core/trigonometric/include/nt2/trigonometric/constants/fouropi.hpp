@@ -55,6 +55,7 @@ namespace nt2
                                 , 1, 0x3fa2f983
                                 , 0x3ff45f306dc9c883ll
                                 );
+    NT2_FUNCTION_DECLARE(Fouropi)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Fouropi, Fouropi);

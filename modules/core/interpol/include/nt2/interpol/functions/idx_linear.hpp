@@ -51,6 +51,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox statistics
     **/
     struct idx_linear_ : ext::unspecified_<idx_linear_> { typedef ext::unspecified_<idx_linear_> parent; };
+    NT2_FUNCTION_DECLARE(idx_linear_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::idx_linear_, idx_linear, 2)
   NT2_FUNCTION_IMPLEMENTATION(tag::idx_linear_, idx_linear, 3)

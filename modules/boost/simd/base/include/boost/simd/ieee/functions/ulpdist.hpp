@@ -95,6 +95,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct ulpdist_ : ext::elementwise_<ulpdist_> { typedef ext::elementwise_<ulpdist_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(ulpdist_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::ulpdist_, ulpdist, 2)
 } }

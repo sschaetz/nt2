@@ -59,6 +59,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct mantissa_ : ext::elementwise_<mantissa_> { typedef ext::elementwise_<mantissa_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(mantissa_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::mantissa_, mantissa, 1)
 } }

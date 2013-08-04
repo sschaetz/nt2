@@ -20,6 +20,7 @@ namespace nt2
                                 , 63, 0x427b53d1       //20*pi
                                 , 0x404f6a7a2955385ell  //20*pi
                                 );
+    NT2_FUNCTION_DECLARE(_20_pi)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::_20_pi, _20_pi);

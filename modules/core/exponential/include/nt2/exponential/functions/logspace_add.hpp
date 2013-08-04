@@ -54,6 +54,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox exponential
     **/
     struct logspace_add_ : ext::elementwise_<logspace_add_> { typedef ext::elementwise_<logspace_add_> parent; };
+    NT2_FUNCTION_DECLARE(logspace_add_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::logspace_add_, logspace_add, 2)
 }

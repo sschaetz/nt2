@@ -71,6 +71,7 @@ namespace boost { namespace simd
     {
       typedef ext::reduction_<all_, tag::logical_and_, tag::True> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(logical_and_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::all_, all, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::all_, all, 2)

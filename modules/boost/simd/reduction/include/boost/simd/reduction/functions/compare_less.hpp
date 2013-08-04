@@ -74,6 +74,7 @@ namespace boost { namespace simd
      *        in namespace boost::simd::tag for toolbox boost.simd.reduction
     **/
     struct compare_less_ : ext::unspecified_<compare_less_> { typedef ext::unspecified_<compare_less_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(compare_less_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::compare_less_, compare_less , 2 )

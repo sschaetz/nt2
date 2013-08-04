@@ -61,6 +61,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct nextafter_ : ext::elementwise_<nextafter_> { typedef ext::elementwise_<nextafter_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(nextafter_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::nextafter_, nextafter, 2)
 } }

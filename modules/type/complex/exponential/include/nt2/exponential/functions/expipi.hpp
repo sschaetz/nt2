@@ -55,6 +55,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox expipionential
     **/
     struct expipi_ : ext::elementwise_<expipi_> { typedef ext::elementwise_<expipi_> parent; };
+    NT2_FUNCTION_DECLARE(expipi_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::expipi_, expipi, 1)
 }

@@ -55,6 +55,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox bessel
     **/
     struct y1_ : ext::elementwise_<y1_> { typedef ext::elementwise_<y1_> parent; };
+    NT2_FUNCTION_DECLARE(y1_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::y1_, y1, 1)
 }

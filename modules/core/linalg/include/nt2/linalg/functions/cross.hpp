@@ -58,6 +58,7 @@ namespace nt2
     {
       typedef  boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(cross_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::cross_, cross, 2)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::cross_, cross, 3)

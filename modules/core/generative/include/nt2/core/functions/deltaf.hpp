@@ -26,6 +26,7 @@ namespace nt2
       typedef ext::state_constant_<deltaf_> parent;
       typedef double                 default_type;
     };
+    NT2_FUNCTION_DECLARE(deltaf_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::deltaf_, deltaf, 3)

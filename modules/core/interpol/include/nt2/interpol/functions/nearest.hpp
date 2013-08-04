@@ -53,6 +53,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox interpol
     **/
     struct nearest_ : ext::unspecified_<nearest_> { typedef ext::unspecified_<nearest_> parent; };
+    NT2_FUNCTION_DECLARE(nearest_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::nearest_, nearest, 3)
   NT2_FUNCTION_IMPLEMENTATION(tag::nearest_, nearest, 4)

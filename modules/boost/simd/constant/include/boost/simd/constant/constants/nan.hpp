@@ -68,6 +68,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Nan, double, 0
                                 , 0xFFFFFFFF, 0xFFFFFFFFFFFFFFFFULL
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Nan)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Nan, Nan)

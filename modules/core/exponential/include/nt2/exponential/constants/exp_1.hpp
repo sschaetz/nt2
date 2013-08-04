@@ -58,6 +58,7 @@ namespace nt2
                                 , 2, 0x402df854
                                 , 0x4005bf0a8b145769LL
                                 );
+    NT2_FUNCTION_DECLARE(Exp_1)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Exp_1, Exp_1);

@@ -51,6 +51,7 @@ namespace nt2
     {
       typedef ext::unspecified_<mtimes_> parent;
     };
+    NT2_FUNCTION_DECLARE(mtimes_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::mtimes_, mtimes, 2)
 }

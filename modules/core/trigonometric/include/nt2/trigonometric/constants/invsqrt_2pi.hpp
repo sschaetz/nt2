@@ -20,6 +20,7 @@ namespace nt2
                                 , 0, 0x3ecc422a
                                 , 0x3fd9884533d43651ll
                                 );
+    NT2_FUNCTION_DECLARE(Invsqrt_2pi)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Invsqrt_2pi, Invsqrt_2pi);

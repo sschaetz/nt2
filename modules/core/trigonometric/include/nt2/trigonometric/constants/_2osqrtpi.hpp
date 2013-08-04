@@ -54,6 +54,7 @@ namespace nt2
                                 , 0, 0x3ecc422a
                                 , 0x3fd9884533d43651ll
                                 );
+    NT2_FUNCTION_DECLARE(_2osqrtpi)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::_2osqrtpi, _2osqrtpi);//1.1283791670955125738961589031215

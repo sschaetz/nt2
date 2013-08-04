@@ -36,6 +36,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox combinatorial
     **/
     struct perms_ : ext::unspecified_<perms_> { typedef ext::unspecified_<perms_> parent; };
+    NT2_FUNCTION_DECLARE(perms_)
     }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::perms_, perms, 1)

@@ -58,6 +58,7 @@ namespace nt2
                                 , 0, 0x3f13c468
                                 , 0x3fe2788cfc6fb619ll
                                 );
+    NT2_FUNCTION_DECLARE(Euler)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Euler, Euler);

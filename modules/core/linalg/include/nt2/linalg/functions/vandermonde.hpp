@@ -47,6 +47,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(vandermonde_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::vandermonde_, vandermonde, 2)

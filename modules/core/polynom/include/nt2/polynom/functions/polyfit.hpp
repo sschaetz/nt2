@@ -19,6 +19,7 @@
 namespace nt2 { namespace tag
   {
     struct polyfit_ : ext::tieable_<polyfit_> { typedef ext::tieable_<polyfit_> parent; };
+    NT2_FUNCTION_DECLARE(polyfit_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::polyfit_, polyfit, 2)
   NT2_FUNCTION_IMPLEMENTATION(tag::polyfit_, polyfit, 3)

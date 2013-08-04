@@ -63,6 +63,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct copysign_ : ext::elementwise_<copysign_> { typedef ext::elementwise_<copysign_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(copysign_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::copysign_, copysign, 2)
 } }

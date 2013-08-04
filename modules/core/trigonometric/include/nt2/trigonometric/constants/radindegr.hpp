@@ -20,6 +20,7 @@ namespace nt2
                                 , 0, 0xb53387c1
                                 , 0xbce1e7ab456405f8ull
                                 );
+    NT2_FUNCTION_DECLARE(Radindegr)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Radindegr, Radindegr);

@@ -50,6 +50,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(smoke_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::smoke_, smoke, 2)

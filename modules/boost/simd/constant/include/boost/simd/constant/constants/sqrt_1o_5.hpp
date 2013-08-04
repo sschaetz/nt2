@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Sqrt_1o_5, double, 0
                                 , 0x3ee4f92e, 0x3fdc9f25c5bfedd9ll
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Sqrt_1o_5)
   }
 
 

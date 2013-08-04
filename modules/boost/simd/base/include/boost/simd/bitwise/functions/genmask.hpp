@@ -62,6 +62,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.bitwise
     **/
     struct genmask_ : ext::elementwise_<genmask_> { typedef ext::elementwise_<genmask_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(genmask_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::genmask_, genmask, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::genmask_, typed_mask, 1)

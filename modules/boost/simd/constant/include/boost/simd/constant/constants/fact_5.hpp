@@ -60,6 +60,7 @@ namespace boost { namespace simd
     BOOST_SIMD_CONSTANT_REGISTER( Fact_5,double
                                 , 120, 0x42f00000,0x405e000000000000ll
                                 );
+    BOOST_SIMD_FUNCTION_DECLARE(Fact_5)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(boost::simd::tag::Fact_5, Fact_5)

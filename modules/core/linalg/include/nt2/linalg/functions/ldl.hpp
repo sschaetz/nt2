@@ -28,12 +28,14 @@ namespace nt2
       {
         typedef ext::unspecified_<factorization::ldl_> parent;
       };
+      NT2_FUNCTION_DECLARE(ldl_)
     }
 
     struct ldl_ : ext::tieable_<ldl_>
     {
       typedef ext::tieable_<ldl_>  parent;
     };
+    NT2_FUNCTION_DECLARE(ldl_)
   }
 
   /**

@@ -63,6 +63,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.reduction
     **/
     struct inbtrue_ : ext::unspecified_<inbtrue_> { typedef ext::unspecified_<inbtrue_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(inbtrue_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::inbtrue_, inbtrue, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::inbtrue_, inbtrue, 2)

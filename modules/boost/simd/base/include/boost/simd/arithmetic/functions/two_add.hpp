@@ -25,6 +25,7 @@ namespace boost { namespace simd
     {
       typedef ext::elementwise_<two_add_> parent;
     };
+    BOOST_SIMD_FUNCTION_DECLARE(two_add_)
   }
 
   /*!

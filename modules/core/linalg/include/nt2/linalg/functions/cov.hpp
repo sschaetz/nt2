@@ -24,6 +24,7 @@ namespace nt2 {  namespace tag
     {
        typedef tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(cov_)
   }
   /**
    * @brief compute covariance matrix expression

@@ -57,6 +57,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox euler
     **/
     struct dawson_ : ext::elementwise_<dawson_> { typedef ext::elementwise_<dawson_> parent; };
+    NT2_FUNCTION_DECLARE(dawson_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::dawson_, dawson, 1)
 }

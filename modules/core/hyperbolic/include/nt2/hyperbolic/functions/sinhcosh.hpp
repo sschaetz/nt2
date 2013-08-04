@@ -22,6 +22,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::elementwise_<sinhcosh_> parent;
     };
+    NT2_FUNCTION_DECLARE(sinhcosh_)
   }
   /*!
     @brief sinhcosh

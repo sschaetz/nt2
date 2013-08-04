@@ -45,6 +45,7 @@ namespace nt2 { namespace tag
      *        in namespace nt2::tag for toolbox algebra
     **/
     struct invhilb_ : ext::unspecified_<invhilb_> { typedef ext::unspecified_<invhilb_> parent; };
+    NT2_FUNCTION_DECLARE(invhilb_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::invhilb_, invhilb, 1)

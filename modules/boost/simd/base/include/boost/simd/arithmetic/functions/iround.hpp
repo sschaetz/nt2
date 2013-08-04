@@ -57,6 +57,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.arithmetic
     **/
     struct iround_ : ext::elementwise_<iround_> { typedef ext::elementwise_<iround_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(iround_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::iround_, iround, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::iround_, iround2even, 1)

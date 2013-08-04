@@ -55,6 +55,7 @@ namespace nt2
                                   , 0, 0x3e22f983
                                   , 0x3fc45f306dc9c883ll
                                   );
+    NT2_FUNCTION_DECLARE(Inv2pi)
   }
 
   BOOST_SIMD_CONSTANT_IMPLEMENTATION(tag::Inv2pi, Inv2pi);

@@ -67,6 +67,7 @@ namespace boost { namespace simd
      *        in namespace boost::simd::tag for toolbox boost.simd.swar
     **/
     struct sort_ : ext::tieable_<sort_> { typedef ext::tieable_<sort_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(sort_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::sort_, sort, 1)

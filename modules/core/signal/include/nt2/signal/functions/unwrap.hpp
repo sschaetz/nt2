@@ -45,6 +45,7 @@ namespace nt2
     {
       typedef ext::unspecified_<unwrap_> parent;
     };
+    NT2_FUNCTION_DECLARE(unwrap_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::unwrap_, unwrap, 1)
   NT2_FUNCTION_IMPLEMENTATION(tag::unwrap_, unwrap, 2)

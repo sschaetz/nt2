@@ -57,6 +57,7 @@ namespace boost { namespace simd { namespace tag
      *        in namespace boost::simd::tag for toolbox boost.simd.ieee
     **/
     struct negate_ : ext::elementwise_<negate_> { typedef ext::elementwise_<negate_> parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(negate_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::negate_, negate, 2)
 } }

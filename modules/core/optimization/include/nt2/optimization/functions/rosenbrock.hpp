@@ -26,6 +26,7 @@ namespace nt2
     {
       typedef ext::unspecified_<rosenbrock_> parent;
     };
+    NT2_FUNCTION_DECLARE(rosenbrock_)
   }
 
   //============================================================================

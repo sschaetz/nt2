@@ -28,11 +28,13 @@ namespace nt2
     {
       typedef ext::elementwise_<tril_> parent;
     };
+    NT2_FUNCTION_DECLARE(tril_)
 
     struct offset_tril_ : ext::elementwise_<offset_tril_>
     {
       typedef ext::elementwise_<offset_tril_>  parent;
     };
+    NT2_FUNCTION_DECLARE(offset_tril_)
   }
 
   //============================================================================

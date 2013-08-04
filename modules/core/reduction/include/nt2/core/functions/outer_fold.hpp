@@ -24,6 +24,7 @@ namespace nt2
     {
       typedef ext::unspecified_<outer_fold_> parent;
     };
+    NT2_FUNCTION_DECLARE(outer_fold_)
   }
 
   //============================================================================

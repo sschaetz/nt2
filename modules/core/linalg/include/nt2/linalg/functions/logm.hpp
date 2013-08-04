@@ -20,6 +20,7 @@ namespace nt2 { namespace tag
     {
       typedef ext::unspecified_<logm_>  parent;
     };
+    NT2_FUNCTION_DECLARE(logm_)
   }
   /**
    * @brief compute natural principal logarithm of a matricial expression

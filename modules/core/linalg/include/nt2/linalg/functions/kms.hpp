@@ -58,6 +58,7 @@ namespace nt2
     {
       typedef ext::unspecified_<kms_> parent;
     };
+    NT2_FUNCTION_DECLARE(kms_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(tag::kms_, kms, 1)

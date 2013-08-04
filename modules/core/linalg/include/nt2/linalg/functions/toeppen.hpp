@@ -57,6 +57,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(toeppen_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::toeppen_, toeppen, 2)

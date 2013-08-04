@@ -31,6 +31,7 @@ namespace nt2
     {
       typedef ext::state_constant_<logspace_> parent;
     };
+    NT2_FUNCTION_DECLARE(logspace_)
   }
 
   NT2_FUNCTION_IMPLEMENTATION(nt2::tag::logspace_, logspace, 2)

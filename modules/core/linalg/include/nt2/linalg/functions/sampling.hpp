@@ -45,6 +45,7 @@ namespace nt2 { namespace tag
     {
       typedef boost::dispatch::tag::formal_ parent;
     };
+    NT2_FUNCTION_DECLARE(sampling_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::sampling_, sampling, 1)

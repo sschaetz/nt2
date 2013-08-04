@@ -32,12 +32,14 @@ namespace nt2
       {
         typedef ext::unspecified_<solvers::full_lu_solve_> parent;
       };
+      NT2_FUNCTION_DECLARE(full_lu_solve_)
     }
 
     struct full_lu_solve_ :  ext::tieable_<full_lu_solve_>
     {
       typedef ext::tieable_<full_lu_solve_>  parent;
     };
+    NT2_FUNCTION_DECLARE(full_lu_solve_)
   }
 
   /**
