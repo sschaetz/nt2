@@ -16,13 +16,13 @@
 #define NT2_FUNCTOR_CALL_REPEAT(N) BOOST_DISPATCH_CALL_REPEAT(N)
 
 #define NT2_FUNCTOR_IMPLEMENTATION(Tag,Site,Types,Seq)                         \
-BOOST_DISPATCH_IMPLEMENT((nt2)(ext),Tag,Site,Types,Seq)
+BOOST_DISPATCH_IMPLEMENT((nt2)(ext),Tag,nt2::tag::Tag,Site,Types,Seq)
 
 #define NT2_FUNCTOR_IMPLEMENTATION_TPL(Tag,Site,Types,Seq)                     \
-BOOST_DISPATCH_IMPLEMENT_TPL((nt2)(ext),Tag,Site,Types,Seq)
+BOOST_DISPATCH_IMPLEMENT_TPL((nt2)(ext),Tag,nt2::tag::Tag,Site,Types,Seq)
 
 #define NT2_FUNCTOR_IMPLEMENTATION_IF(Tag,Site,Types,Cond,Seq)                 \
-BOOST_DISPATCH_IMPLEMENT_IF((nt2)(ext),Tag,Site,Types,Cond,Seq)
+BOOST_DISPATCH_IMPLEMENT_IF((nt2)(ext),Tag,nt2::tag::Tag,Site,Types,Cond,Seq)
 
 #define NT2_FUNCTOR_IMPLEMENTATION_GEN(Tag,Site,Types,Seq)                     \
 BOOST_DISPATCH_IMPLEMENT_GEN((nt2)(ext),Tag,Site,Types,Seq)

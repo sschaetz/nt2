@@ -100,23 +100,23 @@ template< BOOST_PP_ENUM( BOOST_PP_SEQ_SIZE(Types), M, Types ) >                \
 struct BOOST_DISPATCH_IMPLEMENT_(Tag, Site, Seq)                               \
 /**/
 
-#define BOOST_DISPATCH_IMPLEMENT(NS, Tag, Site, Types, Seq)                    \
-BOOST_DISPATCH_REGISTER(NS, Tag, Site, Types, Seq)                             \
+#define BOOST_DISPATCH_IMPLEMENT(NS, Name, Tag, Site, Types, Seq)              \
+BOOST_DISPATCH_REGISTER(NS, Name, Tag, Site, Types, Seq)                       \
 BOOST_DISPATCH_IMPLEMENT_BODY(Tag, Site, Types, Seq, BOOST_DISPATCH_TYPE)      \
 /**/
 
-#define BOOST_DISPATCH_IMPLEMENT_TPL(NS, Tag, Site, Types, Seq)                \
-BOOST_DISPATCH_REGISTER_TPL(NS, Tag, Site, Types, Seq)                         \
+#define BOOST_DISPATCH_IMPLEMENT_TPL(NS, Name, Tag, Site, Types, Seq)          \
+BOOST_DISPATCH_REGISTER_TPL(NS, Name, Tag, Site, Types, Seq)                   \
 BOOST_DISPATCH_IMPLEMENT_BODY(Tag, Site, Types, Seq, BOOST_DISPATCH_TYPE_TPL)  \
 /**/
 
-#define BOOST_DISPATCH_IMPLEMENT_IF(NS, Tag, Site, Types, Cond, Seq)           \
-BOOST_DISPATCH_REGISTER_IF(NS, Tag, Site, Types, Cond, Seq)                    \
+#define BOOST_DISPATCH_IMPLEMENT_IF(NS, Name, Tag, Site, Types, Cond, Seq)     \
+BOOST_DISPATCH_REGISTER_IF(NS, Name, Tag, Site, Types, Cond, Seq)              \
 BOOST_DISPATCH_IMPLEMENT_BODY(Tag, Site, Types, Seq, BOOST_DISPATCH_TYPE)      \
 /**/
 
-#define BOOST_DISPATCH_IMPLEMENT_TPL_IF(NS, Tag, Site, Types, Cond, Seq)       \
-BOOST_DISPATCH_REGISTER_TPL_IF(NS, Tag, Site, Types, Cond, Seq)                \
+#define BOOST_DISPATCH_IMPLEMENT_TPL_IF(NS, Name, Tag, Site, Types, Cond, Seq) \
+BOOST_DISPATCH_REGISTER_TPL_IF(NS, Name, Tag, Site, Types, Cond, Seq)          \
 BOOST_DISPATCH_IMPLEMENT_BODY(Tag, Site, Types, Seq, BOOST_DISPATCH_TYPE_TPL)  \
 /**/
 
