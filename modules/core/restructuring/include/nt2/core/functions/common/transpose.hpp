@@ -65,7 +65,7 @@ namespace nt2 { namespace ext
   {
     BOOST_DISPATCH_RETURNS(1, (A0 const& a0), colvect(a0))
   };
-  NT2_REGISTER_DISPATCH_TO_IF( nt2::tag::transpose_, tag::cpu_
+  NT2_REGISTER_DISPATCH_TO_IF( transpose_, tag::cpu_
                              , (A0)
                              , (nt2::details::is_definitely_row_vector<typename A0::extent_type>)
                              , ((ast_<A0, nt2::container::domain>))
@@ -77,7 +77,7 @@ namespace nt2 { namespace ext
   {
     BOOST_DISPATCH_RETURNS(1, (A0 const& a0), rowvect(a0))
   };
-  NT2_REGISTER_DISPATCH_TO_IF( nt2::tag::transpose_, tag::cpu_
+  NT2_REGISTER_DISPATCH_TO_IF( transpose_, tag::cpu_
                              , (A0)
                              , (nt2::details::is_definitely_col_vector<typename A0::extent_type>)
                              , ((ast_<A0, nt2::container::domain>))
