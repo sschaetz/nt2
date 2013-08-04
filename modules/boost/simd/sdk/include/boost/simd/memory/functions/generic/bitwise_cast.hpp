@@ -65,12 +65,12 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_DISPATCH_REGISTER_TO_IF_GEN((boost)(simd)(ext), boost::simd::tag::bitwise_cast_, tag::cpu_, (A0)(A1)
-                            , (is_same<A0, typename A1::type>)
-                            , (generic_< unspecified_<A0> >)
-                              (target_< unspecified_<A1> >)
-                            , dispatch::identity
-                            );
+  BOOST_SIMD_REGISTER_DISPATCH_TO_IF( bitwise_cast_, tag::cpu_, (A0)(A1)
+                                    , (is_same<A0, typename A1::type>)
+                                    , (generic_< unspecified_<A0> >)
+                                      (target_< unspecified_<A1> >)
+                                    , dispatch::identity
+                                    );
 
 #endif
 } } }
