@@ -19,7 +19,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::polyint_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( polyint_, tag::cpu_,
                               (A0),
                               (scalar_<floating_<A0> >)
                             )
@@ -28,7 +28,7 @@ namespace nt2 { namespace ext
                            ( polyint(nt2::_(a0, a0)))
                           )
   };
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::polyint_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( polyint_, tag::cpu_
                               , (A0)(A1)
                               , ((ast_<A0, nt2::container::domain>))
                               (scalar_<floating_<A1> >)
@@ -45,7 +45,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::polyint_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( polyint_, tag::cpu_
                               , (A0)
                               , ((ast_<A0, nt2::container::domain>))
                             )

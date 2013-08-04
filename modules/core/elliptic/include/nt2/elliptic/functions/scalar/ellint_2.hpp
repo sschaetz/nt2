@@ -20,7 +20,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::ellint_2_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( ellint_2_, tag::cpu_
                             , (A0)
                             , (scalar_< arithmetic_<A0> >)
                             )
@@ -34,7 +34,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::ellint_2_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( ellint_2_, tag::cpu_
                             , (A0)
                             , (scalar_< floating_<A0> >)
                             )

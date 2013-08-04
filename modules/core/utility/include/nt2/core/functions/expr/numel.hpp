@@ -14,7 +14,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::numel_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( numel_, tag::cpu_
                             , (A0)
                             , ((ast_<A0, nt2::container::domain>))
                             )

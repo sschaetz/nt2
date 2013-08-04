@@ -14,7 +14,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::putalong_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( putalong_, tag::cpu_
                             , (A0)(A1)
                             , (scalar_<unspecified_<A0> >)
                               (scalar_<integer_<A1> >)

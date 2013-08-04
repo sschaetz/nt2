@@ -23,7 +23,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( run_, tag::cpu_
                             , (Expr)(State)(Data)(Arity)
                             , ((expr_< unspecified_<Expr>
                                      , nt2::tag::function_index_

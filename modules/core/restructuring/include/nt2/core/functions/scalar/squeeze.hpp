@@ -14,7 +14,7 @@
 namespace nt2 { namespace ext
 {
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::squeeze_, tag::cpu_, (A0)
+  NT2_FUNCTOR_IMPLEMENTATION( squeeze_, tag::cpu_, (A0)
                             , (scalar_< arithmetic_<A0> >)
                             )
   {

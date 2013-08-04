@@ -14,7 +14,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::seladd_, tag::cpu_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( seladd_, tag::cpu_, (A0)(A1)
                             , (scalar_< unspecified_<A0> >)
                               (scalar_< fundamental_<A1> >)
                               (scalar_< fundamental_<A1> >)

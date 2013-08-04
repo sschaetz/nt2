@@ -17,7 +17,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::selsub_, tag::cpu_, (A0)(A1)
+  NT2_FUNCTOR_IMPLEMENTATION( selsub_, tag::cpu_, (A0)(A1)
                             , (generic_< logical_<A0> >)
                               (generic_< complex_<floating_<A1> > >)
                               (generic_< complex_<floating_<A1> > >)
@@ -29,7 +29,7 @@ namespace nt2 { namespace ext
       return a1+nt2::if_else_zero(a0, -a2);
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::selsub_, tag::cpu_, (A0)(A1)(A2)
+  NT2_FUNCTOR_IMPLEMENTATION( selsub_, tag::cpu_, (A0)(A1)(A2)
                             , (generic_< logical_<A0> >)
                               (generic_< complex_<floating_<A1> > >)
                               (generic_< floating_<A2> >)
@@ -41,7 +41,7 @@ namespace nt2 { namespace ext
       return a1+nt2::if_else_zero(a0, -a2);
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::selsub_, tag::cpu_, (A0)(A1)(A2)
+  NT2_FUNCTOR_IMPLEMENTATION( selsub_, tag::cpu_, (A0)(A1)(A2)
                             , (generic_< logical_<A0> >)
                               (generic_< floating_<A1> >)
                               (generic_< complex_<floating_<A2> > >)
@@ -53,7 +53,7 @@ namespace nt2 { namespace ext
       return a1+nt2::if_else_zero(a0, -a2);
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::selsub_, tag::cpu_, (A0)(A1)
+  NT2_FUNCTOR_IMPLEMENTATION( selsub_, tag::cpu_, (A0)(A1)
                             , (generic_< unspecified_<A0> >)
                               (generic_< complex_<floating_<A1> > >)
                               (generic_< complex_<floating_<A1> > >)
@@ -65,7 +65,7 @@ namespace nt2 { namespace ext
       return nt2::selsub(is_nez(a0), a1, a2);
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::selsub_, tag::cpu_, (A0)(A1)(A2)
+  NT2_FUNCTOR_IMPLEMENTATION( selsub_, tag::cpu_, (A0)(A1)(A2)
                             , (generic_< unspecified_<A0> >)
                               (generic_< complex_<floating_<A1> > >)
                               (generic_< floating_<A2> >)
@@ -77,7 +77,7 @@ namespace nt2 { namespace ext
       return nt2::selsub(is_nez(a0), a1, a2);
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::selsub_, tag::cpu_, (A0)(A1)(A2)
+  NT2_FUNCTOR_IMPLEMENTATION( selsub_, tag::cpu_, (A0)(A1)(A2)
                             , (generic_< unspecified_<A0> >)
                               (generic_< floating_<A1> >)
                               (generic_< complex_<floating_<A2> > >)

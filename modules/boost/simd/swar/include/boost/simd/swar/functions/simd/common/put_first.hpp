@@ -20,7 +20,7 @@
 /////////////////////////////////////////////////////////////////////////////
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::put_first_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( put_first_, tag::cpu_
                             , (A0)(A1)(X)
                             , ((simd_<arithmetic_<A0>,X>))(scalar_< integer_<A1> >)
                             )

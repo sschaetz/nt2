@@ -20,7 +20,7 @@
 namespace boost { namespace simd { namespace ext
 {
   /// INTERNAL ONLY - Scalar store and store are equivalent
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( store_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)
                                     , (unspecified_<A0>)
@@ -38,7 +38,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Scalar store and store are equivalent
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( store_
                                     , tag::cpu_
                                     , (A0)(A1)
                                     , (unspecified_<A0>)
@@ -54,7 +54,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Fusion sequence store with offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( store_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)
                                     , (fusion_sequence_<A0>)
@@ -76,7 +76,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Scalar store and store are equivalent
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( store_
                                     , tag::cpu_
                                     , (A0)(A1)
                                     , (fusion_sequence_<A0>)
@@ -97,7 +97,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// Handles store( seq, seq'*)
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( store_
                                     , tag::cpu_
                                     , (A0)(A1)
                                     , (fusion_sequence_<A0>)
@@ -112,7 +112,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::store_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( store_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)
                                     , (fusion_sequence_<A0>)

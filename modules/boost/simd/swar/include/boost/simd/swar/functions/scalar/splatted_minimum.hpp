@@ -13,7 +13,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::splatted_minimum_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( splatted_minimum_
                                     , tag::cpu_
                                     , (A0)
                                     , ( scalar_< unspecified_<A0> >)

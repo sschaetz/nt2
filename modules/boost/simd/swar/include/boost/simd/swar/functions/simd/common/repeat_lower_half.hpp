@@ -14,7 +14,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::repeat_lower_half_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( repeat_lower_half_, tag::cpu_
                                     , (A0)(X)
                                     , ((simd_< unspecified_<A0>, X>))
                                     )

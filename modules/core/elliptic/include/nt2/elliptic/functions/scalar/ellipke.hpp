@@ -29,7 +29,7 @@
 namespace nt2 { namespace ext
 {
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN(  nt2::tag::ellipke_, tag::cpu_,(A0),
+  NT2_FUNCTOR_IMPLEMENTATION(  ellipke_, tag::cpu_,(A0),
                                (scalar_<floating_<A0> >)
                                (scalar_<floating_<A0> >)
                                (scalar_<floating_<A0> >)

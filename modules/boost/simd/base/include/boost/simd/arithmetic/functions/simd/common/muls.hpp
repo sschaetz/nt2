@@ -18,7 +18,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::muls_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( muls_, tag::cpu_
                                    , (A0)(X)
                                    , ((simd_<floating_<A0>, X>))((simd_<floating_<A0>, X>))
                                    )
@@ -30,7 +30,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::muls_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( muls_, tag::cpu_
                                       , (A0)(X)
                                       , ( simd::meta::is_upgradable_on_ext<A0,X> )
                                       , ((simd_<integer_<A0>, X>))((simd_<integer_<A0>, X>))

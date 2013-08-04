@@ -15,7 +15,7 @@
 namespace nt2 { namespace ext
 {
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::flipdim_, tag::cpu_, (A0)(A1)
+  NT2_FUNCTOR_IMPLEMENTATION( flipdim_, tag::cpu_, (A0)(A1)
                             , (scalar_< arithmetic_<A0> >)
                               (scalar_< integer_<A1> >)
                             )
@@ -27,7 +27,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::flipdim_, tag::cpu_, (A0)
+  NT2_FUNCTOR_IMPLEMENTATION( flipdim_, tag::cpu_, (A0)
                             , (scalar_< arithmetic_<A0> >)
                             )
   {

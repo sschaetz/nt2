@@ -20,7 +20,7 @@
 #include <nt2/sdk/meta/as_floating.hpp>
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::acot_,tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( acot_,tag::cpu_
                             , (A0)
                             , ((generic_<arithmetic_<A0> >))
                             )
@@ -32,7 +32,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::acot_,tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( acot_,tag::cpu_
                             , (A0)
                             , ((generic_<double_<A0> >))
                             )
@@ -46,7 +46,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::acot_,tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( acot_,tag::cpu_
                             , (A0)
                             , ((generic_<single_<A0> >))
                             )

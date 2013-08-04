@@ -17,7 +17,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::splat_, boost::simd::tag::altivec_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( splat_, boost::simd::tag::altivec_, (A0)(A1)
                             , (scalar_< fundamental_<A0> >)
                               ((target_<simd_<arithmetic_<A1>,boost::simd::tag::altivec_> >))
                             )

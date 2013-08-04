@@ -13,7 +13,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::nanmean_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( nanmean_, tag::cpu_
                             , (A0)
                             , (scalar_< unspecified_<A0> >)
                             )
@@ -25,7 +25,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::nanmean_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( nanmean_, tag::cpu_
                             , (A0)(A1)
                             , (scalar_< unspecified_<A0> > )
                               (scalar_< integer_<A1>  > )

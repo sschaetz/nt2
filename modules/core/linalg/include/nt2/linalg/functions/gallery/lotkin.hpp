@@ -32,7 +32,7 @@ namespace nt2
   namespace ext
   {
 
-    NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::lotkin_, tag::cpu_,
+    NT2_FUNCTOR_IMPLEMENTATION( lotkin_, tag::cpu_,
                                 (A0)(T),
                                 (scalar_<integer_<A0> >)
                                 (target_<scalar_<floating_<T> > > )

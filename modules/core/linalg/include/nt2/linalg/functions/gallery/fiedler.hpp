@@ -18,7 +18,7 @@
 
 namespace nt2{ namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::fiedler_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( fiedler_, tag::cpu_,
                               (A0),
                               (scalar_<floating_<A0> > )
     )
@@ -32,7 +32,7 @@ namespace nt2{ namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::fiedler_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( fiedler_, tag::cpu_,
                               (A0),
                               ((ast_<A0, nt2::container::domain> ))
     )

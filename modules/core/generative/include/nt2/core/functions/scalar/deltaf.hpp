@@ -20,7 +20,7 @@ namespace nt2 { namespace ext
 {
 
   /// INTERNAL ONLY
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::deltaf_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( deltaf_, tag::cpu_
                             , (A0)(A1)(D1)(D2)(T)
                             , (scalar_<integer_<A0> >)
                               (scalar_<integer_<A1> >)
@@ -57,7 +57,7 @@ namespace nt2 { namespace ext
   };
 
   /// INTERNAL ONLY
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::deltaf_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( deltaf_, tag::cpu_
                             , (A0)(A1)(D1)(T)
                             , (scalar_<integer_<A0> >)
                               (scalar_<integer_<A1> >)
@@ -92,7 +92,7 @@ namespace nt2 { namespace ext
   };
 
 /// INTERNAL ONLY
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::deltaf_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( deltaf_, tag::cpu_
                             , (A0)(A1)(FS)(T)
                             , (scalar_<integer_<A0> >)
                               (scalar_<integer_<A1> >)

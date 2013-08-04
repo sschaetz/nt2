@@ -18,7 +18,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::reallog_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( reallog_, tag::cpu_
                             , (A0)
                             , (generic_< arithmetic_<A0> >)
                             )

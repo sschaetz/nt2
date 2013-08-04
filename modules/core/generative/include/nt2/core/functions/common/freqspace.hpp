@@ -26,7 +26,7 @@ namespace nt2 { namespace ext
   // captured before assign is resolved. As a tieable function, freqspace
   // retrieves rhs/lhs pair as inputs
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::freqspace_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( freqspace_, tag::cpu_
                               , (A0)(N0)(A1)(N1)
                               , ((node_ < A0, nt2::tag::freqspace_
                                         , N0, nt2::container::domain

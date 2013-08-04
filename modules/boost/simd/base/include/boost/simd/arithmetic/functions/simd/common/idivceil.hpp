@@ -22,7 +22,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::idivceil_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( idivceil_, tag::cpu_
                                    , (A0)(X)
                                    , ((simd_<arithmetic_<A0>,X>))((simd_<arithmetic_<A0>,X>))
                                    )
@@ -32,7 +32,7 @@ namespace boost { namespace simd { namespace ext
     { return boost::simd::iceil(boost::simd::tofloat(a0)/boost::simd::tofloat(a1)); }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::idivceil_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( idivceil_, tag::cpu_
                                    , (A0)(X)
                                    , ((simd_<unsigned_<A0>,X>))((simd_<unsigned_<A0>,X>))
                                    )
@@ -42,7 +42,7 @@ namespace boost { namespace simd { namespace ext
     { return boost::simd::rdivide(boost::simd::minusone(a0+a1), a1); }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::idivceil_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( idivceil_, tag::cpu_
                                    , (A0)(X)
                                    , ((simd_<int16_<A0>,X>))((simd_<int16_<A0>,X>))
                                    )
@@ -63,7 +63,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::idivceil_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( idivceil_, tag::cpu_
                                    , (A0)(X)
                                    , ((simd_<int8_<A0>,X>))((simd_<int8_<A0>,X>))
                                    )
@@ -82,7 +82,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::idivceil_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( idivceil_, tag::cpu_
                                    , (A0)(X)
                                    , ((simd_<floating_<A0>,X>))((simd_<floating_<A0>,X>))
                                    )

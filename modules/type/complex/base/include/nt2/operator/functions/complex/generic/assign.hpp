@@ -16,7 +16,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_IF_GEN( nt2::tag::assign_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_IF( assign_, tag::cpu_
                                , (A0)(A1)
                                , (is_same<A1, typename nt2::meta::real_of<A0>::type>)
                                , (generic_< complex_< unspecified_<A0> > >)

@@ -18,7 +18,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::enumerate_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( enumerate_, tag::cpu_
                             , (A0)(T)
                             , ((generic_< arithmetic_<A0> >))
                               ((target_< generic_< complex_<arithmetic_<T> > > >))
@@ -33,7 +33,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::enumerate_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( enumerate_, tag::cpu_
                             , (A0)(T)
                             , ((generic_< complex_<arithmetic_<A0> > >))
                               ((target_< generic_< complex_<arithmetic_<T> > > >))
@@ -50,7 +50,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::enumerate_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( enumerate_, tag::cpu_
                             , (A0)(A1)(T)
                             , ((generic_< complex_<arithmetic_<A0> > >))
                               ((generic_< complex_<arithmetic_<A1> > >))

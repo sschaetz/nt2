@@ -20,7 +20,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::all_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( all_, tag::cpu_
                             , (A0)(T)(N)
                             , ((expr_< generic_<arithmetic_<A0> >,T,N >))
                             )
@@ -34,7 +34,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::all_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( all_, tag::cpu_
                             , (A0)(T)(N)(A1)
                             , ((expr_< generic_<arithmetic_<A0> >,T,N >))
                               (scalar_< integer_<A1> >)

@@ -17,7 +17,7 @@
 namespace boost { namespace simd { namespace ext
 {
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::split_multiplies_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( split_multiplies_
                                       , boost::simd::tag::avx_
                                       , (A0)(A1)
                                       , (simd::meta::is_upgradable_to<A0,A1>)

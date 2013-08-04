@@ -14,7 +14,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN (  boost::simd::tag::fast_rec_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION (  fast_rec_, tag::cpu_
                                     , (A0)
                                     , ((generic_< arithmetic_<A0> >))
                                     )

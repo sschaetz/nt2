@@ -16,7 +16,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::atanpi_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( atanpi_, tag::cpu_
                             , (A0)
                             , (generic_< arithmetic_<A0> >)
                             )

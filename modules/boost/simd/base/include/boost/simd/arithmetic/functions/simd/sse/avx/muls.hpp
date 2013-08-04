@@ -15,7 +15,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::muls_, boost::simd::tag::avx_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( muls_, boost::simd::tag::avx_
                                    , (A0)
                                    , ((simd_<ints32_<A0>, boost::simd::tag::avx_>))
                                      ((simd_<ints32_<A0>, boost::simd::tag::avx_>))

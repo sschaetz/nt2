@@ -41,7 +41,7 @@ namespace nt2 { namespace ext
 namespace nt2 { namespace ext
 {
   /// INTERNAL ONLY
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::ifvectvert_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( ifvectvert_, tag::cpu_
                             , (A0)
                             , (scalar_<unspecified_<A0> >)
                             )

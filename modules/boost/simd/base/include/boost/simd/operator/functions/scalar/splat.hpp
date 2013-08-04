@@ -13,7 +13,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::splat_ , tag::cpu_ , (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( splat_ , tag::cpu_ , (A0)(A1)
                             , (scalar_< unspecified_<A0> >)
                               (target_< scalar_< unspecified_<A1> > >)
                             )

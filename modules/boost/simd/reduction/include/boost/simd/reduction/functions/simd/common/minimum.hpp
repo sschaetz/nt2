@@ -14,7 +14,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::minimum_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( minimum_
                                     , tag::cpu_
                                     , (A0)(X)
                                     , ((simd_<unspecified_<A0>,X>))

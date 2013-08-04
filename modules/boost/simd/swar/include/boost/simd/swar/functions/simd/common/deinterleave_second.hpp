@@ -14,7 +14,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::deinterleave_second_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( deinterleave_second_, tag::cpu_
                                     , (A0)(A1)(X)
                                     , ((simd_< unspecified_<A0>, X>))
                                       ((simd_< unspecified_<A1>, X>))

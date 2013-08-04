@@ -16,7 +16,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::if_else_zero_, tag::cpu_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( if_else_zero_, tag::cpu_, (A0)(A1)
                             , (scalar_< logical_<A0> >)
                               (scalar_< unspecified_<A1> >)
                             )
@@ -25,7 +25,7 @@ namespace boost { namespace simd { namespace ext
     inline A1 operator()(const A0 & a0,const A1 & a1) const
     { return is_nez(a0) ? a1 :Zero<result_type>(); }
   };
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::if_else_zero_, tag::cpu_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( if_else_zero_, tag::cpu_, (A0)(A1)
                             , (scalar_< unspecified_<A0> >)
                               (scalar_< unspecified_<A1> >)
                             )

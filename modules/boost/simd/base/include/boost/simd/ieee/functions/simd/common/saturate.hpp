@@ -22,7 +22,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::saturate_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( saturate_, tag::cpu_
                                     , (A0)(T)(X)
                                     , ((simd_< arithmetic_<A0>,X>))
                                       (target_< generic_<arithmetic_<T> > >)
@@ -40,7 +40,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::saturate_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( saturate_, tag::cpu_
                                     , (A0)(T)(X)
                                     , ((simd_<int_<A0>,X>))
                                       (target_< generic_<arithmetic_<T> > >)
@@ -57,7 +57,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::saturate_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( saturate_, tag::cpu_
                                     , (A0)(T)(X)
                                     , ((simd_<uint_<A0>,X>))
                                       (target_< generic_<integer_<T> > >)

@@ -14,7 +14,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::negate_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( negate_, tag::cpu_
                             , (A0)
                             , (scalar_< signed_<A0> >)(scalar_< signed_<A0> >)
                             )
@@ -23,7 +23,7 @@ namespace boost { namespace simd { namespace ext
     BOOST_SIMD_FUNCTOR_CALL_REPEAT(2) { return bool(is_nez(a1))*(is_gez(a1)?a0:-a0); }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::negate_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( negate_, tag::cpu_
                             , (A0)
                             , (scalar_< unsigned_<A0> >)(scalar_< unsigned_<A0> >)
                             )

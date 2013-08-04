@@ -20,7 +20,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cospi_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cospi_, tag::cpu_
                             , (A0)
                             , (generic_< arithmetic_<A0> >)
                             )
@@ -32,7 +32,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cospi_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cospi_, tag::cpu_
                             , (A0)
                             , (generic_< floating_<A0> >)
                             )

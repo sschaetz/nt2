@@ -14,7 +14,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::value_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( value_, tag::cpu_
                             , (A0)(D)(N)(Tag)
                             , ((node_<A0,unspecified_<Tag>,N,D>))
                             )

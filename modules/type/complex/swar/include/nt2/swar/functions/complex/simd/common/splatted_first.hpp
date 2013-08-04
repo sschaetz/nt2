@@ -19,7 +19,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::splatted_first_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION(splatted_first_, tag::cpu_,
                                  (A0)(X),
                                  ((simd_<complex_<arithmetic_<A0> >,X>))
                                 )
@@ -31,7 +31,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::splatted_first_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION(splatted_first_, tag::cpu_,
                                  (A0)(X),
                                  ((simd_<dry_<arithmetic_<A0> >,X>))
                                 )

@@ -49,7 +49,7 @@
 namespace nt2 { namespace ext
 {
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_assign_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( run_assign_, tag::cpu_
                               , (A0)(A1)
                               , ((ast_<A0, nt2::container::domain>))
                               ((node_<A1,nt2::tag::bsearch_,boost::mpl::long_<2> ,nt2::container::domain>))

@@ -18,7 +18,7 @@
 namespace boost { namespace simd { namespace ext
 {
   /// INTERNAL ONLY - Load pack with offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( aligned_load_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)
                                     , (iterator_< unspecified_<A0> >)
@@ -39,7 +39,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Load pack with offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( aligned_load_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)(X)
                                     , (iterator_< unspecified_<A0> >)
@@ -60,7 +60,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Load pack without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( aligned_load_
                                     , tag::cpu_
                                     , (A0)(A2)
                                     , (iterator_< unspecified_<A0> >)
@@ -80,7 +80,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Load misaligned pack with offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::aligned_load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( aligned_load_
                                     , tag::cpu_
                                     , (A0)(A1)(A2)(A3)
                                     , (iterator_< unspecified_<A0> >)
@@ -101,7 +101,7 @@ namespace boost { namespace simd { namespace ext
   };
 
   /// INTERNAL ONLY - Load misaligned pack without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::aligned_load_ , tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( aligned_load_ , tag::cpu_
                                     , (A0)(A2)(A3)
                                     , (iterator_< unspecified_<A0> >)
                                       ((target_< ast_<A2, boost::simd::domain> >))

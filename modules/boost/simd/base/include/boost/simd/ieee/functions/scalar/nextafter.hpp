@@ -41,7 +41,7 @@ namespace boost { namespace simd { namespace details
     return boost::math::nextafter(a0, a1, c_policy());
   }
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::nextafter_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( nextafter_, tag::cpu_
                             , (A0)
                             , (scalar_< arithmetic_<A0> >)(scalar_< arithmetic_<A0> >)
                             )
@@ -53,7 +53,7 @@ namespace boost { namespace simd { namespace details
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::nextafter_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( nextafter_, tag::cpu_
                             , (A0)
                             , (scalar_< double_<A0> >)(scalar_< double_<A0> >)
                             )
@@ -71,7 +71,7 @@ namespace boost { namespace simd { namespace details
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::nextafter_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( nextafter_, tag::cpu_
                             , (A0)
                             , (scalar_< single_<A0> >)(scalar_< single_<A0> >)
                             )
@@ -89,7 +89,7 @@ namespace boost { namespace simd { namespace details
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::nextafter_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( nextafter_, tag::cpu_
                             , (A0)
                             , (scalar_< unsigned_<A0> >)(scalar_< unsigned_<A0> >)
                             )

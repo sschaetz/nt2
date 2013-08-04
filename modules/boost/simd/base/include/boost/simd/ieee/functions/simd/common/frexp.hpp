@@ -30,7 +30,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::frexp_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( frexp_
                                       , tag::cpu_, (A0)(A1)(A2)(X)
                                       , ( boost::mpl::and_
                                           < boost::is_same<A0,A1>

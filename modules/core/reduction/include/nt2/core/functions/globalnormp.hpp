@@ -42,7 +42,7 @@ namespace nt2
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::globalnormp_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( globalnormp_, tag::cpu_
                               , (A0)(A1)
                               , (unspecified_<A0>)
                               (scalar_<arithmetic_<A1> > )

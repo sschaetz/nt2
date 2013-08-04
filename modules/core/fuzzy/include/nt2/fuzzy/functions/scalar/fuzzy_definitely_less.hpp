@@ -19,7 +19,7 @@
 /////////////////////////////////////////////////////////////////////////////
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::fuzzy_definitely_less_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( fuzzy_definitely_less_, tag::cpu_
                             , (A0)
                             , (scalar_< arithmetic_<A0> >)(scalar_< arithmetic_<A0> >)(scalar_< arithmetic_<A0> >)
                             )

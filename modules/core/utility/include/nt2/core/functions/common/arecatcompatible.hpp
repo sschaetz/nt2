@@ -19,7 +19,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::arecatcompatible_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( arecatcompatible_, tag::cpu_
                               , (A0)(A1)(A2)
                               , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))
@@ -56,7 +56,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::arecatcompatible_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( arecatcompatible_, tag::cpu_
                               , (A0)(A1)(A2)
                             , (scalar_<unspecified_<A0> >)
                               (scalar_<unspecified_<A1> >)
@@ -71,7 +71,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::arecatcompatible_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( arecatcompatible_, tag::cpu_
                             , (A0)(A1)(A2)
                             , ((ast_<A0, nt2::container::domain>))
                               (scalar_<unspecified_<A1> >)
@@ -86,7 +86,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::arecatcompatible_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( arecatcompatible_, tag::cpu_
                             , (A0)(A1)(A2)
                             , (scalar_<unspecified_<A0> >)((ast_<A1, nt2::container::domain>))
                               (scalar_<integer_<A2> >)

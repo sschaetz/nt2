@@ -18,7 +18,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::rsqrt_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( rsqrt_, tag::cpu_
                             , (A0)
                             , (generic_< arithmetic_<A0> >)
                             )

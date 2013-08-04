@@ -19,7 +19,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::multiplies_, boost::simd::tag::altivec_, (A0)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( multiplies_, boost::simd::tag::altivec_, (A0)
                             , ((simd_<single_<A0>,boost::simd::tag::altivec_>))
                               ((simd_<single_<A0>,boost::simd::tag::altivec_>))
                             )
@@ -33,7 +33,7 @@ namespace boost { namespace simd { namespace ext
   };
 
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::multiplies_, boost::simd::tag::altivec_, (A0)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( multiplies_, boost::simd::tag::altivec_, (A0)
                             , ((simd_<type16_<A0>,boost::simd::tag::altivec_>))
                               ((simd_<type16_<A0>,boost::simd::tag::altivec_>))
                             )
@@ -45,7 +45,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::multiplies_, boost::simd::tag::altivec_, (A0)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( multiplies_, boost::simd::tag::altivec_, (A0)
                             , ((simd_<type8_<A0>,boost::simd::tag::altivec_>))
                               ((simd_<type8_<A0>,boost::simd::tag::altivec_>))
                             )

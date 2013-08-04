@@ -17,7 +17,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::lcm_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION(lcm_, tag::cpu_,
                       (A0)(X),
                       ((simd_<integer_<A0>,X>))
                       ((simd_<integer_<A0>,X>))

@@ -15,7 +15,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::splatted_prod_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( splatted_prod_
                                     , tag::cpu_
                                     , (A0)(X)
                                     , ((simd_<unspecified_<A0>,X>))

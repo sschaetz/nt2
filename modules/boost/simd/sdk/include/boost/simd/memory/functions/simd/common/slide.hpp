@@ -17,7 +17,7 @@
 namespace boost { namespace simd { namespace ext
 {
   /// INTERNAL ONLY - slide between scalar values
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::slide_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( slide_
                                     , boost::simd::tag::cpu_
                                     , (A0)(N)(X)
                                     , ((simd_<arithmetic_<A0>,X>))

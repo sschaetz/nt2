@@ -17,7 +17,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates tri1l from a pair of [a, k]
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::offset_tri1l_, tag::cpu_, (A0)(A1)
+  NT2_FUNCTOR_IMPLEMENTATION( offset_tri1l_, tag::cpu_, (A0)(A1)
                             , (scalar_< unspecified_<A0> >)
                               (scalar_< integer_<A1> >)
                             )
@@ -29,7 +29,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::tri1l_, tag::cpu_, (A0)
+  NT2_FUNCTOR_IMPLEMENTATION( tri1l_, tag::cpu_, (A0)
                             , (scalar_< unspecified_<A0> >)
                             )
   {

@@ -17,7 +17,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // reshaping expression forward to its inner member
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( run_, tag::cpu_
                             , (A0)(Tag)(State)(Data)(N)
                             , ((node_ < A0, reshaping_<Tag>
                                       , N , nt2::container::domain

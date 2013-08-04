@@ -13,7 +13,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::logical_notor_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( logical_notor_, tag::cpu_
                             , (A0)(A1)
                             , (scalar_< unspecified_<A0> >)
                               (scalar_< unspecified_<A1> >)
@@ -23,7 +23,7 @@ namespace boost { namespace simd { namespace ext
     BOOST_SIMD_FUNCTOR_CALL(2) { return result_type(!a0 || a1); }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::logical_notor_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( logical_notor_, tag::cpu_
                              , (A0)(A1)
                              , (scalar_< logical_<A0> >)
                                (scalar_< logical_<A1> >)

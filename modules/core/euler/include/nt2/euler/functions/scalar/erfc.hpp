@@ -24,7 +24,7 @@
 #include <boost/simd/sdk/config.hpp>
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::erfc_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( erfc_, tag::cpu_
                             , (A0)
                             , (scalar_< arithmetic_<A0> >)
                             )
@@ -36,7 +36,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::erfc_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( erfc_, tag::cpu_
                             , (A0)
                             , (scalar_< floating_<A0> >)
                             )

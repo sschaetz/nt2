@@ -16,7 +16,7 @@
 namespace nt2 { namespace ext
 {
   // conj optimizations
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::conj_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( conj_, tag::cpu_
                             , (A0)
                             , ((node_<A0, nt2::tag::transpose_, boost::mpl::long_<1>, nt2::container::domain>))
                             )
@@ -24,7 +24,7 @@ namespace nt2 { namespace ext
     BOOST_DISPATCH_RETURNS(1, (A0 const& a0), ctranspose(boost::proto::child_c<0>(a0)))
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::conj_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( conj_, tag::cpu_
                             , (A0)
                             , ((node_<A0, nt2::tag::ctranspose_, boost::mpl::long_<1>, nt2::container::domain>))
                             )
@@ -32,7 +32,7 @@ namespace nt2 { namespace ext
     BOOST_DISPATCH_RETURNS(1, (A0 const& a0), transpose(boost::proto::child_c<0>(a0)))
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::conj_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( conj_, tag::cpu_
                             , (A0)
                             , ((node_<A0, nt2::tag::conj_, boost::mpl::long_<1>, nt2::container::domain>))
                             )

@@ -25,7 +25,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::fibonacci_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION(fibonacci_, tag::cpu_,
                              (A0)(A1),
                              ((scalar_<arithmetic_<A0> >))
                              ((scalar_<arithmetic_<A0> >))

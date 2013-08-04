@@ -13,7 +13,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::sum_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( sum_, tag::cpu_
                                     , (A0)
                                     , (scalar_< unspecified_<A0> >)
                                     )
@@ -26,7 +26,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::sum_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( sum_, tag::cpu_
                             , (A0)(A1)
                             , (scalar_< unspecified_<A0> >)
                               (scalar_< integer_<A1> >)

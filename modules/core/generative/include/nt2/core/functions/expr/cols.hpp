@@ -14,7 +14,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cols_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cols_, tag::cpu_
                             , (A0)(T)
                             , ((ast_<A0, nt2::container::domain>))
                               (scalar_< arithmetic_<T> >)

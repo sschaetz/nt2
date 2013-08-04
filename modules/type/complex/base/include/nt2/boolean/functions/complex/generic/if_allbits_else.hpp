@@ -17,7 +17,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::if_allbits_else_, tag::cpu_, (A0)(A1)
+  NT2_FUNCTOR_IMPLEMENTATION( if_allbits_else_, tag::cpu_, (A0)(A1)
                             , (generic_< logical_<A0> >)
                               (generic_< complex_<floating_<A1> > >)
                             )
@@ -28,7 +28,7 @@ namespace nt2 { namespace ext
       return result_type(if_allbits_else(a0, real(a1)), if_allbits_else(a0, imag(a1)));
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::if_allbits_else_, tag::cpu_, (A0)(A1)
+  NT2_FUNCTOR_IMPLEMENTATION( if_allbits_else_, tag::cpu_, (A0)(A1)
                             , (generic_< complex_<floating_<A0> > > )
                               (generic_< complex_<floating_<A1> > > )
                             )

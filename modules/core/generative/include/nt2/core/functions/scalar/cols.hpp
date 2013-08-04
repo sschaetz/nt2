@@ -21,7 +21,7 @@ namespace nt2 { namespace ext
   #define M1(z,n,t) (scalar_< arithmetic_<BOOST_PP_CAT(A,n)> >)
 
   #define M0(z,n,t)                                                             \
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cols_, tag::cpu_                        \
+  NT2_FUNCTOR_IMPLEMENTATION( cols_, tag::cpu_                        \
                             , BOOST_PP_REPEAT(n,M2,~)(T)                        \
                             , BOOST_PP_REPEAT(n,M1,~)                           \
                               (scalar_< unspecified_<T> >)                      \
@@ -46,7 +46,7 @@ namespace nt2 { namespace ext
   #undef M2
 
   /// INTERNAL ONLY
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cols_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cols_, tag::cpu_
                             , (T)
                             , (scalar_< unspecified_<T> >)
                             )
@@ -60,7 +60,7 @@ namespace nt2 { namespace ext
   };
 
   /// INTERNAL ONLY
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cols_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cols_, tag::cpu_
                             , (A0)(T)
                             , (fusion_sequence_<A0>)
                               (scalar_< arithmetic_<T> >)

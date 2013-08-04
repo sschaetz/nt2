@@ -19,7 +19,7 @@
 namespace nt2 {namespace ext
 {
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gearmat_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( gearmat_, tag::cpu_,
                               (A0)(A1)(A2)(T),
                               (scalar_<integer_<A0> >)
                               (scalar_<arithmetic_<A1> >)
@@ -35,7 +35,7 @@ namespace nt2 {namespace ext
                           )
       };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gearmat_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( gearmat_, tag::cpu_,
                               (A0)(A1)(T),
                               (scalar_<integer_<A0> >)
                               (scalar_<arithmetic_<A1> >)
@@ -47,7 +47,7 @@ namespace nt2 {namespace ext
                           )
       };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gearmat_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( gearmat_, tag::cpu_,
                               (A0)(T),
                               (scalar_<integer_<A0> >)
                               (target_<scalar_<unspecified_<T> > >)
@@ -58,7 +58,7 @@ namespace nt2 {namespace ext
                           )
       };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gearmat_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( gearmat_, tag::cpu_,
                               (A0)(A1)(A2),
                               (scalar_<integer_<A0> >)
                               (scalar_<floating_<A1> >)
@@ -71,7 +71,7 @@ namespace nt2 {namespace ext
                           )
       };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gearmat_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( gearmat_, tag::cpu_,
                               (A0)(A1)(A2),
                               (scalar_<integer_<A0> >)
                               (scalar_<integer_<A1> >)
@@ -85,7 +85,7 @@ namespace nt2 {namespace ext
       };
 
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gearmat_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( gearmat_, tag::cpu_,
                               (A0)(A1),
                               (scalar_<integer_<A0> >)
                               (scalar_<integer_<A1> >)
@@ -96,7 +96,7 @@ namespace nt2 {namespace ext
                           )
       };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gearmat_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( gearmat_, tag::cpu_,
                               (A0)(A1),
                               (scalar_<integer_<A0> >)
                               (scalar_<floating_<A1> >)
@@ -107,7 +107,7 @@ namespace nt2 {namespace ext
                           )
       };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gearmat_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( gearmat_, tag::cpu_,
                               (A0),
                               (scalar_<integer_<A0> >)
                             )

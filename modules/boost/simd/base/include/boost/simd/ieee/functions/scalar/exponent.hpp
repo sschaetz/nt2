@@ -24,7 +24,7 @@
 namespace boost { namespace simd { namespace ext
 {
 #ifdef BOOST_SIMD_HAS_ILOGB
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::exponent_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( exponent_, tag::cpu_
                             , (A0)
                             , (scalar_< double_<A0> >)
                             )
@@ -39,7 +39,7 @@ namespace boost { namespace simd { namespace ext
 #endif
 
 #ifdef BOOST_SIMD_HAS_ILOGBF
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::exponent_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( exponent_, tag::cpu_
                             , (A0)
                             , (scalar_< single_<A0> >)
                             )
@@ -53,7 +53,7 @@ namespace boost { namespace simd { namespace ext
   };
 #endif
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::exponent_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( exponent_, tag::cpu_
                             , (A0)
                             , (scalar_< floating_<A0> >)
                             )

@@ -80,7 +80,7 @@ namespace nt2
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::globalmin_, tag::cpu_, (A0), (unspecified_<A0>) )
+  NT2_FUNCTOR_IMPLEMENTATION( globalmin_, tag::cpu_, (A0), (unspecified_<A0>) )
   {
     typedef typename meta::call<tag::global_(nt2::functor<tag::minimum_>, const A0&)>::type result_type;
     BOOST_FORCEINLINE result_type operator()(A0 const& a0) const
@@ -88,7 +88,7 @@ namespace nt2 { namespace ext
        return global(nt2::functor<tag::minimum_>(), a0);
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::globalmin_, tag::cpu_, (A0)(A1), (unspecified_<A0>)(scalar_<integer_<A1> > ))
+  NT2_FUNCTOR_IMPLEMENTATION( globalmin_, tag::cpu_, (A0)(A1), (unspecified_<A0>)(scalar_<integer_<A1> > ))
   {
     typedef typename meta::call<tag::global_(nt2::functor<tag::minimum_>, const A0&)>::type result_type;
     BOOST_FORCEINLINE result_type operator()(A0 const& a0, A1 & a1) const

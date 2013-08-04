@@ -15,7 +15,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::deinterleave_first_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( deinterleave_first_
                                    , boost::simd::tag::avx_
                                    , (A0)
                                    , ((simd_<single_<A0>,boost::simd::tag::avx_>))
@@ -37,7 +37,7 @@ namespace boost { namespace simd { namespace ext
      }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::deinterleave_first_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( deinterleave_first_
                                    , boost::simd::tag::avx_
                                    , (A0)
                                    , ((simd_<double_<A0>,boost::simd::tag::avx_>))
@@ -60,7 +60,7 @@ namespace boost { namespace simd { namespace ext
      }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::deinterleave_first_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( deinterleave_first_
                                    , boost::simd::tag::avx_
                                    , (A0)
                                    , ((simd_<arithmetic_<A0>,boost::simd::tag::avx_>))

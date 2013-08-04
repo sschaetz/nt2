@@ -16,7 +16,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::linear_interp_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( linear_interp_, tag::cpu_,
                               (A0)(A1)(A2),
                               (generic_<floating_<A0> >)
                               (generic_<floating_<A1> >)
@@ -31,7 +31,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::linear_interp_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( linear_interp_, tag::cpu_,
                               (A0)(A1)(A2),
                               (unspecified_<A0>)
                               (unspecified_<A1>)
@@ -48,7 +48,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::linear_interp_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( linear_interp_, tag::cpu_,
                               (A0)(A1)(A2),
                               (generic_<floating_<A0> >)
                               (unspecified_<A1>)

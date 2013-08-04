@@ -13,7 +13,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::is_equal_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( is_equal_, tag::cpu_
                             , (A0)
                             , (scalar_< fundamental_<A0> >)
                               (scalar_< fundamental_<A0> >)
@@ -22,7 +22,7 @@ namespace boost { namespace simd { namespace ext
     typedef logical<A0> result_type;
     BOOST_SIMD_FUNCTOR_CALL_REPEAT(2) { return result_type(a0 == a1); }
   };
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::is_equal_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( is_equal_, tag::cpu_
                             , (A0)
                             , (scalar_< logical_<A0> >)
                               (scalar_< logical_<A0> >)

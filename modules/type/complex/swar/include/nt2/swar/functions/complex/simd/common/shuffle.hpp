@@ -17,7 +17,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::shuffle_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( shuffle_, tag::cpu_
                             , (A0)(X)(P)
                             , ((simd_<complex_<arithmetic_<A0> >,X>))
                               (target_< unspecified_<P> >)
@@ -32,7 +32,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::shuffle_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( shuffle_, tag::cpu_
                             , (A0)(X)(P)
                             , ((simd_<dry_<arithmetic_<A0> >,X>))
                               (target_< unspecified_<P> >)
@@ -48,7 +48,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::shuffle_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( shuffle_, tag::cpu_
                             , (A0)(X)(P)
                             , ((simd_<complex_<arithmetic_<A0> >,X>))
                               ((simd_<complex_<arithmetic_<A0> >,X>))
@@ -67,7 +67,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::shuffle_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( shuffle_, tag::cpu_
                             , (A0)(X)(P)
                             , ((simd_<dry_<arithmetic_<A0> >,X>))
                               ((simd_<dry_<arithmetic_<A0> >,X>))

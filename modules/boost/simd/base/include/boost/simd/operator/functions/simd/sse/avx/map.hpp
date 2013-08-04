@@ -32,8 +32,8 @@ namespace boost { namespace simd
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN
-  ( boost::simd::tag::map_avx_sse_, boost::simd::tag::avx_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION
+  ( map_avx_sse_, boost::simd::tag::avx_
   , (A0)
   , ((simd_< logical_<A0>, boost::simd::tag::sse_ >))
     ((simd_< logical_<A0>, boost::simd::tag::sse_ >))

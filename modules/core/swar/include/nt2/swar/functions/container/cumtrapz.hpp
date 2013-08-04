@@ -24,7 +24,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cumtrapz_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cumtrapz_, tag::cpu_
                             , (A0)
                             , ((ast_<A0, nt2::container::domain>))
                             )
@@ -37,7 +37,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cumtrapz_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cumtrapz_, tag::cpu_
                               , (A0)(A1)
                               , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))
@@ -51,7 +51,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cumtrapz_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cumtrapz_, tag::cpu_
                               , (A0)(A1)
                               , (scalar_<unspecified_ < A0> >)
                               ((ast_<A1, nt2::container::domain>))
@@ -66,7 +66,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cumtrapz_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cumtrapz_, tag::cpu_
                               , (A0)(A1)(A2)
                               , (scalar_<unspecified_ < A0> >)
                               ((ast_<A1, nt2::container::domain>))
@@ -80,7 +80,7 @@ namespace nt2 { namespace ext
       return nt2::cumtrapz(y, dim)*x;
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cumtrapz_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cumtrapz_, tag::cpu_
                               , (A0)(A1)
                               , ((ast_<A0, nt2::container::domain>))
                               (scalar_<integer_<A1> > )
@@ -106,7 +106,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cumtrapz_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cumtrapz_, tag::cpu_
                               , (A0)(A1)(A2)
                               , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))

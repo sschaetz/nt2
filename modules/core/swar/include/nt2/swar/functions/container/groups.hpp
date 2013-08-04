@@ -22,7 +22,7 @@
 namespace nt2 { namespace ext
 {
   // groups
-  NT2_FUNCTOR_IMPLEMENTATION_IF_GEN( nt2::tag::run_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_IF( run_, tag::cpu_
                             , (A0)(State)(Data)(X)
                             , (mpl::and_<
                                 mpl::less< mpl::sizeof_<typename A0::value_type>
@@ -50,7 +50,7 @@ namespace nt2 { namespace ext
   };
 
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( run_, tag::cpu_
                             , (A0)(State)(Data)
                             , ((node_<A0, nt2::tag::groups_, boost::mpl::long_<1> , nt2::container::domain>))
                               (generic_< integer_<State> >)

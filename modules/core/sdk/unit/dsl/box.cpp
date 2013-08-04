@@ -75,8 +75,8 @@ NT2_TEST_CASE( value_semantic )
 // For the sake of it, let's pretend foo can do plus
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN
-  ( boost::simd::tag::plus_, tag::cpu_, (A0)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION
+  ( plus_, tag::cpu_, (A0)
   , (unspecified_< foo >)(unspecified_<A0>)
   )
   {

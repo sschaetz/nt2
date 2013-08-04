@@ -23,7 +23,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::idivround2even_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( idivround2even_, tag::cpu_
                             , (A0)(X)
                             , ((simd_<arithmetic_<A0>,X>))((simd_<arithmetic_<A0>,X>))
                             )
@@ -33,7 +33,7 @@ namespace boost { namespace simd { namespace ext
     { return iround2even(tofloat(a0)/tofloat(a1)); }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::idivround2even_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( idivround2even_, tag::cpu_
                             , (A0)(X)
                             , ((simd_<unsigned_<A0>,X>))((simd_<unsigned_<A0>,X>))
                             )
@@ -45,7 +45,7 @@ namespace boost { namespace simd { namespace ext
     { return rdivide(a0+a1/boost::simd::Two<A0>(), a1); }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::idivround2even_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( idivround2even_, tag::cpu_
                             , (A0)(X)
                             , ((simd_<int16_<A0>,X>))((simd_<int16_<A0>,X>))
                             )
@@ -66,7 +66,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::idivround2even_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( idivround2even_, tag::cpu_
                             , (A0)(X)
                             , ((simd_<int8_<A0>,X>))((simd_<int8_<A0>,X>))
                             )
@@ -85,7 +85,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::idivround2even_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( idivround2even_, tag::cpu_
                             , (A0)(X)
                             , ((simd_<floating_<A0>,X>))((simd_<floating_<A0>,X>))
                             )

@@ -15,7 +15,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::if_allbits_else_, tag::cpu_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( if_allbits_else_, tag::cpu_, (A0)(A1)
                             , (scalar_< logical_<A0> >)
                               (scalar_< fundamental_<A1> >)
                             )
@@ -24,7 +24,7 @@ namespace boost { namespace simd { namespace ext
     inline A1 operator()(const A0 & a0,const A1 & a1) const
       { return  a0 ? Allbits<A1>() : a1; }
   };
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::if_allbits_else_, tag::cpu_, (A0)(A1)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( if_allbits_else_, tag::cpu_, (A0)(A1)
                             , (scalar_< fundamental_<A0> >)
                               (scalar_< fundamental_<A1> >)
                             )

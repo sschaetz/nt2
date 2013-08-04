@@ -16,7 +16,7 @@
 #include <boost/math/special_functions/sign.hpp>
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::copysign_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( copysign_, tag::cpu_
                             , (A0)
                             , (scalar_< arithmetic_<A0> >)(scalar_< arithmetic_<A0> >)
                             )
@@ -28,7 +28,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::copysign_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( copysign_, tag::cpu_
                             , (A0)
                             , (scalar_< double_<A0> >)(scalar_< double_<A0> >)
                             )
@@ -47,7 +47,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::copysign_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( copysign_, tag::cpu_
                             , (A0)
                             , (scalar_< single_<A0> >)(scalar_< single_<A0> >)
                             )

@@ -20,7 +20,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // run tie(...) does nothing (doesn't make sense to evaluate it)
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( run_, tag::cpu_
                             , (A0)(N0)
                             , ((node_<A0, nt2::tag::tie_, N0, nt2::container::domain>))
                             )
@@ -37,7 +37,7 @@ namespace nt2 { namespace ext
   // when storing a fusion sequence in a tie(...), run each element of the
   // sequence in its output argument
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( run_, tag::cpu_
                             , (A0)(N0)(State)(Data)
                             , ((node_<A0, nt2::tag::tie_, N0, nt2::container::domain>))
                               (generic_< integer_<State> >)
@@ -74,7 +74,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // when storing a fusion sequence in a terminal, take first element
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::terminal_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( terminal_, tag::cpu_
                             , (A0)(N0)(State)(Data)
                             , ((node_<A0, nt2::tag::terminal_, N0, nt2::container::domain>))
                               (generic_< integer_<State> >)
@@ -93,7 +93,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Call function for tie(...) = tieable_func(...)
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::run_assign_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( run_assign_, tag::cpu_
                             , (A0)(N0)(A1)(T1)(N1)
                             , ((node_<A0, nt2::tag::tie_, N0, nt2::container::domain>))
                               ((node_<A1, tieable_<T1>, N1, nt2::container::domain>))
@@ -116,7 +116,7 @@ namespace nt2 { namespace ext
   // Handles elementwise  = tieable_func(...) by transforming it to
   //     tie(elementwise) = tieable_func(...)
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_IF_GEN( nt2::tag::assign_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_IF( assign_, tag::cpu_
                               , (A0)(T0)(N0)(A1)(T1)(N1)
                               , (mpl::not_< is_same<T0, nt2::tag::tie_> >)
                               , ((node_ <A0, elementwise_<T0>, N0 ,nt2::container::domain> ))

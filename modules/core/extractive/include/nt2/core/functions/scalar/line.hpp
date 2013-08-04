@@ -16,7 +16,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::line_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( line_, tag::cpu_
                             , (A0)(A1)
                             , (scalar_<unspecified_<A0> > )
                               (scalar_<integer_<A1> > )
@@ -29,7 +29,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::line_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( line_, tag::cpu_
                             , (A0)(A1)(A2)
                             , (scalar_<unspecified_<A0> > )
                               (scalar_<integer_<A1> > )

@@ -51,7 +51,7 @@ namespace nt2 { namespace ext
         : meta::value_as<Expr,0>
   {};
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::deconv_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( deconv_, tag::cpu_,
                               (A0),
                               (scalar_<floating_<A0> >)
                               (scalar_<floating_<A0> >)
@@ -62,7 +62,7 @@ namespace nt2 { namespace ext
                           )
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::deconv_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( deconv_, tag::cpu_,
                               (A0)(A1),
                               (scalar_<floating_<A0> >)
                               ((ast_<A1, nt2::container::domain>))
@@ -73,7 +73,7 @@ namespace nt2 { namespace ext
                           )
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::deconv_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( deconv_, tag::cpu_,
                               (A0)(A1),
                               ((ast_<A0, nt2::container::domain>))
                               (scalar_<floating_<A1> >)
@@ -89,7 +89,7 @@ namespace nt2 { namespace ext
   // before assign is resolved. As a tieable function, balance retrieves rhs/lhs
   // pair as inputs
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::deconv_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( deconv_, tag::cpu_
                               , (A0)(N0)(A1)(N1)
                               , ((node_<A0, nt2::tag::deconv_, N0, nt2::container::domain>))
                               ((node_<A1, nt2::tag::tie_ , N1, nt2::container::domain>))

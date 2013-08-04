@@ -16,7 +16,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN ( nt2::tag::Cnan, tag::cpu_, (A0)
+  NT2_FUNCTOR_IMPLEMENTATION ( Cnan, tag::cpu_, (A0)
                              , ((target_< generic_< complex_< arithmetic_<A0> > > >))
                              )
   {

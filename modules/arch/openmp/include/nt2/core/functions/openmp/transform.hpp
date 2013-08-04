@@ -28,7 +28,7 @@ namespace nt2 { namespace ext
   // Generates a SPMD loop nest and forward to internal site for evaluation
   // using the partial transform syntax.
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::transform_, nt2::tag::openmp_<Site>
+  NT2_FUNCTOR_IMPLEMENTATION( transform_, nt2::tag::openmp_<Site>
                             , (A0)(A1)(Site)
                             , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))
@@ -48,7 +48,7 @@ namespace nt2 { namespace ext
   // Generates a SPMD loop nest and forward to internal site for evaluation
   // using the partial transform syntax.
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::transform_, nt2::tag::openmp_<Site>
+  NT2_FUNCTOR_IMPLEMENTATION( transform_, nt2::tag::openmp_<Site>
                             , (A0)(A1)(Site)(A2)(A3)
                             , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))

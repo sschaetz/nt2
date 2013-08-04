@@ -25,7 +25,7 @@ namespace boost { namespace simd { namespace ext
 #pragma warning(disable: 4723) // potential divide by 0
 #endif
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::divs_, tag::cpu_, (A0)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( divs_, tag::cpu_, (A0)
                                   , (scalar_< floating_<A0> >)
                                     (scalar_< floating_<A0> >)
                                   )
@@ -41,7 +41,7 @@ namespace boost { namespace simd { namespace ext
 #pragma warning(pop)
 #endif
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::divs_, tag::cpu_ , (A0)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( divs_, tag::cpu_ , (A0)
                                    , (scalar_< int_<A0> >)
                                      (scalar_< int_<A0> >)
                                    )
@@ -64,7 +64,7 @@ namespace boost { namespace simd { namespace ext
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::divs_, tag::cpu_ , (A0)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( divs_, tag::cpu_ , (A0)
                                    , (scalar_< uint_<A0> >)
                                      (scalar_< uint_<A0> >)
                                    )

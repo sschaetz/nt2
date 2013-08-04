@@ -43,7 +43,7 @@ namespace nt2
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::globalstdev_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( globalstdev_, tag::cpu_
                             , (A0)
                             , (unspecified_<A0>)
                             )
@@ -57,7 +57,7 @@ namespace nt2 { namespace ext
        return global(nt2::functor<tag::stdev_>(), a0);
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::globalstdev_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( globalstdev_, tag::cpu_
                               , (A0)(A1)
                               , (unspecified_<A0>)
                               (scalar_<integer_<A1> > )

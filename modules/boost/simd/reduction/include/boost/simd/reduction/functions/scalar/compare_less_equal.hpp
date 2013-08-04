@@ -14,7 +14,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::compare_less_equal_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( compare_less_equal_, tag::cpu_
                             , (A0)
                             , (scalar_< fundamental_<A0> >)
                               (scalar_< fundamental_<A0> >)
@@ -24,7 +24,7 @@ namespace boost { namespace simd { namespace ext
     BOOST_SIMD_FUNCTOR_CALL_REPEAT(2) { return result_type(a0 <= a1); }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::compare_less_equal_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( compare_less_equal_, tag::cpu_
                             , (A0)
                             , (scalar_< floating_<A0> >)
                               (scalar_< floating_<A0> >)

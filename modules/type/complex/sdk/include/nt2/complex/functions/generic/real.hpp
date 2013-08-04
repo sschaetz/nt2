@@ -17,7 +17,7 @@
 namespace nt2 { namespace ext
 {
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::real_, tag::cpu_, (A0)
+  NT2_FUNCTOR_IMPLEMENTATION( real_, tag::cpu_, (A0)
                             , (generic_< complex_< arithmetic_<A0> > >)
                             )
   {
@@ -28,7 +28,7 @@ namespace nt2 { namespace ext
       return boost::fusion::at_c<0>(a0);
     }
   };
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::real_, tag::cpu_, (A0)
+  NT2_FUNCTOR_IMPLEMENTATION( real_, tag::cpu_, (A0)
                             , (generic_< arithmetic_<A0> >)
                             )
   {
@@ -39,7 +39,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::real_, tag::cpu_, (A0)
+  NT2_FUNCTOR_IMPLEMENTATION( real_, tag::cpu_, (A0)
                             , (generic_< dry_< arithmetic_<A0> > > )
                             )
   {

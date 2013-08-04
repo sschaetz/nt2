@@ -18,7 +18,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cosine_<mode>, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cosine_<mode>, tag::cpu_
                             , (A0)(mode)
                             , (generic_< arithmetic_<A0> >)
                             )
@@ -30,7 +30,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::cosine_<mode> , tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( cosine_<mode> , tag::cpu_
                             , (A0)(mode)
                             , (generic_< floating_<A0> >)
                             )

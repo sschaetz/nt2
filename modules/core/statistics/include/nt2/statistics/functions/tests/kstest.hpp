@@ -29,7 +29,7 @@
 namespace nt2 { namespace ext
 {
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::kstest_
+  NT2_FUNCTOR_IMPLEMENTATION( kstest_
                             , tag::cpu_
                             , (A0)(A1)(A2)
                             ,  ((ast_<A0, nt2::container::domain>))
@@ -74,7 +74,7 @@ namespace nt2 { namespace ext
 
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::kstest_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( kstest_, tag::cpu_
                             , (A0)(A1)
                             , ((ast_<A0, nt2::container::domain>))
                               ((unspecified_< A1 >))
@@ -90,7 +90,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::kstest_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( kstest_, tag::cpu_
                             , (A0)(A1)(A2)
                             , ((ast_<A0, nt2::container::domain>))
                               ((unspecified_<A1 >))

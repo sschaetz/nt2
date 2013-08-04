@@ -28,7 +28,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::signgam_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION(signgam_, tag::cpu_,
                     (A0)(X),
                     ((simd_<arithmetic_<A0>,X>))
                     )

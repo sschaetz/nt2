@@ -21,7 +21,7 @@
 #include <boost/simd/include/constants/half.hpp>
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::round_, tag::cpu_, (A0)(X)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( round_, tag::cpu_, (A0)(X)
                             , ((simd_<integer_<A0>,X>))
                             )
   {
@@ -29,7 +29,7 @@ namespace boost { namespace simd { namespace ext
     BOOST_SIMD_FUNCTOR_CALL(1) { return a0; }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::round_, boost::simd::tag::simd_, (A0)(X)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( round_, boost::simd::tag::simd_, (A0)(X)
                             , ((simd_<floating_<A0>,X>))
                             )
   {

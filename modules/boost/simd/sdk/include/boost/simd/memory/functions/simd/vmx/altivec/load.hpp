@@ -18,7 +18,7 @@
 namespace boost { namespace simd { namespace ext
 {
   /// INTERNAL ONLY - SIMD unaligned load without offset
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::load_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( load_
                                       , boost::simd::tag::altivec_
                                       , (A0)(A2)
                                       , ( simd::meta::is_pointing_to

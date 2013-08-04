@@ -19,7 +19,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gammaincinv_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( gammaincinv_, tag::cpu_
                               , (A0)(A1)
                             , (generic_< arithmetic_<A0> >)
                               (generic_< arithmetic_<A1> >)
@@ -35,7 +35,7 @@ namespace nt2 { namespace ext
   };
 
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::gammaincinv_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( gammaincinv_, tag::cpu_
                               , (A0)(A1)
                             , (scalar_< floating_<A0> >)
                               (scalar_< floating_<A1> >)

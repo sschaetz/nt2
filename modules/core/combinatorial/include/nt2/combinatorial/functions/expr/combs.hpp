@@ -20,7 +20,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::combs_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION(combs_, tag::cpu_,
                              (A0)(A1),
                              (unspecified_<A0>)
                              (scalar_ < integer_<A1> > )

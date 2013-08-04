@@ -18,7 +18,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::csch_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( csch_, tag::cpu_
                             , (A0)
                             , (generic_< integer_<A0> >)
                             )
@@ -30,7 +30,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::csch_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( csch_, tag::cpu_
                             , (A0)
                             , (generic_< floating_<A0> >)
                             )

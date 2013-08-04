@@ -17,7 +17,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::sec_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( sec_, tag::cpu_
                             , (A0)
                             , (generic_< arithmetic_<A0> >)
                             )

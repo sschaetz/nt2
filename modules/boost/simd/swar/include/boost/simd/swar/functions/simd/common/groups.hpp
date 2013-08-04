@@ -21,7 +21,7 @@
 /////////////////////////////////////////////////////////////////////////////
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::groups_, tag::cpu_,
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( groups_, tag::cpu_,
                           (A0)(X),
                           (boost::mpl::not_< boost::is_same<A0, typename dispatch::meta::downgrade<A0>::type> >),
                           ((simd_<arithmetic_<A0>,X>))((simd_<arithmetic_<A0>,X>))

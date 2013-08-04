@@ -19,7 +19,7 @@
 namespace boost { namespace simd { namespace ext
 {
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF_GEN( boost::simd::tag::correct_fma_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_IF( correct_fma_, tag::cpu_
                                       , (A0)(X)
                                       , ( simd::meta::is_upgradable_on_ext<A0,X> )
                                       , ((simd_<single_<A0>,X>))

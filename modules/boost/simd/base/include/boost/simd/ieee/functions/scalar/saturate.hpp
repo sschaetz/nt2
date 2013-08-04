@@ -22,7 +22,7 @@ namespace boost { namespace simd { namespace ext
  //============================================================================
   // floating/xxx is a cast
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::saturate_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( saturate_, tag::cpu_
                                     , (A0)(T)
                                     , (scalar_< floating_<A0> >)
                                       (target_< generic_<floating_<T> > >)
@@ -37,7 +37,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::saturate_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( saturate_, tag::cpu_
                                     , (A0)(T)
                                     , (scalar_< floating_<A0> >)
                                       (target_< generic_<uint_<T> > >)
@@ -52,7 +52,7 @@ namespace boost { namespace simd { namespace ext
     }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::saturate_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( saturate_, tag::cpu_
                                     , (A0)(T)
                                     , (scalar_< floating_<A0> >)
                                       (target_< generic_<int_<T> > >)
@@ -71,7 +71,7 @@ namespace boost { namespace simd { namespace ext
   //============================================================================
   // Trivial case int/xxx : Just compare over Valmax/Valmin after conversion
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::saturate_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( saturate_, tag::cpu_
                                     , (A0)(T)
                                     , (scalar_<int_<A0> >)
                                       (target_< generic_<integer_<T> > >)
@@ -93,7 +93,7 @@ namespace boost { namespace simd { namespace ext
   //============================================================================
   // Trivial case uint/uint : Just compare over Valmax
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::saturate_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( saturate_, tag::cpu_
                                     , (A0)(T)
                                     , (scalar_<uint_<A0> >)
                                       (target_< generic_<uint_<T> > >)
@@ -112,7 +112,7 @@ namespace boost { namespace simd { namespace ext
   // For uint/int, do the comparison after casting Valmax<T> to the unsigned
   // type to avoid warnings.
   //============================================================================
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN ( boost::simd::tag::saturate_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( saturate_, tag::cpu_
                                     , (A0)(T)
                                     , (scalar_<uint_<A0> >)
                                       (target_< generic_<int_<T> > >)

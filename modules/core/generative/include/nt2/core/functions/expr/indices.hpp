@@ -16,7 +16,7 @@
 namespace nt2 { namespace ext
 {
   /// INTERNAL ONLY
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::indices_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( indices_, tag::cpu_
                             , (A0)(A1)
                             , ((ast_<A0, nt2::container::domain>))
                               ((array_< scalar_< integer_<A1> >,2>))
@@ -28,7 +28,7 @@ namespace nt2 { namespace ext
   };
 
   /// INTERNAL ONLY
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::indices_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( indices_, tag::cpu_
                             , (A0)(A1)(T)
                             , ((ast_<A0, nt2::container::domain>))
                               ((array_< scalar_< integer_<A1> >,2>))

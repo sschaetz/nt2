@@ -19,7 +19,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates inner_fold
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_IF_GEN( nt2::tag::inner_fold_, boost::simd::tag::simd_, (A0)(S0)(A1)(A2)(A3)(A4)
+  NT2_FUNCTOR_IMPLEMENTATION_IF( inner_fold_, boost::simd::tag::simd_, (A0)(S0)(A1)(A2)(A3)(A4)
                                , (boost::simd::meta::is_vectorizable<typename A0::value_type, BOOST_SIMD_DEFAULT_EXTENSION>)
                                , ((expr_< table_< unspecified_<A0>, S0 >
                                         , nt2::tag::terminal_

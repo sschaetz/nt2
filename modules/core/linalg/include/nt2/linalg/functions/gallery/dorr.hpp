@@ -25,7 +25,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::dorr_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( dorr_, tag::cpu_,
                               (A0),
                               (scalar_<integer_<A0> >)
                             )
@@ -52,7 +52,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::dorr_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( dorr_, tag::cpu_,
                               (A0)(A1),
                               (scalar_<integer_<A0> >)
                               (scalar_<floating_<A1> >)
@@ -80,7 +80,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::dorr_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( dorr_, tag::cpu_,
                               (A0)(A1),
                               (scalar_<integer_<A0> >)
                               (target_ < scalar_<floating_<A1> > > )
@@ -110,7 +110,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::dorr_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION( dorr_, tag::cpu_,
                               (A0)(A1)(A2),
                               (scalar_<integer_<A0> >)
                               (scalar_<arithmetic_<A1> > )
@@ -144,7 +144,7 @@ namespace nt2 { namespace ext
 
 
 
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::dorr_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( dorr_, tag::cpu_
                               , (A0)(N0)(A1)(N1)
                               , ((node_<A0, nt2::tag::dorr_, N0, nt2::container::domain>))
                               ((node_<A1, nt2::tag::tie_ , N1, nt2::container::domain>))

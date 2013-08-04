@@ -39,7 +39,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Generates outer_fold
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::outer_fold_, tag::cpu_, (A0)(A1)(A2)(A3)(A4)
+  NT2_FUNCTOR_IMPLEMENTATION( outer_fold_, tag::cpu_, (A0)(A1)(A2)(A3)(A4)
                             , ((ast_< A0, nt2::container::domain>))
                               ((ast_< A1, nt2::container::domain>))
                               (unspecified_<A2>)

@@ -15,7 +15,7 @@
 namespace nt2 { namespace ext
 {
   /// INTERNAL ONLY
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::repnum_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( repnum_, tag::cpu_
                             , (A0)(A1)
                             , (scalar_< unspecified_<A0> >)
                               ((ast_<A1, nt2::container::domain>))

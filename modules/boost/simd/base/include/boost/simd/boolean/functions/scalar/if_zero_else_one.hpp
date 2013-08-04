@@ -17,7 +17,7 @@
 
 namespace boost { namespace simd { namespace ext
 {
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::if_zero_else_one_, tag::cpu_, (A0)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( if_zero_else_one_, tag::cpu_, (A0)
                             , (scalar_< logical_<A0> >)
                             )
   {
@@ -26,7 +26,7 @@ namespace boost { namespace simd { namespace ext
       { return a0 ? Zero<result_type>() : One<result_type>(); }
   };
 
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::if_zero_else_one_, tag::cpu_, (A0)
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( if_zero_else_one_, tag::cpu_, (A0)
                             , (scalar_< unspecified_<A0> >)
                             )
   {

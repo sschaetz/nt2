@@ -16,7 +16,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // freqspace(a0)
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::freqspace_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( freqspace_, tag::cpu_
                             , (A0)
                             , ((scalar_< integer_<A0> >))
                             )
@@ -44,7 +44,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // freqspace(a0,whole_)
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::freqspace_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( freqspace_, tag::cpu_
                             , (A0)(A1)
                             , ((scalar_< integer_<A0> >))
                               ((unspecified_<A1>))
@@ -75,7 +75,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // freqspace(a0,as<T>)
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::freqspace_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( freqspace_, tag::cpu_
                             , (A0)(A1)
                             , ((scalar_< integer_<A0>  >))
                               ((target_< floating_<A1> >))
@@ -102,7 +102,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // freqspace(a0,whole_, as<T>)
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::freqspace_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( freqspace_, tag::cpu_
                             , (A0)(A1)(A2)
                             , ((scalar_< integer_<A0> >))
                               ((unspecified_<A1>))

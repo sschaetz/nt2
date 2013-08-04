@@ -25,7 +25,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION_GEN(nt2::tag::factor_, tag::cpu_,
+  NT2_FUNCTOR_IMPLEMENTATION(factor_, tag::cpu_,
                       (A0),
                       (scalar_ < integer_<A0> > )
                       )

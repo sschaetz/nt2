@@ -116,7 +116,7 @@ namespace nt2 { namespace ext
   // semantic of assigning a fusion sequence to a fusion sequence is assumed
   // to always be valid if assigning the first element is
   // TODO: check other elements?
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::assign_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( assign_, tag::cpu_
                             , (A0)(A1)
                             , (fusion_sequence_<A0>)
                               (fusion_sequence_<A1>)
@@ -130,7 +130,7 @@ namespace nt2 { namespace ext
   // semantic of assigning a fusion sequence to a value can
   // only take the first value
   // Not allowed if the fusion sequence is actually a scalar
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::assign_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION( assign_, tag::cpu_
                             , (A0)(A1)
                             , (generic_< unspecified_<A0> >)
                               (fusion_sequence_<A1>)

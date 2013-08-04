@@ -24,7 +24,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Global nD element-wise transform
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::transform_, boost::simd::tag::simd_
+  NT2_FUNCTOR_IMPLEMENTATION( transform_, boost::simd::tag::simd_
                             , (A0)(A1)
                             , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))
@@ -41,7 +41,7 @@ namespace nt2 { namespace ext
   //============================================================================
   // Partial nD element-wise transform with offset/size
   //============================================================================
-  NT2_FUNCTOR_IMPLEMENTATION_IF_GEN( nt2::tag::transform_, boost::simd::tag::simd_
+  NT2_FUNCTOR_IMPLEMENTATION_IF( transform_, boost::simd::tag::simd_
                                , (A0)(A1)(A2)(A3)
                                , (boost::simd::meta::is_vectorizable<typename A0::value_type, BOOST_SIMD_DEFAULT_EXTENSION>)
                                , ((ast_<A0, nt2::container::domain>))
