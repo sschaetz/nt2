@@ -32,7 +32,6 @@ namespace nt2
       {
         typedef ext::unspecified_<solvers::full_qr_solve_> parent;
       };
-      NT2_FUNCTION_DECLARE(full_qr_solve_)
     }
 
     struct full_qr_solve_ :  ext::tieable_<full_qr_solve_>

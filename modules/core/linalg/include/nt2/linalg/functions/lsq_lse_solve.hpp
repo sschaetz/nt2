@@ -32,7 +32,6 @@ namespace nt2
       {
         typedef ext::unspecified_<solvers::lsq_lse_solve_> parent;
       };
-      NT2_FUNCTION_DECLARE(lsq_lse_solve_)
     }
 
     struct lsq_lse_solve_ :  ext::tieable_<lsq_lse_solve_>

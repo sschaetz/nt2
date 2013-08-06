@@ -32,7 +32,6 @@ namespace nt2
       {
         typedef ext::unspecified_<solvers::chol_solve_> parent;
       };
-      NT2_FUNCTION_DECLARE(chol_solve_)
     }
 
     struct chol_solve_ :  ext::tieable_<chol_solve_>

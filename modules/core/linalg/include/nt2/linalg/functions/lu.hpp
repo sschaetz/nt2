@@ -28,7 +28,6 @@ namespace nt2
       {
         typedef ext::unspecified_<factorization::lu_> parent;
       };
-      NT2_FUNCTION_DECLARE(lu_)
     }
 
     struct lu_ : ext::tieable_<lu_>

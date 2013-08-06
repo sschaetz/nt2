@@ -28,7 +28,6 @@ namespace nt2
       {
         typedef ext::unspecified_<factorization::qr_> parent;
       };
-      NT2_FUNCTION_DECLARE(qr_)
     }
 
     struct qr_ :  ext::tieable_<qr_>

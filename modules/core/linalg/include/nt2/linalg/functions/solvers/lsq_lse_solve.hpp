@@ -18,7 +18,7 @@
 
 namespace nt2 { namespace ext
 {
-  NT2_FUNCTOR_IMPLEMENTATION( solvers::lsq_lse_solve_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::solvers::lsq_lse_solve_, tag::cpu_
                             , (A0)(A1)(A2)(A3)
                             , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))
@@ -46,7 +46,7 @@ namespace nt2 { namespace ext
     }
   };
 
-  NT2_FUNCTOR_IMPLEMENTATION( solvers::lsq_lse_solve_, tag::cpu_
+  NT2_FUNCTOR_IMPLEMENTATION_GEN( nt2::tag::solvers::lsq_lse_solve_, tag::cpu_
                             , (A0)(A1)(A2)(A3)(IP)
                             , ((ast_<A0, nt2::container::domain>))
                               ((ast_<A1, nt2::container::domain>))

@@ -32,7 +32,6 @@ namespace nt2
       {
         typedef ext::unspecified_<solvers::tr_solve_> parent;
       };
-      NT2_FUNCTION_DECLARE(tr_solve_)
     }
 
     struct tr_solve_ :  ext::tieable_<tr_solve_>

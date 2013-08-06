@@ -28,7 +28,6 @@ namespace nt2
       {
         typedef ext::unspecified_<factorization::balance_> parent;
       };
-      NT2_FUNCTION_DECLARE(balance_)
     }
 
     struct balance_ :  ext::tieable_<balance_>
