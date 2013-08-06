@@ -81,7 +81,7 @@ namespace meta
 #define M4(z,n,t) boost::reference_wrapper<A##n>(a##n)
 
 #define M5(z,n,t)                                                               \
-BOOST_DISPATCH_REGISTER_TO_IF ( (boost)(dispatch)(meta), unspecified_<Func>     \
+BOOST_DISPATCH_REGISTER_TO_IF_GEN ( (boost)(dispatch)(meta), unspecified_<Func> \
                               , tag::formal_                                    \
                               , (Func)BOOST_PP_REPEAT(n,M2,~)                   \
                               , (mpl::and_< mpl::not_< is_formal<Func> >        \
