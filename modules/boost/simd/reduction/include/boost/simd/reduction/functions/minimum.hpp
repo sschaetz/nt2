@@ -71,7 +71,7 @@ namespace boost { namespace simd
     {
       typedef ext::reduction_<minimum_, tag::min_, tag::Valmax> parent;
     };
-    BOOST_SIMD_FUNCTION_DECLARE(min_)
+    BOOST_SIMD_FUNCTION_DECLARE(minimum_)
   }
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::minimum_, minimum, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::minimum_, minimum, 2)

@@ -20,14 +20,14 @@
 namespace boost { namespace simd { namespace ext
 {
   // Terminal returns ASTs by reference
-  BOOST_SIMD_REGISTER_DISPATCH_TO( terminal_, tag::formal_
+  BOOST_SIMD_REGISTER_DISPATCH_TO_GEN( boost::simd::tag::terminal_, tag::formal_
                             , (A0)(D)
                             , ((ast_<A0, D>))
                             , identity
                             )
 
   // When evaluating a terminal, get its value
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION( terminal_, tag::cpu_
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN( boost::simd::tag::terminal_, tag::cpu_
                             , (A0)(D)
                             , ((ast_<A0, D>))
                             )
@@ -42,12 +42,12 @@ namespace boost { namespace simd { namespace ext
   };
 
   // Terminal functions on non-ASTs do nothing
-  BOOST_SIMD_REGISTER_DISPATCH_TO( terminal_, tag::cpu_
+  BOOST_SIMD_REGISTER_DISPATCH_TO_GEN( boost::simd::tag::terminal_, tag::cpu_
                             , (A0)
                             , (unspecified_<A0>)
                             , identity
                             )
-  BOOST_SIMD_REGISTER_DISPATCH_TO( terminal_, tag::cpu_
+  BOOST_SIMD_REGISTER_DISPATCH_TO_GEN( boost::simd::tag::terminal_, tag::cpu_
                             , (A0)
                             , (generic_< unspecified_<A0> >)
                             , identity

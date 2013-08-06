@@ -108,7 +108,7 @@ namespace boost { namespace simd { namespace ext                               \
       BOOST_PP_REPEAT(n, M4, BOOST_PP_TUPLE_ELEM(3, 1, t))                     \
       r0 = f(BOOST_PP_ENUM_PARAMS(n, a0) );                                    \
       r1 = f(BOOST_PP_ENUM_PARAMS(n, a1) );                                    \
-      return map_avx_sse(r0, r1);                                                \
+      return map_avx_sse(r0, r1);                                              \
     }                                                                          \
   };                                                                           \
 } } }                                                                          \
@@ -117,8 +117,8 @@ namespace boost { namespace simd { namespace ext                               \
 #define BOOST_SIMD_MAP_CALL(T,C,CC)                                            \
 namespace boost { namespace simd { namespace ext                               \
 {                                                                              \
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION_GEN                                            \
-  ( boost::simd::tag::map_avx_sse_, boost::simd::tag::avx_                       \
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION                                            \
+  ( map_avx_sse_, boost::simd::tag::avx_                                       \
   , (A0)                                                                       \
   , ((simd_< T<A0>, boost::simd::tag::sse_ >))                                 \
     ((simd_< T<A0>, boost::simd::tag::sse_ >))                                 \
