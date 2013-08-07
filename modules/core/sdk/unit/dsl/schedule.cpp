@@ -107,7 +107,7 @@ red(A0 const& a0)
 
 namespace boost { namespace dispatch { namespace meta
 {
-  BOOST_DISPATCH_IMPLEMENT( (boost)(dispatch)(meta)
+  BOOST_DISPATCH_IMPLEMENT_GEN( (boost)(dispatch)(meta)
                           , ::tag::red_, tag::cpu_
                           , (A0)
                           , (scalar_< unspecified_<A0> >)
@@ -120,7 +120,7 @@ namespace boost { namespace dispatch { namespace meta
     }
   };
 
-  BOOST_DISPATCH_IMPLEMENT( (boost)(dispatch)(meta)
+  BOOST_DISPATCH_IMPLEMENT_GEN( (boost)(dispatch)(meta)
                           , nt2::tag::run_assign_, tag::cpu_
                           , (A0)(T0)(N0)(A1)
                           , ((node_<A0, unspecified_<T0>, N0, nt2::container::domain>))

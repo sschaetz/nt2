@@ -14,7 +14,11 @@
 
 namespace boost { namespace simd
 {
-  namespace tag { struct evaluate_ : dispatch::tag::formal_ { typedef dispatch::tag::formal_ parent; }; }
+  namespace tag
+  {
+    struct evaluate_ : dispatch::tag::formal_ { typedef dispatch::tag::formal_ parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(evaluate_)
+  }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::evaluate_, evaluate, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION_TPL(tag::evaluate_, evaluate, (A0&), 1)

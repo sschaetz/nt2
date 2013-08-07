@@ -14,7 +14,11 @@
 
 namespace boost { namespace simd
 {
-  namespace tag { struct optimize_ : dispatch::tag::formal_ { typedef dispatch::tag::formal_ parent; }; }
+  namespace tag
+  {
+    struct optimize_ : dispatch::tag::formal_ { typedef dispatch::tag::formal_ parent; };
+    BOOST_SIMD_FUNCTION_DECLARE(optimize_)
+  }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION(tag::optimize_, optimize, 1)
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION_TPL(tag::optimize_, optimize, (A0&), 1)

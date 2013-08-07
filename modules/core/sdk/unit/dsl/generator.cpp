@@ -35,6 +35,7 @@ namespace nt2
     {
      typedef ext::elementwise_<pplus_> parent;
     };
+    NT2_FUNCTION_DECLARE(pplus_)
   }
 
   BOOST_DISPATCH_FUNCTION_IMPLEMENTATION_TPL(tag::pplus_, pplus, (A0&)(A1&), 2)
