@@ -21,28 +21,28 @@
 #include <boost/mpl/and.hpp>
 #include <boost/mpl/not.hpp>
 #include <boost/mpl/or.hpp>
-#include <boost/proto/tags.hpp>
 #include <boost/proto/traits.hpp>
-#include <boost/proto/proto_fwd.hpp>
 
 #define BOOST_SIMD_OVERLOAD_UNARY_OP(Tag, Op)                                  \
+namespace tag { struct Tag; }                                                  \
 template<class A0>                                                             \
 BOOST_FORCEINLINE                                                              \
 typename                                                                       \
 lazy_enable_if< is_value<A0>                                                   \
               , dispatch::meta::                                               \
-                call< Tag(A0 const&) >                                         \
+                call< tag::Tag(A0 const&) >                                    \
          >::type                                                               \
 operator Op                                                                    \
 (                                                                              \
   A0 const & a0                                                                \
 )                                                                              \
 {                                                                              \
-  return typename dispatch::make_functor<Tag, A0>::type()(a0);                 \
+  return typename dispatch::make_functor<tag::Tag, A0>::type()(a0);            \
 }                                                                              \
 /**/
 
 #define BOOST_SIMD_OVERLOAD_UNARY_OP_INC(Tag, Op)                              \
+namespace tag { struct Tag; }                                                  \
 template<class A0>                                                             \
 BOOST_FORCEINLINE                                                              \
 typename                                                                       \
@@ -54,7 +54,7 @@ operator Op                                                                    \
   A0 & a0                                                                      \
 )                                                                              \
 {                                                                              \
-  return a0 = typename dispatch::make_functor<Tag, A0>::type()(a0, 1);         \
+  return a0 = typename dispatch::make_functor<tag::Tag, A0>::type()(a0, 1);    \
 }                                                                              \
 template<class A0>                                                             \
 BOOST_FORCEINLINE                                                              \
@@ -75,12 +75,13 @@ operator Op                                                                    \
 /**/
 
 #define BOOST_SIMD_OVERLOAD_BINARY_OP(Tag, Op)                                 \
+namespace tag { struct Tag; }                                                  \
 template<class A0, class A1>                                                   \
 BOOST_FORCEINLINE                                                              \
 typename                                                                       \
 lazy_enable_if< mpl::and_< is_value<A0>, is_value<A1> >                        \
               , dispatch::meta::                                               \
-                call<Tag(A0 const&, A1 const&)>                                \
+                call<tag::Tag(A0 const&, A1 const&)>                           \
               >::type                                                          \
 operator Op                                                                    \
 (                                                                              \
@@ -88,7 +89,7 @@ operator Op                                                                    \
   A1 const & a1                                                                \
 )                                                                              \
 {                                                                              \
-  return typename dispatch::make_functor<Tag, A0>::type()(a0, a1);             \
+  return typename dispatch::make_functor<tag::Tag, A0>::type()(a0, a1);        \
 }                                                                              \
 /**/
 
@@ -139,34 +140,34 @@ namespace boost { namespace simd
   };
 
   // unary operators
-  BOOST_SIMD_OVERLOAD_UNARY_OP( boost::proto::tag::unary_plus  ,  + )
-  BOOST_SIMD_OVERLOAD_UNARY_OP( boost::proto::tag::negate      ,  - )
-  BOOST_SIMD_OVERLOAD_UNARY_OP( boost::proto::tag::complement  ,  ~ )
-  BOOST_SIMD_OVERLOAD_UNARY_OP( boost::proto::tag::logical_not ,  ! )
-  BOOST_SIMD_OVERLOAD_UNARY_OP_INC( boost::proto::tag::plus  , ++ )
-  BOOST_SIMD_OVERLOAD_UNARY_OP_INC( boost::proto::tag::minus , -- )
+  BOOST_SIMD_OVERLOAD_UNARY_OP( unary_plus_  ,  + )
+  BOOST_SIMD_OVERLOAD_UNARY_OP( unary_minus_ ,  - )
+  BOOST_SIMD_OVERLOAD_UNARY_OP( complement_  ,  ~ )
+  BOOST_SIMD_OVERLOAD_UNARY_OP( logical_not_ ,  ! )
+  BOOST_SIMD_OVERLOAD_UNARY_OP_INC( plus_    , ++ )
+  BOOST_SIMD_OVERLOAD_UNARY_OP_INC( minus_   , -- )
 
   // binary operators
-  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( boost::proto::tag::bitwise_and , &  )
-  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( boost::proto::tag::bitwise_or  , |  )
-  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( boost::proto::tag::bitwise_xor , ^  )
-  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( boost::proto::tag::plus        , +  )
-  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( boost::proto::tag::minus       , -  )
-  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( boost::proto::tag::divides     , /  )
-  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( boost::proto::tag::multiplies  , *  )
-  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( boost::proto::tag::modulus     , %  )
-  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( boost::proto::tag::shift_left  , << )
-  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( boost::proto::tag::shift_right , >> )
-  BOOST_SIMD_OVERLOAD_BINARY_OP( boost::proto::tag::logical_and        , && )
-  BOOST_SIMD_OVERLOAD_BINARY_OP( boost::proto::tag::logical_or         , || )
+  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( bitwise_and_ , &  )
+  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( bitwise_or_  , |  )
+  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( bitwise_xor_ , ^  )
+  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( plus_        , +  )
+  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( minus_       , -  )
+  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( divides_     , /  )
+  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( multiplies_  , *  )
+  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( modulo_      , %  )
+  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( shift_left_  , << )
+  BOOST_SIMD_OVERLOAD_BINARY_OP_ASSIGN( shift_right_ , >> )
+  BOOST_SIMD_OVERLOAD_BINARY_OP( logical_and_        , && )
+  BOOST_SIMD_OVERLOAD_BINARY_OP( logical_or_         , || )
 
   // comparison operators
-  BOOST_SIMD_OVERLOAD_BINARY_OP( boost::proto::tag::equal_to        , == )
-  BOOST_SIMD_OVERLOAD_BINARY_OP( boost::proto::tag::not_equal_to    , != )
-  BOOST_SIMD_OVERLOAD_BINARY_OP( boost::proto::tag::less            , <  )
-  BOOST_SIMD_OVERLOAD_BINARY_OP( boost::proto::tag::greater         , >  )
-  BOOST_SIMD_OVERLOAD_BINARY_OP( boost::proto::tag::less_equal      , <= )
-  BOOST_SIMD_OVERLOAD_BINARY_OP( boost::proto::tag::greater_equal   , >= )
+  BOOST_SIMD_OVERLOAD_BINARY_OP( is_equal_           , == )
+  BOOST_SIMD_OVERLOAD_BINARY_OP( is_not_equal_       , != )
+  BOOST_SIMD_OVERLOAD_BINARY_OP( is_less_            , <  )
+  BOOST_SIMD_OVERLOAD_BINARY_OP( is_greater_         , >  )
+  BOOST_SIMD_OVERLOAD_BINARY_OP( is_less_equal_      , <= )
+  BOOST_SIMD_OVERLOAD_BINARY_OP( is_greater_equal_   , >= )
 } }
 
 #undef BOOST_SIMD_OVERLOAD_UNARY_OP
