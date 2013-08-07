@@ -21,7 +21,7 @@ BOOST_DISPATCH_REGISTER_TPL((boost)(simd)(ext),Tag,boost::simd::tag::Tag,Site,Ty
 #define BOOST_SIMD_REGISTER_DISPATCH_TO(Tag,Site,Types,Seq,Ret)                \
 BOOST_DISPATCH_REGISTER_TO((boost)(simd)(ext),Tag,boost::simd::tag::Tag,Site,Types,Seq,Ret)
 
-#define BOOST_SIMD_REGISTER_DISPATCH_TO_IF(Tag,Site,Types,Seq,Ret)            \
+#define BOOST_SIMD_REGISTER_DISPATCH_TO_IF(Tag,Site,Types,Cond,Seq,Ret)        \
 BOOST_DISPATCH_REGISTER_TO_IF((boost)(simd)(ext),Tag,boost::simd::tag::Tag,Site,Types,Cond,Seq,Ret)
 
 #define BOOST_SIMD_REGISTER_DISPATCH_TO_TPL(Tag,Site,Types,Seq,Ret)            \
