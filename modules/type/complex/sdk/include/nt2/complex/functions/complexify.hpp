@@ -27,6 +27,7 @@ namespace nt2
     {
       typedef ext::elementwise_<complexify_> parent;
     };
+    NT2_FUNCTION_DECLARE(complexify_)
   }
   NT2_FUNCTION_IMPLEMENTATION(tag::complexify_, complexify, 1)
 
