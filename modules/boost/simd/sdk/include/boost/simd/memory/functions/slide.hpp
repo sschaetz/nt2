@@ -45,18 +45,10 @@ namespace boost { namespace simd
   **/
   template<int Misalignement, typename A0, typename A1>
   BOOST_FORCEINLINE
-  typename boost::dispatch::meta
-                ::call<tag::slide_( A0 const&, A1 const&
-                                  , mpl::int_<Misalignement> const&
-                                  )>::type
+  BOOST_DISPATCH_MAKE_CALL_TYPE(tag::slide_, slide_, 3, (A0 const&, A1 const&, mpl::int_<Misalignement> const&))
   slide(A0 const& a0, A1 const& a1)
   {
-    typename  boost::dispatch::meta
-            ::dispatch_call<tag::slide_ ( A0 const&, A1 const&
-                                        , mpl::int_<Misalignement> const&
-                                        )>::type          callee;
-
-    return callee(a0, a1, mpl::int_<Misalignement>());
+    return BOOST_DISPATCH_MAKE_CALL(tag::slide_, slide_, 3, (a0, a1, mpl::int_<Misalignement>()));
   }
 } }
 

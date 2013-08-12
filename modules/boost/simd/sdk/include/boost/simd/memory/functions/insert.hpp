@@ -72,12 +72,7 @@ namespace boost { namespace simd
   BOOST_FORCEINLINE
   void insert(Value const& value, Data& data, Offset const& offset)
   {
-    typename  boost::dispatch::meta
-            ::dispatch_call<tag::insert_( Value const&
-                                        , Data&
-                                        , Offset const&
-                                        )>::type          callee;
-    callee(value,data,offset);
+    return BOOST_DISPATCH_MAKE_CALL(tag::insert_, insert_, 3, (value, data, offset));
   }
 } }
 

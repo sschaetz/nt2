@@ -36,23 +36,12 @@ namespace boost { namespace simd
     template<typename A0, typename T>
     struct bitwise_cast_impl
     {
-      typedef typename  dispatch::meta
-                        ::call<tag::bitwise_cast_ ( A0 const&
-                                                  , dispatch::meta::as_<T> const&
-                                                  )
-                              >::type                             type;
+      BOOST_DISPATCH_MAKE_CALL_TYPEDEF(tag::bitwise_cast_, bitwise_cast_, 2, (A0 const&, dispatch::meta::as_<T> const&), type)
 
       static BOOST_FORCEINLINE type call(A0 const& a0)
       {
-        typename  boost::dispatch::meta
-                  ::dispatch_call<tag::bitwise_cast_( A0 const&
-                                                    , boost::dispatch::meta
-                                                                ::as_<T> const&
-                                                    )
-                                  >::type                callee;
-
         dispatch::meta::as_<T> target;
-        return callee(a0, target);
+        return BOOST_DISPATCH_MAKE_CALL(tag::bitwise_cast_, bitwise_cast_, 2, (a0, target));
       }
     };
   }

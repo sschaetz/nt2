@@ -62,6 +62,8 @@ NT2_TEST_CASE_TPL ( plus_integer__2_0,  BOOST_SIMD_INTEGRAL_TYPES)
   NT2_TEST( (boost::is_same < r_t, wished_r_t >::value) );
   std::cout << std::endl;
 
+  NT2_TEST_EQUAL(plus(1, 2), 3);
+
   // specific values tests
   NT2_TEST_EQUAL(plus(boost::simd::One<T>(), boost::simd::One<T>()), boost::simd::Two<r_t>());
   NT2_TEST_EQUAL(plus(boost::simd::One<T>(),boost::simd::Zero<T>()), boost::simd::One<r_t>());

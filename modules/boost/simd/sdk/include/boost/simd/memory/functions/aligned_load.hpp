@@ -118,58 +118,28 @@ namespace boost { namespace simd
   template<typename Type,int Misalignment,typename Pointer,typename Offset>
   BOOST_FORCEINLINE Type aligned_load(Pointer const& ptr, Offset const& offset )
   {
-    typename  boost::dispatch::meta
-            ::dispatch_call<tag::aligned_load_( Pointer const&
-                                              , Offset const&
-                                              , boost::dispatch::meta::as_<Type> const&
-                                              , boost::mpl::int_<Misalignment> const&
-                                              )>::type          callee;
-
-    return callee ( ptr , offset
-                  , boost::dispatch::meta::as_<Type>()
-                  , boost::mpl::int_<Misalignment>()
-                  );
+    return BOOST_DISPATCH_MAKE_CALL(tag::aligned_load_, aligned_load_, 4, (ptr, offset, boost::dispatch::meta::as_<Type>(), boost::mpl::int_<Misalignment>()));
   }
 
   /// @overaligned_load
   template<typename Type,int Misalignment,typename Pointer>
   BOOST_FORCEINLINE Type aligned_load(Pointer const& ptr)
   {
-    typename  boost::dispatch::meta
-            ::dispatch_call<tag::aligned_load_(Pointer const&
-                                              , boost::dispatch::meta::as_<Type> const&
-                                              , boost::mpl::int_<Misalignment> const&
-                                              )>::type callee;
-
-    return callee ( ptr
-                  , boost::dispatch::meta::as_<Type>()
-                  , boost::mpl::int_<Misalignment>()
-                  );
+    return BOOST_DISPATCH_MAKE_CALL(tag::aligned_load_, aligned_load_, 3, (ptr, boost::dispatch::meta::as_<Type>(), boost::mpl::int_<Misalignment>()));
   }
 
   /// @overaligned_load
   template<typename Type,typename Pointer,typename Offset>
   BOOST_FORCEINLINE Type aligned_load(Pointer const& ptr,Offset const& offset)
   {
-    typename  boost::dispatch::meta
-            ::dispatch_call<tag::aligned_load_( Pointer const&
-                                              , Offset const&
-                                              , boost::dispatch::meta::as_<Type> const&
-                                              )>::type          callee;
-
-    return callee(ptr,offset,boost::dispatch::meta::as_<Type>());
+    return BOOST_DISPATCH_MAKE_CALL(tag::aligned_load_, aligned_load_, 3, (ptr, offset, boost::dispatch::meta::as_<Type>()));
   }
 
   /// @overaligned_load
   template<typename Type,typename Pointer>
   BOOST_FORCEINLINE Type aligned_load(Pointer const& ptr)
   {
-    typename  boost::dispatch::meta
-            ::dispatch_call<tag::aligned_load_(Pointer const&
-                                              , boost::dispatch::meta::as_<Type> const&
-                                              )>::type callee;
-
-    return callee(ptr,boost::dispatch::meta::as_<Type>());
+    return BOOST_DISPATCH_MAKE_CALL(tag::aligned_load_, aligned_load_, 2, (ptr, boost::dispatch::meta::as_<Type>()));
   }
 } }
 

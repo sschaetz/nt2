@@ -67,39 +67,23 @@ namespace boost { namespace simd { namespace ext
   // Run an expression without state nor data
   //============================================================================
   #define M0(z,n,t)                                                                                \
-  typename dispatch::meta::result_of<                                                              \
-    typename dispatch::meta::dispatch_call<                                                        \
-      tag::run_(typename boost::proto::result_of::child_c<Expr&, n>::type)                         \
-    >::type                                                                                        \
-    ( typename boost::proto::result_of::child_c<Expr&, n>::type )                                  \
-  >::type                                                                                          \
+  (BOOST_DISPATCH_MAKE_CALL_TYPE(tag::run_, run_, 1, ((typename boost::proto::result_of::child_c<Expr&, n>::type)))) \
   /**/
 
   #define M1(z,n,t)                                                                                \
-  typename dispatch::meta::dispatch_call<                                                          \
-    tag::run_(typename boost::proto::result_of::child_c<Expr&, n>::type)                           \
-  >::type()                                                                                        \
-  ( boost::proto::child_c<n>(expr) )                                                               \
+  BOOST_DISPATCH_MAKE_CALL(tag::run_, run_, 1, (boost::proto::child_c<n>(expr)))                        \
   /**/
 
   #define M2(z,n,t)                                                                                \
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( run_, tag::formal_                         \
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( run_, tag::formal_                                           \
                                     , (Expr)(T)(D)                                                 \
                                     , ((node_<Expr, unspecified_<T>, boost::mpl::long_<n>, D>))    \
                                     )                                                              \
   {                                                                                                \
-    typedef typename dispatch::meta::result_of<                                                    \
-      typename dispatch::meta::dispatch_call<                                                      \
-        T( BOOST_PP_ENUM(n, M0, ~) )                                                               \
-      >::type                                                                                      \
-      ( BOOST_PP_ENUM(n, M0, ~) )                                                                  \
-    >::type result_type;                                                                           \
+    BOOST_DISPATCH_MAKE_CALL_TYPEDEF_GEN(T, n, (BOOST_PP_ENUM(n, M0, ~)), result_type);            \
     result_type operator()(Expr& expr) const                                                       \
     {                                                                                              \
-      return typename dispatch::meta::dispatch_call<                                               \
-        T( BOOST_PP_ENUM(n, M0, ~) )                                                               \
-      >::type()                                                                                    \
-      ( BOOST_PP_ENUM(n, M1, ~) );                                                                 \
+      return BOOST_DISPATCH_MAKE_CALL_GEN(T, n, (BOOST_PP_ENUM(n, M1, ~)));                        \
     }                                                                                              \
   };                                                                                               \
   /**/
@@ -119,63 +103,40 @@ namespace boost { namespace simd { namespace ext
   //============================================================================
   // Run an expression with a state and a data
   //============================================================================
+
   #define M0(z,n,t)                                                                                \
-  typename dispatch::meta::result_of<                                                              \
-    typename dispatch::meta::dispatch_call<                                                        \
-      tag::run_( typename boost::proto::result_of::child_c<Expr&, n>::type                         \
-               , State const&                                                                      \
-               , typename adapt_data< typename boost::proto::result_of::                           \
-                                      child_c<Expr&, n>::value_type                                \
-                                    , Data                                                         \
-                                    >::type                                                        \
-               )                                                                                   \
-    >::type                                                                                        \
-    ( typename boost::proto::result_of::child_c<Expr&, n>::type                                    \
+  (BOOST_DISPATCH_MAKE_CALL_TYPE(tag::run_, run_, 3,                                               \
+    ( (typename boost::proto::result_of::child_c<Expr&, n>::type)                                  \
     , State const&                                                                                 \
-    , typename adapt_data< typename boost::proto::result_of::                                      \
-                           child_c<Expr&, n>::value_type                                           \
+    , (typename adapt_data< typename boost::proto::result_of::                                     \
+                                    child_c<Expr&, n>::value_type                                  \
                          , Data                                                                    \
-                         >::type                                                                   \
+                         >::type)                                                                  \
     )                                                                                              \
-  >::type                                                                                          \
+  ))                                                                                               \
   /**/
 
   #define M1(z,n,t)                                                                                \
-  typename dispatch::meta::dispatch_call<                                                          \
-    tag::run_( typename boost::proto::result_of::child_c<Expr&, n>::type                           \
-             , State const&                                                                        \
-             , typename adapt_data< typename boost::proto::result_of::                             \
-                                    child_c<Expr&, n>::value_type                                  \
-                                  , Data                                                           \
-                                  >::type                                                          \
-             )                                                                                     \
-  >::type()                                                                                        \
-  ( boost::proto::child_c<n>(expr)                                                                 \
-  , state                                                                                          \
-  , adapt_data<typename boost::proto::result_of::child_c<Expr&, n>::value_type, Data>::call(data)  \
-  )                                                                                                \
+  (BOOST_DISPATCH_MAKE_CALL(tag::run_, run_, 3,                                                    \
+    ( boost::proto::child_c<n>(expr)                                                               \
+    , state                                                                                        \
+    , (adapt_data<typename boost::proto::result_of::child_c<Expr&, n>::value_type, Data>::call(data)) \
+    )                                                                                              \
+  ))                                                                                               \
   /**/
 
   #define M2(z,n,t)                                                                                \
-  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( run_, tag::cpu_                            \
+  BOOST_SIMD_FUNCTOR_IMPLEMENTATION ( run_, tag::cpu_                                              \
                                     , (Expr)(T)(D)(State)(Data)                                    \
                                     , ((node_<Expr, unspecified_<T>, boost::mpl::long_<n>, D>))    \
                                       (unspecified_<State>)                                        \
                                       (unspecified_<Data>)                                         \
                                     )                                                              \
   {                                                                                                \
-    typedef typename dispatch::meta::result_of<                                                    \
-      typename dispatch::meta::dispatch_call<                                                      \
-        T( BOOST_PP_ENUM(n, M0, ~) )                                                               \
-      >::type                                                                                      \
-      ( BOOST_PP_ENUM(n, M0, ~) )                                                                  \
-    >::type result_type;                                                                           \
+    BOOST_DISPATCH_MAKE_CALL_TYPEDEF_GEN(T, n, (BOOST_PP_ENUM(n, M0, ~)), result_type);            \
     result_type operator()(Expr& expr, State const& state, Data const& data) const                 \
     {                                                                                              \
-      return typename dispatch::meta::dispatch_call<                                               \
-        T( BOOST_PP_ENUM(n, M0, ~) )                                                               \
-      >::type()                                                                                    \
-      ( BOOST_PP_ENUM(n, M1, ~) );                                                                 \
+      return BOOST_DISPATCH_MAKE_CALL_GEN(T, n, (BOOST_PP_ENUM(n, M1, ~)));                        \
     }                                                                                              \
   };                                                                                               \
   /**/
@@ -201,12 +162,12 @@ namespace boost { namespace simd { namespace ext
                                     , ((node_<A0, unspecified_<T>, mpl::long_<0>, D>))
                                     )
   {
-    typedef typename dispatch::meta::dispatch_call<T(A0&)>::type::result_type result_type;
+    BOOST_DISPATCH_MAKE_CALL_TYPEDEF_GEN(T, 1, (A0&), result_type);
 
     BOOST_FORCEINLINE result_type
     operator()(A0& a0) const
     {
-      return typename dispatch::meta::dispatch_call<T(A0&)>::type()(a0);
+      return BOOST_DISPATCH_MAKE_CALL_GEN(T, 1, (a0));
     }
   };
 
@@ -217,12 +178,12 @@ namespace boost { namespace simd { namespace ext
                                       (unspecified_<Data>)
                                     )
   {
-    typedef typename dispatch::meta::dispatch_call<T(A0&, State const&, Data const&)>::type::result_type result_type;
+    BOOST_DISPATCH_MAKE_CALL_TYPEDEF_GEN(T, 3, (A0&, State const&, Data const&), result_type);
 
     BOOST_FORCEINLINE result_type
     operator()(A0& a0, State const& state, Data const& data) const
     {
-      return typename dispatch::meta::dispatch_call<T(A0&, State const&, Data const&)>::type()(a0, state, data);
+      return BOOST_DISPATCH_MAKE_CALL_GEN(T, 3, (a0, state, data));
     }
   };
 } } }

@@ -56,25 +56,14 @@ namespace boost { namespace simd
   BOOST_FORCEINLINE Type
   load(Pointer const& ptr,Offset const& offset )
   {
-    typename  boost::dispatch::meta
-            ::dispatch_call<tag::load_
-                                  ( Pointer const&
-                                  , Offset const&
-                                  , boost::dispatch::meta::as_<Type> const
-                                  )>::type          callee;
-    return callee(ptr,offset,boost::dispatch::meta::as_<Type>());
+    return BOOST_DISPATCH_MAKE_CALL(tag::load_, load_, 3, (ptr, offset, boost::dispatch::meta::as_<Type>()));
   }
 
   /// @overload
   template<typename Type,typename Pointer>
   BOOST_FORCEINLINE Type load(Pointer const& ptr)
   {
-    typename  boost::dispatch::meta
-            ::dispatch_call<tag::load_
-                                  ( Pointer const&
-                                  , boost::dispatch::meta::as_<Type> const
-                                  )>::type          callee;
-    return callee(ptr,boost::dispatch::meta::as_<Type>());
+    return BOOST_DISPATCH_MAKE_CALL(tag::load_, load_, 2, (ptr, boost::dispatch::meta::as_<Type>()));
   }
 } }
 

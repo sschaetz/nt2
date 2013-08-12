@@ -41,10 +41,9 @@ namespace boost { namespace simd { namespace details
     template<typename Op, typename V>
     BOOST_FORCEINLINE Type operator()(Op op, V const& a0) const
     {
-      typename dispatch::meta::dispatch_call<Op(V const&,V const&)>::type f;
       butterfly<Step/2, Type> next;
 
-      return next( op, f(a0, boost::simd::shuffle< butterfly_perm<Step> >(a0)) );
+      return next( op, BOOST_DISPATCH_MAKE_CALL_GEN(Op, 2, (a0, boost::simd::shuffle< butterfly_perm<Step> >(a0))) );
     }
   };
 
@@ -54,8 +53,7 @@ namespace boost { namespace simd { namespace details
     template<typename Op, typename V>
     BOOST_FORCEINLINE Type operator()(Op, V const& a0) const
     {
-      typename dispatch::meta::dispatch_call<Op(V const&,V const&)>::type f;
-      return f(boost::simd::shuffle< butterfly_perm<1> >(a0),a0);
+      return BOOST_DISPATCH_MAKE_CALL_GEN(Op, 2, (boost::simd::shuffle< butterfly_perm<1> >(a0), a0));
     }
   };
 } } }

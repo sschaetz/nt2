@@ -61,25 +61,10 @@ namespace boost { namespace simd
   */
   template<typename Tag, typename Type>
   BOOST_FORCEINLINE
-  typename  boost::dispatch::meta::
-            result_of < typename boost::dispatch::meta::
-                        dispatch_call < tag::all_reduce_
-                                      ( Type const&
-                                      , boost::dispatch::meta::as_<Tag> const
-                                      )
-                                      >::type
-                        ( Type const&
-                        , boost::dispatch::meta::as_<Tag> const
-                        )
-                      >::type
+  BOOST_DISPATCH_MAKE_CALL_TYPE(tag::all_reduce_, all_reduce_, 2, (Type const&, boost::dispatch::meta::as_<Tag> const))
   all_reduce(Type const& value)
   {
-    typename  boost::dispatch::meta
-            ::dispatch_call<tag::all_reduce_
-                                  ( Type const&
-                                  , boost::dispatch::meta::as_<Tag> const
-                                  )>::type          callee;
-    return callee(value,boost::dispatch::meta::as_<Tag>());
+    return BOOST_DISPATCH_MAKE_CALL(tag::all_reduce_, all_reduce_, 2, (value,boost::dispatch::meta::as_<Tag>()));
   }
 } }
 

@@ -59,7 +59,7 @@ namespace boost { namespace dispatch { namespace meta
 #if (!defined(BOOST_NO_VARIADIC_TEMPLATES) && !defined(BOOST_DISPATCH_CREATE_PREPROCESSED_FILES)) || defined(DOXYGEN_ONLY)
   template<class Tag, class... Args, class Site>
   struct call<Tag(Args...),Site>
-        : meta::result_of<typename meta::dispatch_call<Tag(typename meta::as_ref<Args>::type...), Site>::type(Args...)>
+        : meta::result_of<typename meta::dispatch_call<Tag>::template apply<typename meta::hierarchy_of<typename meta::as_ref<Args>::type>::type...>::type(Args...)>
   {};
 #else
 
@@ -73,11 +73,11 @@ namespace boost { namespace dispatch { namespace meta
 #define M0(z,n,t) \
 template<class Tag, BOOST_PP_ENUM_PARAMS(n,class A), class Site> \
 struct call<Tag(BOOST_PP_ENUM_PARAMS(n,A)),Site> \
-: meta::result_of<typename meta::dispatch_call<Tag(BOOST_PP_ENUM(n,M1,~)), Site>::type((BOOST_PP_ENUM_PARAMS(n,A)))> \
+: meta::result_of<typename meta::dispatch_call<Tag>::template apply<BOOST_PP_ENUM(n,M1,~)>::type(BOOST_PP_ENUM_PARAMS(n,A))> \
 {}; \
 /**/
 
-#define M1(z,n,t) typename meta::as_ref<A##n>::type
+#define M1(z,n,t) typename meta::hierarchy_of<typename meta::as_ref<A##n>::type>::type
 
   BOOST_PP_REPEAT_FROM_TO(1,BOOST_PP_INC(BOOST_DISPATCH_MAX_ARITY),M0,~)
 #undef M0

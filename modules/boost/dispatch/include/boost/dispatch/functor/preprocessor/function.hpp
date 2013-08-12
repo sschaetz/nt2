@@ -52,11 +52,7 @@
 #define BOOST_DISPATCH_FUNCTION_INTERFACE(Tag, Name, N)                        \
 template<BOOST_PP_ENUM_PARAMS(N,class A)>                                      \
 BOOST_FORCEINLINE                                                              \
-typename boost::dispatch::meta::result_of< typename boost::dispatch::meta::    \
-  dispatch_call< Tag( BOOST_PP_ENUM_BINARY_PARAMS(N, A, const& a) )            \
-              >::type                                                          \
-  ( BOOST_PP_ENUM_BINARY_PARAMS(N, A, const& a) )                              \
->::type                                                                        \
+BOOST_DISPATCH_MAKE_CALL_TYPE(Tag, Name, N, (BOOST_PP_ENUM_BINARY_PARAMS(N, A, const& BOOST_PP_INTERCEPT))) \
 Name( BOOST_PP_ENUM_BINARY_PARAMS(N, A, const& a) )                            \
 /**/
 
@@ -82,10 +78,7 @@ Name( BOOST_PP_ENUM_BINARY_PARAMS(N, A, const& a) )                            \
   @endcode
 **/
 #define BOOST_DISPATCH_FUNCTION_BODY(Tag, N)                                   \
-return typename boost::dispatch::meta::                                        \
-       dispatch_call< Tag( BOOST_PP_ENUM_BINARY_PARAMS(N, A, const& a) )       \
-                     >::type()                                                 \
-(BOOST_PP_ENUM_PARAMS(N, a));                                                  \
+return BOOST_DISPATCH_MAKE_CALL_GEN(Tag, N, (BOOST_PP_ENUM_PARAMS(N, a)));     \
 /**/
 
 /*!
@@ -135,6 +128,7 @@ BOOST_DISPATCH_FUNCTION_IMPLEMENTATION_TPL(                                    \
 
 /// INTERNAL ONLY
 #define BOOST_DISPATCH_FN_ARGS(z,n,t) BOOST_PP_SEQ_ELEM(n,t) a##n
+#define BOOST_DISPATCH_FN_ARGS_2(z,n,t) BOOST_PP_SEQ_ELEM(n,t)
 
 /*!
   @brief Generate custom dispatch-based function implementation
@@ -175,25 +169,18 @@ BOOST_DISPATCH_FUNCTION_IMPLEMENTATION_TPL(                                    \
 #define BOOST_DISPATCH_FUNCTION_IMPLEMENTATION_TPL(Tag, Name, Args, N)         \
 template<BOOST_PP_ENUM_PARAMS(N, class A)>                                     \
 BOOST_FORCEINLINE                                                              \
-typename boost::dispatch::meta::result_of< typename boost::dispatch::meta::    \
-  dispatch_call< Tag( BOOST_PP_ENUM( BOOST_PP_SEQ_SIZE(Args)                   \
-                                   , BOOST_DISPATCH_FN_ARGS                    \
+BOOST_DISPATCH_MAKE_CALL_TYPE(Tag, Name, BOOST_PP_SEQ_SIZE(Args),              \
+  ( BOOST_PP_ENUM( BOOST_PP_SEQ_SIZE(Args)                                   \
+                                   , BOOST_DISPATCH_FN_ARGS_2                    \
                                    , Args                                      \
                                    )                                           \
                     )                                                          \
-               >::type                                                         \
-  ( BOOST_PP_ENUM(BOOST_PP_SEQ_SIZE(Args), BOOST_DISPATCH_FN_ARGS, Args) )     \
->::type                                                                        \
+)                                                                              \
 Name( BOOST_PP_ENUM(BOOST_PP_SEQ_SIZE(Args), BOOST_DISPATCH_FN_ARGS, Args) )   \
 {                                                                              \
-  return typename boost::dispatch::meta::                                      \
-         dispatch_call< Tag( BOOST_PP_ENUM( BOOST_PP_SEQ_SIZE(Args)            \
-                                          , BOOST_DISPATCH_FN_ARGS             \
-                                          , Args                               \
-                                          )                                    \
-                           )                                                   \
-                      >::type()                                                \
-  (BOOST_PP_ENUM_PARAMS(BOOST_PP_SEQ_SIZE(Args), a));                          \
+  return BOOST_DISPATCH_MAKE_CALL(Tag, Name, BOOST_PP_SEQ_SIZE(Args),           \
+    (BOOST_PP_ENUM_PARAMS(BOOST_PP_SEQ_SIZE(Args), a))                        \
+  );                                                                           \
 }                                                                              \
 /**/
 

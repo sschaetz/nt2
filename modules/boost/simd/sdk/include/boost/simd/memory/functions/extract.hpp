@@ -68,15 +68,10 @@ namespace boost { namespace simd
   **/
   template<typename Value,typename Offset>
   BOOST_FORCEINLINE
-  typename boost::dispatch::meta
-                ::call<tag::extract_(Value const&, Offset const&)>::type
+  BOOST_DISPATCH_MAKE_CALL_TYPE(tag::extract_, extract_, 2, (Value const&, Offset const&))
   extract(Value const& value, Offset const& offset)
   {
-    typename  boost::dispatch::meta
-            ::dispatch_call<tag::extract_ ( Value const&
-                                          , Offset const&
-                                          )>::type          callee;
-    return callee(value,offset);
+    return BOOST_DISPATCH_MAKE_CALL(tag::extract_, extract_, 2, (value, offset));
   }
 } }
 
