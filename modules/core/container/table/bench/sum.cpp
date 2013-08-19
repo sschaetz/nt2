@@ -6,93 +6,72 @@
 //                 See accompanying file LICENSE.txt or copy at
 //                     http://www.boost.org/LICENSE_1_0.txt
 //==============================================================================
-#include <nt2/core/container/table/table.hpp>
-#include <nt2/include/functions/of_size.hpp>
-#include <nt2/include/functions/sum.hpp>
-#include <nt2/include/functions/plus.hpp>
-
 #include <nt2/sdk/bench/benchmark.hpp>
+#include <nt2/sdk/bench/measure/cycles_per_element.hpp>
+#include <nt2/sdk/bench/workbench/nary_range.hpp>
+#include <nt2/sdk/bench/max_duration.hpp>
+#include <nt2/sdk/bench/stat/median.hpp>
+#include <nt2/include/functions/plus.hpp>
+#include <nt2/include/functions/sum.hpp>
+#include <nt2/table.hpp>
 
-template< typename T, int N
-        , class Tag = boost::dispatch::default_site<void>::type
-        >
-NT2_EXPERIMENT(sum_over)
+// Sum workbench
+template<typename Container>
+struct sum_workbench : public nt2::nary_range< Container, 2 >
 {
-  public:
-  sum_over( std::size_t s0, std::size_t s1 )
-          : NT2_EXPRIMENT_CTOR(1.,"cycles/operations")
-          , d0(s0), d1(s1)
+  typedef nt2::nary_range<Container,2> parent;
+
+  sum_workbench ( std::size_t mn, std::size_t mx)
+                : parent(mn,mx,-100,100,nt2::geometric(2))
+                , along(1), init(mn)
   {}
 
-  virtual void run() const { a1 = nt2::sum(a0,N); }
-
-  virtual double compute(nt2::benchmark_result_t const& r) const
+  virtual void setup()
   {
-    return r.first/double(d0*d1);
+    parent::setup();
+    if(parent::exhausted)
+    {
+      along++;
+      parent::sz = init;
+      parent::exhausted = (along > 2) && (parent::sz > parent::sx);
+    }
   }
 
-  virtual void info(std::ostream& os) const { os << d0 << "x" << d1; }
-
-  virtual void reset() const
+  virtual void describe(std::ostream& os)  const
   {
-    a0.resize(nt2::of_size(d0,d1));
-    a1.resize(nt2::of_size( N==1 ? 1 : d0
-                          , N==2 ? 1 : d1
-                          )
-                );
-
-    for(std::size_t i=1; i<=d0*d1; ++i) a0(i) = T(1);
+    os << "(" << parent::size() << ") @" << along;
   }
 
-  private:
-          std::size_t                               d0,d1;
-  mutable nt2::container::table<T, nt2::settings()> a0,a1;
+  std::size_t along, init;
 };
 
+NT2_STATEFUL_BENCHMARK_WITH_METRIC_TPL
+( sum_table
+, (nt2::max_duration)((3.))
+, ((sum_workbench< nt2::table<T> >))(( 2,4096 ))
+, (nt2::cycles_per_element<nt2::stat::median_>)
+, (float)(double)
+)
+{
+  work::a1 = nt2::sum(work::a0,work::along);
+}
 
-#define NT2_SUM_EXP(T,D,N)                                        \
-NT2_RUN_EXPERIMENT_TPL( sum_over, ((T,D)), (1<<N,1<<N) )          \
-NT2_RUN_EXPERIMENT_TPL( sum_over, ((T,D)), ((1<<N)-1,(1<<N)-1 ) ) \
-NT2_RUN_EXPERIMENT_TPL( sum_over, ((T,D)), (1   ,1<<N) )          \
-NT2_RUN_EXPERIMENT_TPL( sum_over, ((T,D)), (1<<N,1   ) )          \
-/**/
+// NT2_STATEFUL_BENCHMARK_WITH_METRIC_TPL
+// ( sum_vector
+// , (nt2::max_duration)((3.))
+// , ((nt2::nary_range< std::vector<T>,3 >))
+//   (( 2,4096, -100, 100, nt2::geometric(2)))
+// , (nt2::cycles_per_element<nt2::stat::median_>)
+// , (float)(double)
+// )
+// {
+//   for(std::size_t i=0; i<work::size(); ++i)
+//     work::a2[i]  = work::a1[i] + work::a0[i];
+// }
 
-NT2_SUM_EXP(double , 1,  4 );
-NT2_SUM_EXP(double , 1,  5 );
-NT2_SUM_EXP(double , 1,  6 );
-NT2_SUM_EXP(double , 1,  7 );
-NT2_SUM_EXP(double , 1,  8 );
-NT2_SUM_EXP(double , 1,  9 );
-NT2_SUM_EXP(double , 1, 10 );
-NT2_SUM_EXP(double , 1, 11 );
-NT2_SUM_EXP(double , 1, 12 );
-
-NT2_SUM_EXP(float , 1,  4 );
-NT2_SUM_EXP(float , 1,  5 );
-NT2_SUM_EXP(float , 1,  6 );
-NT2_SUM_EXP(float , 1,  7 );
-NT2_SUM_EXP(float , 1,  8 );
-NT2_SUM_EXP(float , 1,  9 );
-NT2_SUM_EXP(float , 1, 10 );
-NT2_SUM_EXP(float , 1, 11 );
-NT2_SUM_EXP(float , 1, 12 );
-
-NT2_SUM_EXP(double , 2,  4 );
-NT2_SUM_EXP(double , 2,  5 );
-NT2_SUM_EXP(double , 2,  6 );
-NT2_SUM_EXP(double , 2,  7 );
-NT2_SUM_EXP(double , 2,  8 );
-NT2_SUM_EXP(double , 2,  9 );
-NT2_SUM_EXP(double , 2, 10 );
-NT2_SUM_EXP(double , 2, 11 );
-NT2_SUM_EXP(double , 2, 12 );
-
-NT2_SUM_EXP(float , 2,  4 );
-NT2_SUM_EXP(float , 2,  5 );
-NT2_SUM_EXP(float , 2,  6 );
-NT2_SUM_EXP(float , 2,  7 );
-NT2_SUM_EXP(float , 2,  8 );
-NT2_SUM_EXP(float , 2,  9 );
-NT2_SUM_EXP(float , 2, 10 );
-NT2_SUM_EXP(float , 2, 11 );
-NT2_SUM_EXP(float , 2, 12 );
+// #define NT2_SUM_EXP(T,D,N)                                        \
+// NT2_RUN_EXPERIMENT_TPL( sum_over, ((T,D)), (1<<N,1<<N) )          \
+// NT2_RUN_EXPERIMENT_TPL( sum_over, ((T,D)), ((1<<N)-1,(1<<N)-1 ) ) \
+// NT2_RUN_EXPERIMENT_TPL( sum_over, ((T,D)), (1   ,1<<N) )          \
+// NT2_RUN_EXPERIMENT_TPL( sum_over, ((T,D)), (1<<N,1   ) )          \
+// /**/

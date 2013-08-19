@@ -100,7 +100,7 @@ namespace nt2
 
     BOOST_PP_REPEAT(N,M2,~)
 
-    private:
+    protected:
     std::size_t sz,sx;
     double rmin, rmax;
     boost::function<void(std::size_t&)> stepper_;
