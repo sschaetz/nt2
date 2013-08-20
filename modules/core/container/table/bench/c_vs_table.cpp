@@ -6,127 +6,22 @@
 //                 See accompanying file LICENSE.txt or copy at
 //                     http://www.boost.org/LICENSE_1_0.txt
 //==============================================================================
-#include <nt2/core/container/table/table.hpp>
+#include <nt2/sdk/bench/benchmark.hpp>
+#include <nt2/sdk/bench/workbench/nary_range.hpp>
+#include <nt2/sdk/bench/measure/absolute_time.hpp>
+#include <nt2/sdk/bench/stat/median.hpp>
+#include <nt2/sdk/bench/stat/min.hpp>
+#include <nt2/sdk/bench/max_duration.hpp>
+
 #include <nt2/include/functions/width.hpp>
 #include <nt2/include/functions/rand.hpp>
 #include <nt2/include/functions/exp.hpp>
 #include <nt2/include/functions/sqr.hpp>
 #include <nt2/include/functions/minus.hpp>
-#include <nt2/include/functions/tic.hpp>
-#include <nt2/include/functions/zeros.hpp>
-#include <nt2/include/functions/rand.hpp>
-#include <nt2/include/constants/one.hpp>
-
-#include <nt2/sdk/bench/benchmark.hpp>
+#include <nt2/table.hpp>
 
 #include <cstdio>
 #include <cmath>
-
-NT2_EXPERIMENT(per_matrix)
-{
-  public:
-  per_matrix( std::size_t s0, std::size_t s1 )
-            : NT2_EXPRIMENT_CTOR(5,"ms")
-            , d0(s0), d1(s1)
-  {}
-
-  virtual void run() const
-  {
-    y = nt2::exp(nt2::sqr(a - b) * 0.5);
-  }
-
-  virtual double compute(nt2::benchmark_result_t const& r) const
-  {
-    return r.second/1e3;
-  }
-
-  virtual void info(std::ostream& os) const { os << d0 << "x" << d1; }
-
-  virtual void reset() const
-  {
-    a = nt2::rand(d0,d1);
-    b = nt2::rand(d0, d1);
-    y = nt2::zeros(d0, d1);
-  }
-
-  private:
-          std::size_t                   d0,d1;
-  mutable nt2::container::table<double> y,a,b;
-};
-
-NT2_EXPERIMENT(per_column)
-{
-  public:
-  per_column( std::size_t s0, std::size_t s1 )
-            : NT2_EXPRIMENT_CTOR(5,"ms")
-            , d0(s0), d1(s1)
-  {}
-
-  virtual void run() const
-  {
-    for(std::size_t j = 1; j <= d1; ++j)
-    {
-      y(nt2::_, j) = nt2::exp(nt2::sqr(a(nt2::_, j) - b(nt2::_, j)) * 0.5);
-    }
-  }
-
-  virtual double compute(nt2::benchmark_result_t const& r) const
-  {
-    return r.second/1e3;
-  }
-
-  virtual void info(std::ostream& os) const { os << d0 << "x" << d1; }
-
-  virtual void reset() const
-  {
-    a = nt2::rand(d0,d1);
-    b = nt2::rand(d0, d1);
-    y = nt2::zeros(d0, d1);
-  }
-
-  private:
-          std::size_t                   d0,d1;
-  mutable nt2::container::table<double> y,a,b;
-};
-
-NT2_EXPERIMENT(per_element)
-{
-  public:
-  per_element ( std::size_t s0, std::size_t s1 )
-              : NT2_EXPRIMENT_CTOR(5,"ms")
-              , d0(s0), d1(s1)
-  {}
-
-  virtual void run() const
-  {
-    for(std::size_t j = 1; j <= d1; ++j)
-    {
-      for(std::size_t i = 1; i <= d0; ++i)
-      {
-        double v = a(i, j) - b(i, j);
-        y(i, j) = std::exp( (v * v) * 0.5 );
-      }
-    }
-  }
-
-  virtual double compute(nt2::benchmark_result_t const& r) const
-  {
-    return r.second/1e3;
-  }
-
-  virtual void info(std::ostream& os) const { os << d0 << "x" << d1; }
-
-  virtual void reset() const
-  {
-    a = nt2::rand(d0,d1);
-    b = nt2::rand(d0, d1);
-    y = nt2::zeros(d0, d1);
-  }
-
-  private:
-          std::size_t                   d0,d1;
-  mutable nt2::container::table<double> y,a,b;
-};
 
 void raw_function(double* y, double* a, double* b, std::size_t n)
 {
@@ -137,42 +32,62 @@ void raw_function(double* y, double* a, double* b, std::size_t n)
   }
 }
 
-NT2_EXPERIMENT(raw_C)
+NT2_STATEFUL_BENCHMARK_WITH_METRIC
+( using_raw_C
+, (nt2::max_duration)((1.5))
+, (( nt2::nary_range<std::vector<double>,3> ))
+  (( 2000,4000,0,1,nt2::geometric(2) ))
+, (nt2::absolute_time<nt2::stat::median_>)
+  (nt2::absolute_time<nt2::stat::min_>)
+)
 {
-  public:
-  raw_C( std::size_t s0, std::size_t s1 )
-       : NT2_EXPRIMENT_CTOR(5,"ms")
-       , d(s0*s1)
-  {}
+  raw_function(&work::a0[0],&work::a1[0],&work::a2[0],work::size());
+}
 
-  virtual void run() const
+NT2_STATEFUL_BENCHMARK_WITH_METRIC
+( per_element
+, (nt2::max_duration)((1.5))
+, (( nt2::nary_range<nt2::table<double>,3> ))
+  (( 2000,4000,0,1,nt2::geometric(2) ))
+, (nt2::absolute_time<nt2::stat::median_>)
+  (nt2::absolute_time<nt2::stat::min_>)
+)
+{
+  for(std::size_t j = 1; j <= 2000; ++j)
   {
-    raw_function(&y[0],&a[0],&b[0],d);
+    for(std::size_t i = 1; i <= 2000; ++i)
+    {
+      double v = work::a1(i, j) - work::a2(i, j);
+      work::a0(i, j) = std::exp( (v * v) * 0.5 );
+    }
   }
+}
 
-  virtual double compute(nt2::benchmark_result_t const& r) const
+NT2_STATEFUL_BENCHMARK_WITH_METRIC
+( per_matrix
+, (nt2::max_duration)((1.5))
+, (( nt2::nary_range<nt2::table<double>,3> ))
+  (( 2000,4000,0,1,nt2::geometric(2) ))
+, (nt2::absolute_time<nt2::stat::median_>)
+  (nt2::absolute_time<nt2::stat::min_>)
+)
+{
+  work::a0 = nt2::exp(nt2::sqr(work::a1 - work::a2) * 0.5);
+}
+
+NT2_STATEFUL_BENCHMARK_WITH_METRIC
+( per_column
+, (nt2::max_duration)((1.5))
+, (( nt2::nary_range<nt2::table<double>,3> ))
+  (( 2000,4000,0,1,nt2::geometric(2) ))
+, (nt2::absolute_time<nt2::stat::median_>)
+  (nt2::absolute_time<nt2::stat::min_>)
+)
+{
+  using nt2::_;
+
+  for(std::size_t j = 1; j <= 2000; ++j)
   {
-    return r.second/1e3;
+    work::a0(_,j) = nt2::exp(nt2::sqr(work::a1(_,j) - work::a2(_,j)) * 0.5);
   }
-
-  virtual void info(std::ostream& os) const { os << d; }
-
-  virtual void reset() const
-  {
-    a.resize(d);
-    b.resize(d);
-    y.resize(d);
-
-    nt2::roll ( a, 0, 1 );
-    nt2::roll ( b, 0, 1 );
-  }
-
-  private:
-          std::size_t         d;
-  mutable std::vector<double> y,a,b;
-};
-
-NT2_RUN_EXPERIMENT( raw_C       )(2000,2000);
-NT2_RUN_EXPERIMENT( per_matrix  )(2000,2000);
-NT2_RUN_EXPERIMENT( per_column  )(2000,2000);
-NT2_RUN_EXPERIMENT( per_element )(2000,2000);
+}
