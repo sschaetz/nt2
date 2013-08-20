@@ -16,7 +16,7 @@
 
 namespace nt2
 {
-  NT2_TEST_BENCHMARK_DECL workbench::workbench() : exhausted(false)
+  NT2_TEST_BENCHMARK_DECL workbench::workbench()
   {
   }
 
@@ -25,9 +25,13 @@ namespace nt2
     BOOST_FOREACH( measure* m, measures_ ) { delete m; }
   }
 
-  NT2_TEST_BENCHMARK_DECL void workbench::setup()
+  NT2_TEST_BENCHMARK_DECL void workbench::setup(bool)
   {
-    exhausted = true;
+  }
+
+  NT2_TEST_BENCHMARK_DECL bool workbench::exhausted() const
+  {
+    return true;
   }
 
   NT2_TEST_BENCHMARK_DECL void workbench::reset() {}

@@ -89,12 +89,11 @@ namespace nt2
                   : size_(sz), BOOST_PP_ENUM(N,M1,~)
     {}
 
-    virtual void setup()
+    virtual void setup(bool)
     {
       out.resize(size_/card);
       BOOST_PP_REPEAT(N,T1,~)
       BOOST_PP_REPEAT(N,M4,~)
-      workbench::exhausted = true;
     }
 
     virtual std::size_t size()                      const { return size_; }

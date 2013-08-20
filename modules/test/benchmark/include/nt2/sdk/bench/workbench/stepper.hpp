@@ -29,9 +29,9 @@ namespace nt2
     inline arithmetic(double s = 1) : step_(s) {}
 
     /// INTERNAL ONLY
-    inline void operator()(std::size_t& s)
+    inline std::size_t operator()(std::size_t s)
     {
-      s += step_;
+      return std::size_t(s+step_);
     }
 
     /// INTERNAL ONLY
@@ -54,9 +54,9 @@ namespace nt2
     inline geometric(double f) : factor_(f) {}
 
     /// INTERNAL ONLY
-    inline void operator()(std::size_t& s)
+    inline std::size_t operator()(std::size_t s)
     {
-      s *= factor_;
+      return std::size_t(s * factor_);
     }
 
     /// INTERNAL ONLY

@@ -28,7 +28,8 @@ namespace nt2
     NT2_TEST_BENCHMARK_DECL workbench();
     NT2_TEST_BENCHMARK_DECL virtual ~workbench();
 
-    NT2_TEST_BENCHMARK_DECL virtual void        setup();
+    NT2_TEST_BENCHMARK_DECL virtual void        setup(bool);
+    NT2_TEST_BENCHMARK_DECL virtual bool        exhausted() const;
     NT2_TEST_BENCHMARK_DECL virtual void        reset();
     NT2_TEST_BENCHMARK_DECL virtual void        clean();
     NT2_TEST_BENCHMARK_DECL virtual std::size_t size() const;
@@ -36,8 +37,10 @@ namespace nt2
 
     NT2_TEST_BENCHMARK_DECL void add_measure(measure* w);
 
-    bool exhausted;
     std::vector<measure*> measures_;
+
+    protected:
+    bool exhausted_;
   };
 }
 

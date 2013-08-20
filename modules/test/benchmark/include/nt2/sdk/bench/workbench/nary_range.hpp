@@ -78,32 +78,37 @@ namespace nt2
               , double rmn = -100, double rmx = 100
               , Stepper s = nt2::geometric(10.)
               )
-              : sz(mn), sx(mx)
+              : sz(mn), sx(mx), init(mn)
               , rmin(rmn), rmax(rmx)
               , stepper_(s)
     {}
 
-    virtual void setup()
+    virtual void setup(bool reset)
     {
+      sz = reset ? init : stepper_(sz);
+
       BOOST_PP_REPEAT(N,M0,~)
       BOOST_PP_REPEAT(N,M1,~)
-      stepper_(sz);
-      workbench::exhausted = (sz > sx);
+    }
+
+    virtual bool exhausted() const
+    {
+      return sz >= sx;
     }
 
     virtual std::size_t size() const { return details::sizer(a0); }
 
     virtual void describe(std::ostream& os) const
     {
-      os  << "(" << size() << ")";
+      os  << "(" << sz << " x " << sz << ")" << std::flush;
     }
 
     BOOST_PP_REPEAT(N,M2,~)
 
     protected:
-    std::size_t sz,sx;
+    std::size_t sz,sx,init;
     double rmin, rmax;
-    boost::function<void(std::size_t&)> stepper_;
+    boost::function<std::size_t(std::size_t)> stepper_;
   };
 
 #undef N

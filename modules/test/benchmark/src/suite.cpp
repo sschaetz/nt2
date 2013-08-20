@@ -42,15 +42,16 @@ namespace nt2
     BOOST_FOREACH( experiment* xp, experiments_ )
     {
       workbench* wb = dynamic_cast<workbench*>(xp);
-      protocol* p = dynamic_cast<protocol*>(xp);
+      protocol* p   = dynamic_cast<protocol*>(xp);
+
+      wb->setup(true);
 
       // Until the workbench is not exhausted
-      do
+      while(!wb->exhausted())
       {
-        wb->setup();
         p->run(xp);
-        std::cout << std::flush;
-      } while(!wb->exhausted);
+        wb->setup(false);
+      }
     }
   }
 
